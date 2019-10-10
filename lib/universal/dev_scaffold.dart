@@ -30,7 +30,7 @@ class DevScaffold extends StatelessWidget {
                   ConfigBloc().darkModeOn
                       ? FontAwesomeIcons.lightbulb
                       : FontAwesomeIcons.solidLightbulb,
-                  size: 21,
+                  size: 20,
                 ),
                 onPressed: () {
                   ConfigBloc()

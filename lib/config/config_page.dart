@@ -1,4 +1,6 @@
 import 'package:devfestcenfl/home/home_page.dart';
+import 'package:devfestcenfl/schedule/schedule_page.dart';
+import 'package:devfestcenfl/speakers/speakers_page.dart';
 import 'package:devfestcenfl/utils/devfest.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -33,7 +35,7 @@ class _ConfigPageState extends State<ConfigPage> {
       child: BlocBuilder<ConfigBloc, ConfigState>(
         builder: (context, state) {
           return MaterialApp(
-            title: 'Google Devfest',
+            title: 'Google Devfest Florida',
             debugShowCheckedModeBanner: false,
             theme: ThemeData(
               //* Custom Google Font
@@ -55,6 +57,11 @@ class _ConfigPageState extends State<ConfigPage> {
               ),
             ),
             home: HomePage(),
+            routes: {
+              HomePage.routeName: (context) => HomePage(),
+              SchedulePage.routeName: (context) => SchedulePage(),
+              SpeakersPage.routeName: (context) => SpeakersPage(),
+            },
           );
         },
       ),

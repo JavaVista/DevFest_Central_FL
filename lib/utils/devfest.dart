@@ -17,7 +17,7 @@ class Devfest {
   static const String banner_dark = "assets/images/banner_dark.png";
 
     //*  Texts
-  static const String welcomeText = "Welcome to GDG DevFest Florida 🌴🏖";
+  static const String welcomeText = "Welcome to GDG DevFest Florida \n🌴🏖";
   static const String subtitleText = "The most MAGICAL developers conference";
   static const String descText =
       '''DevFests are community-led, developer events hosted by GDG chapters around the globe focused on community building & learning about Google’s technologies. Each DevFest is inspired by and uniquely tailored to the needs of the developer community and region that hosts it.''';
@@ -37,6 +37,14 @@ class Devfest {
       "Please update your app for seamless experience.";
   static const String checkNetText =
       "It seems like your internet connection is not active.";
+
+//* ActionTexts
+  static const String schedule_text = "Schedule";
+  static const String speakers_text = "Speakers";
+  static const String team_text = "Team";
+  static const String sponsor_text = "Sponsors";
+  static const String faq_text = "FAQ";
+  static const String map_text = "Location";
 
   //* Preferences
   static SharedPreferences prefs;
