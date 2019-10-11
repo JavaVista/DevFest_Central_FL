@@ -1,6 +1,8 @@
+import 'dart:math';
 
 import 'package:devfestcenfl/config/config_bloc.dart';
 import 'package:devfestcenfl/universal/dev_scaffold.dart';
+import 'package:devfestcenfl/utils/tools.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -14,7 +16,7 @@ class MapPage extends StatefulWidget {
 class _MapPageState extends State<MapPage> {
   GoogleMapController _controller;
   bool isMapCreated = false;
-  static final LatLng myLocation = LatLng(37.42796133580664, -122.085749655962);
+  static final LatLng eventLocation = LatLng(28.663151, -81.233940);
 
   @override
   void initState() {
@@ -22,7 +24,7 @@ class _MapPageState extends State<MapPage> {
   }
 
   final CameraPosition _kGooglePlex = CameraPosition(
-    target: myLocation,
+    target: eventLocation,
     zoom: 14.4746,
   );
 
@@ -30,7 +32,7 @@ class _MapPageState extends State<MapPage> {
     return <Marker>[
       Marker(
           markerId: MarkerId("marker_1"),
-          position: myLocation,
+          position: eventLocation,
           icon: BitmapDescriptor.defaultMarkerWithHue(
             BitmapDescriptor.hueOrange,
           )),
@@ -84,15 +86,21 @@ class _MapPageState extends State<MapPage> {
                   child: RichText(
                     textAlign: TextAlign.center,
                     text: TextSpan(
-                        text: "Google Office\n",
+                        text: "Neoware Studios, Oviedo Mall\n",
                         style: Theme.of(context).textTheme.title.copyWith(
                               fontWeight: FontWeight.bold,
                             ),
                         children: [
                           TextSpan(
-                              text: "Shoreline Amphitheatre, Mountain View, CA",
-                              style: Theme.of(context).textTheme.subtitle,
-                              children: []),
+                              text:
+                                  "1485 Oviedo Mall Boulevard, Oviedo, FL 32765",
+                              style: Theme.of(context).textTheme.subtitle.copyWith(
+                              fontSize: 14,
+                              fontWeight: FontWeight.normal,
+                              color: Tools.multiColors[Random().nextInt(4)],
+                            )
+
+                              ),
                         ]),
                   )),
             )
