@@ -1,6 +1,10 @@
+import 'package:devfestcenfl/faq/faq_page.dart';
 import 'package:devfestcenfl/home/home_page.dart';
+import 'package:devfestcenfl/map/map_page.dart';
 import 'package:devfestcenfl/schedule/schedule_page.dart';
 import 'package:devfestcenfl/speakers/speakers_page.dart';
+import 'package:devfestcenfl/sponsors/sponsor_page.dart';
+import 'package:devfestcenfl/team/team_page.dart';
 import 'package:devfestcenfl/utils/devfest.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -8,6 +12,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'index.dart';
 
 class ConfigPage extends StatefulWidget {
+  static const String routeName = "/";
   @override
   _ConfigPageState createState() => _ConfigPageState();
 }
@@ -23,7 +28,7 @@ class _ConfigPageState extends State<ConfigPage> {
   }
 
   setupApp() {
-    configBloc = ConfigBloc(); //calls singleton
+    configBloc = ConfigBloc(); // calls singleton
     configBloc.darkModeOn =
         Devfest.prefs.getBool(Devfest.darkModePref) ?? false;
   }
@@ -61,6 +66,10 @@ class _ConfigPageState extends State<ConfigPage> {
               HomePage.routeName: (context) => HomePage(),
               SchedulePage.routeName: (context) => SchedulePage(),
               SpeakersPage.routeName: (context) => SpeakersPage(),
+              TeamPage.routeName: (context) => TeamPage(),
+              SponsorPage.routeName: (context) => SponsorPage(),
+              FaqPage.routeName: (context) => FaqPage(),
+              MapPage.routeName: (context) => MapPage(),
             },
           );
         },

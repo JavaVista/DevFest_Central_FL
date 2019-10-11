@@ -17,7 +17,6 @@ class UnConfigState extends ConfigState {
   }
 
   @override
-  // TODO: implement props
   List<Object> get props => null;
 }
 
@@ -31,7 +30,6 @@ class InConfigState extends ConfigState {
   }
 
   @override
-  // TODO: implement props
   List<Object> get props => null;
 }
 
@@ -49,6 +47,5 @@ class ErrorConfigState extends ConfigState {
   }
 
   @override
-  // TODO: implement props
   List<Object> get props => null;
 }

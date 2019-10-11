@@ -32,7 +32,6 @@ class DarkModeEvent extends ConfigEvent {
   }
 
   @override
-  // TODO: implement props
   List<Object> get props => null;
 }
 
@@ -53,6 +52,5 @@ class LoadConfigEvent extends ConfigEvent {
   }
 
   @override
-  // TODO: implement props
   List<Object> get props => null;
 }

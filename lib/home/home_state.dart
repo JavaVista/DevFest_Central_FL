@@ -19,7 +19,6 @@ class UnHomeState extends HomeState {
   }
 
   @override
-  // TODO: implement props
   List<Object> get props => null;
 }
 
@@ -33,7 +32,6 @@ class InHomeState extends HomeState {
   }
 
   @override
-  // TODO: implement props
   List<Object> get props => null;
 }
 
@@ -51,6 +49,5 @@ class ErrorHomeState extends HomeState {
   }
 
   @override
-  // TODO: implement props
   List<Object> get props => null;
 }

@@ -1,6 +1,10 @@
 import 'package:devfestcenfl/config/config_bloc.dart';
+import 'package:devfestcenfl/faq/faq_page.dart';
+import 'package:devfestcenfl/map/map_page.dart';
 import 'package:devfestcenfl/schedule/schedule_page.dart';
 import 'package:devfestcenfl/speakers/speakers_page.dart';
+import 'package:devfestcenfl/sponsors/sponsor_page.dart';
+import 'package:devfestcenfl/team/team_page.dart';
 import 'package:devfestcenfl/universal/image_card.dart';
 import 'package:devfestcenfl/utils/devfest.dart';
 import 'package:devfestcenfl/utils/tools.dart';
@@ -115,25 +119,25 @@ class HomeFront extends StatelessWidget {
             icon: Icons.people,
             color: Colors.amber,
             title: Devfest.team_text,
-            onPressed: () => {},
+            onPressed: () => Navigator.pushNamed(context, TeamPage.routeName),
           ),
           ActionCard(
             icon: Icons.attach_money,
             color: Colors.purple,
             title: Devfest.sponsor_text,
-            onPressed: () => {},
+            onPressed: () => Navigator.pushNamed(context, SponsorPage.routeName),
           ),
           ActionCard(
             icon: Icons.question_answer,
             color: Colors.brown,
             title: Devfest.faq_text,
-            onPressed: () => {},
+            onPressed: () => Navigator.pushNamed(context, FaqPage.routeName),
           ),
           ActionCard(
             icon: Icons.map,
             color: Colors.blue,
             title: Devfest.map_text,
-            onPressed: () => {},
+            onPressed: () => Navigator.pushNamed(context, MapPage.routeName),
           ),
         ],
       );
