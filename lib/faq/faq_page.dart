@@ -1,17 +1,16 @@
 import 'package:devfestcenfl/universal/dev_scaffold.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 
 class FaqPage extends StatelessWidget {
   static const String routeName = "/faq";
 
   @override
   Widget build(BuildContext context) {
-    // var _homeBloc = HomeBloc();
     return DevScaffold(
-      body: Container(
-        child: Center(
-          child: Text("Coming Soon"),
-        ),
+      body: WebviewScaffold(
+        url: "https://devfestflorida.org/faq",
+        hidden: true,
       ),
       title: "FAQ",
     );
