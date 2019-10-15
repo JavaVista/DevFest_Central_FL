@@ -1,3 +1,5 @@
+import 'package:devfestcenfl/home/index.dart';
+
 import 'index.dart';
 import 'package:meta/meta.dart';
 
@@ -7,10 +9,12 @@ abstract class HomeEvent {
 }
 
 class LoadHomeEvent extends HomeEvent {
+  //final IHomeProvider _homeProvider = HomeProvider();
   @override
   String toString() => 'LoadHomeEvent';
+
   @override
-  Future<HomeState> applyAsync({HomeState currentState, HomeBloc bloc}) async{
+  Future<HomeState> applyAsync({HomeState currentState, HomeBloc bloc}) async {
     try {
       await Future.delayed(Duration(seconds: 2));
       return InHomeState();
@@ -19,5 +23,4 @@ class LoadHomeEvent extends HomeEvent {
       return ErrorHomeState(_?.toString());
     }
   }
-
 }

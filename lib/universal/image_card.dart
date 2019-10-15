@@ -9,7 +9,7 @@ class ImageCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(20),
+      padding: const EdgeInsets.all(14),
       height: MediaQuery.of(context).size.height * 0.2,
       width: MediaQuery.of(context).size.width,
       child: Image.asset(

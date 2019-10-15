@@ -13,9 +13,11 @@ class SessionDetail extends StatelessWidget {
   static const String routeName = "/session_detail";
   final Session session;
 
+  //var index;
+
   SessionDetail({Key key, @required this.session}) : super(key: key);
 
-  Widget socialActions(context) => FittedBox(
+  Widget socialActions(context, Speaker speaker) => FittedBox(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
@@ -25,7 +27,7 @@ class SessionDetail extends StatelessWidget {
                 size: 15,
               ),
               onPressed: () {
-                launch(speakers[0].fbUrl);
+                launch(speaker.fbUrl);
               },
             ),
             IconButton(
@@ -34,7 +36,7 @@ class SessionDetail extends StatelessWidget {
                 size: 15,
               ),
               onPressed: () {
-                launch(speakers[0].twitterUrl);
+                launch(speaker.twitterUrl);
               },
             ),
             IconButton(
@@ -43,7 +45,7 @@ class SessionDetail extends StatelessWidget {
                 size: 15,
               ),
               onPressed: () {
-                launch(speakers[0].linkedinUrl);
+                launch(speaker.linkedinUrl);
               },
             ),
             IconButton(
@@ -52,7 +54,7 @@ class SessionDetail extends StatelessWidget {
                 size: 15,
               ),
               onPressed: () {
-                launch(speakers[0].githubUrl);
+                launch(speaker.githubUrl);
               },
             ),
           ],
@@ -61,7 +63,6 @@ class SessionDetail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // var _homeBloc = HomeBloc();
     return DevScaffold(
       body: SingleChildScrollView(
         child: Padding(
@@ -114,7 +115,8 @@ class SessionDetail extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              socialActions(context),
+              // TODO: Fix socialAction iteration
+              //socialActions(context, speakers[index]),
             ],
           ),
         ),
