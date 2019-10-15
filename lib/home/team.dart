@@ -31,19 +31,20 @@ class Team {
   String twitterUrl;
   String linkedinUrl;
   String githubUrl;
-  String contribution;
+  //String contribution;
 
-  Team(
-      {this.name,
-      this.desc,
-      this.job,
-      this.image,
-      this.speciality,
-      this.fbUrl,
-      this.twitterUrl,
-      this.linkedinUrl,
-      this.githubUrl,
-      this.contribution});
+  Team({
+    this.name,
+    this.desc,
+    this.job,
+    this.image,
+    this.speciality,
+    this.fbUrl,
+    this.twitterUrl,
+    this.linkedinUrl,
+    this.githubUrl,
+    //this.contribution
+  });
 
   Team.fromJson(Map<String, dynamic> json) {
     name = json['name'];
@@ -55,7 +56,7 @@ class Team {
     twitterUrl = json['twitter_url'];
     linkedinUrl = json['linkedin_url'];
     githubUrl = json['github_url'];
-    contribution = json['contribution'];
+    //contribution = json['contribution'];
   }
 
   Map<String, dynamic> toJson() {
@@ -69,44 +70,71 @@ class Team {
     data['twitter_url'] = this.twitterUrl;
     data['linkedin_url'] = this.linkedinUrl;
     data['github_url'] = this.githubUrl;
-    data['contribution'] = this.contribution;
+    //data['contribution'] = this.contribution;
     return data;
   }
 }
 
 List<Team> teams = [
   Team(
-    name: "Sundar Carrion",
+    name: "Hendrix Tavarez",
+    desc: "Lead Organizer",
+    //contribution: "Google CEO",
+    image: "https://devfestflorida.org/images/people/hendrix_tavarez.jpg",
+    fbUrl: "https://www.facebook.com/devfestflorida/",
+    twitterUrl: "https://twitter.com/htavarez",
+    linkedinUrl: "https://www.linkedin.com/in/hendrixtavarez",
+    githubUrl: "https://github.com/lockerfish",
+  ),
+  Team(
+    name: "Michael Rosario",
     desc: "Organizer",
-    contribution: "Google CEO",
-    image:
-        "https://pbs.twimg.com/profile_images/864282616597405701/M-FEJMZ0_400x400.jpg",
+    //contribution: "Logistics and travels",
+    image: "https://devfestflorida.org/images/people/michael_rosario.jpg",
+    fbUrl: "https://www.facebook.com/devfestflorida/",
+    twitterUrl: "https://twitter.com/michaelrosario",
+    linkedinUrl: "https://www.linkedin.com/in/michaelprosario",
+    githubUrl: "https://github.com/",
   ),
   Team(
-    name: "Vrijraj",
-    desc: "Co-Organizer",
-    contribution: "Logistics and travels",
-    image: "https://avatars2.githubusercontent.com/u/10599101?s=460&v=4",
-  ),
-  Team(
-    name: "Larry Page",
-    desc: "Co-Organizer",
-    contribution: "Founder",
-    image:
-        "https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5c76bcaaa7ea43100043c836%2F400x400.jpg%3Ffit%3Dscale%26background%3D000000",
-  ),
-  Team(
-    name: "Pawan Kumar",
-    desc: "Co-Organizer",
-    contribution: "Developed the app",
-    image:
-        "https://avatars1.githubusercontent.com/u/12619420?s=400&u=eac38b075e4e4463edfb0f0a8972825cf7803d4c&v=4",
-  ),
-  Team(
-    name: "Pawan Kumar",
+    name: "Siva G",
     desc: "Organizer",
-    contribution: "Developed the app",
+    //contribution: "Founder",
+    image: "https://devfestflorida.org/images/people/siva_g.jpg",
+    fbUrl: "https://www.facebook.com/devfestflorida/",
+    twitterUrl: "https://twitter.com/devfestfl/",
+    linkedinUrl: "https://www.linkedin.com/company/devfestflorida/",
+    githubUrl: "https://github.com/",
+  ),
+  Team(
+    name: "Christi Kapp",
+    desc: "Organizer",
+    //contribution: "Logistics",
     image:
-        "https://avatars1.githubusercontent.com/u/12619420?s=400&u=eac38b075e4e4463edfb0f0a8972825cf7803d4c&v=4",
+        "https://devfestflorida.org/images/people/christi_kapp.png",
+    fbUrl: "https://www.facebook.com/devfestflorida/",
+    twitterUrl: "https://twitter.com/devfestfl/",
+    linkedinUrl: "https://www.linkedin.com/in/artinmotionllc/",
+    githubUrl: "https://github.com/",
+  ),
+  Team(
+    name: "Anita Kirkovska",
+    desc: "Organizer",
+    //contribution: "Logistics",
+    image:"https://devfestflorida.org/images/people/anita_kirkovska.jpg",
+    fbUrl: "https://www.facebook.com/anitakirkovska",
+    twitterUrl: "https://twitter.com/anitakirkovska",
+    linkedinUrl: "https://www.linkedin.com/in/anitakirkovska",
+    githubUrl: "https://github.com/",
+  ),
+  Team(
+    name: "Marina Trajkovska",
+    desc: "Organizer",
+    //contribution: "Logistics",
+    image:"https://devfestflorida.org/images/people/marina_trajkovska.jpg",
+    fbUrl: "https://www.facebook.com/marinatrajk",
+    twitterUrl: "https://twitter.com/marinatrajk",
+    linkedinUrl: "https://www.linkedin.com/in/marinatrajk/",
+    githubUrl: "https://github.com/",
   ),
 ];

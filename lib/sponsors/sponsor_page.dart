@@ -12,28 +12,35 @@ class SponsorPage extends StatelessWidget {
       body: ListView(
         children: <Widget>[
           SponsorImage(
+            imgUrl: "https://devfestflorida.org/images/logos/STUDIOSLOGO_WITHTM.png",
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          SponsorImage(
+            imgUrl: "https://devfestflorida.org/images/logos/datapsy.png",
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          SponsorImage(
+            imgUrl: "https://lh6.googleusercontent.com/JdsqW1qI_o1NEUOpC-2lgfu41iKCs460fbJVsPszMxk1wHMzNOeowpDdJEBSjzjgdCUSSCQ-PU7Lh0m1zS0o4smDSvSuv2FXhZXkFMWw8fZRgllHjiY5cEmOVnLQANvU=s412",
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          SponsorImage(
             imgUrl: "https://devfest.gdgkolkata.org/assets/img/logos/gd.png",
           ),
           SizedBox(
-            height: 30,
+            height: 20,
           ),
           SponsorImage(
-            imgUrl: "https://devfest.gdgkolkata.org/assets/img/jetbrains.png",
+            imgUrl: "https://devfestflorida.org/images/logos/odevs.png",
           ),
           SizedBox(
-            height: 30,
+            height: 20,
           ),
-          SponsorImage(
-            imgUrl:
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Kotlin-logo.svg/220px-Kotlin-logo.svg.png",
-          ),
-          SizedBox(
-            height: 30,
-          ),
-          SponsorImage(
-            imgUrl:
-                "https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_0016c93c710cf35990b999cba3a59bae/firebase.png",
-          )
         ],
       ),
       title: "Sponsors",
@@ -53,8 +60,8 @@ class SponsorImage extends StatelessWidget {
         padding: const EdgeInsets.all(12.0),
         child: CachedNetworkImage(
           imageUrl: imgUrl,
-          height: 200.0,
-          width: 200.0,
+          height: 150.0,
+          width: 150.0,
           fit: BoxFit.contain,
         ),
       ),

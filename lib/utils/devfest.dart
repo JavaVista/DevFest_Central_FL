@@ -15,8 +15,9 @@ class Devfest {
 
   static const String banner_light = "assets/images/banner_light.png";
   static const String banner_dark = "assets/images/banner_dark.png";
+  
 
-    //*  Texts
+  //*  Texts
   static const String welcomeText = "Welcome to GDG DevFest Florida \n🌴🏖";
   static const String subtitleText = "The most MAGICAL developers conference";
   static const String descText =
@@ -50,4 +51,3 @@ class Devfest {
   static SharedPreferences prefs;
   static const String darkModePref = "darkModePref";
 }
-

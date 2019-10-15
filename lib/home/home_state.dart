@@ -1,3 +1,4 @@
+import 'package:devfestcenfl/home/session.dart';
 import 'package:equatable/equatable.dart';
 import 'package:meta/meta.dart';
 
@@ -9,26 +10,36 @@ abstract class HomeState extends Equatable {
   HomeState getStateCopy();
 }
 
+/// UnInitialized
 class UnHomeState extends HomeState {
   @override
   String toString() => 'UnHomeState';
 
   @override
   HomeState getStateCopy() {
-    return InHomeState();
+    return UnHomeState();
   }
 
   @override
   List<Object> get props => null;
 }
 
+/// Initialized
 class InHomeState extends HomeState {
+  final SessionsData sessionsData;
+
+  InHomeState({
+    this.sessionsData,
+  }) : super([sessionsData]);
+
   @override
-  String toString() => 'UnHomeState';
+  String toString() => 'InHomeState';
 
   @override
   HomeState getStateCopy() {
-    return InHomeState();
+    return InHomeState(
+      sessionsData: this.sessionsData,
+    );
   }
 
   @override
