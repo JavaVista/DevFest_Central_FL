@@ -2,15 +2,20 @@
 
 A Flutter App developed for the most MAGICAL 🎆 developers conference in Florida. This app keeps you tied in to the event with the schedule, speaker information, and location information.
 
-## ScreenShots 🖼️
+## <p align="center">ScreenShots 🖼️</p>
 
-|             Dark Theme              |              Light Theme              |
-| :----------------------------------: | :----------------------------------: |
-| ![](./assets/images/dark_home.png) | ![](./assets/images/light_home.png) |
-| ![](./assets/images/dark_team.png) | ![](./assets/images/light_team.png) |
-| ![](./assets/images/dark_map.png) | ![](./assets/images/light_map.png) |
+<center>
 
-### Conference information 🍊
+|             Dark Theme                |              Light Theme              |
+| :----------------------------------:  | :----------------------------------:  |
+| ![](./assets/images/dark_home.png)    | ![](./assets/images/light_home.png)   |
+| ![](./assets/images/dark_team.png)    | ![](./assets/images/light_team.png)   |
+| ![](./assets/images/dark_map.png)     | ![](./assets/images/light_map.png)    |
+
+</center>
+
+### <p align="center">Conference information 🍊</p>
+
 
 DevFest Florida is a yearly Google Developers conference taking place on Central Florida. Run by GDG Sun Coast, GDG Space Coast and GDG Central Florida and covering Web, Mobile, Startup, IoT, VR/AR, Cloud, Machine Learning and much more. Join us and the Local Developer Experts, Googlers and Startups to learn about the latest and greatest on your favorite technology stacks and business processes. https://devfestflorida.org/
 
