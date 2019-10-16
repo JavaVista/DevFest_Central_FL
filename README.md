@@ -1,6 +1,6 @@
-# The GDG DevFest Florida App
+# The GDG DevFest Florida App 🌴🏖
 
-A Flutter App developed for the most MAGICAL developers conference in Florida.
+A Flutter App developed for the most MAGICAL 🎆 developers conference in Florida. This app keeps you tied in to the event with the schedule, speaker information, and location information.
 
 ## ScreenShots 🖼️
 
@@ -10,9 +10,29 @@ A Flutter App developed for the most MAGICAL developers conference in Florida.
 | ![](./assets/images/dark_team.png) | ![](./assets/images/light_team.png) |
 | ![](./assets/images/dark_map.png) | ![](./assets/images/light_map.png) |
 
+### Conference information 🍊
+
+DevFest Florida is a yearly Google Developers conference taking place on Central Florida. Run by GDG Sun Coast, GDG Space Coast and GDG Central Florida and covering Web, Mobile, Startup, IoT, VR/AR, Cloud, Machine Learning and much more. Join us and the Local Developer Experts, Googlers and Startups to learn about the latest and greatest on your favorite technology stacks and business processes. https://devfestflorida.org/
+
+The event is for the tech community and run by volunteers. Our goal is to raise awareness, and create actionable learning to ensure the success of our tech community.
+
+### Technology
+
+- Flutter Framework
+- Dart
+- Flutter BloC
+
+#DevFest #DevFestFL
+
+We hope to see you there.  🙋‍♀️🙋🏿‍♂️ → Get your ticket today at https://devfestflorida.eventbrite.com
+
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+1. [Fork repository](https://github.com/iampawan/GDG-DevFest-App/fork) and clone your fork locally
+2. Install [Flutter 1.7.8](https://flutter.dev/docs/get-started/install)
+3. Install [Android Studio / IntelliJ / VSCode](https://flutter.dev/docs/development/tools/android-studio)
+4. [Preparing Release for Android](https://flutter.dev/docs/deployment/android)
+5. [Preparing Release for iOS](https://flutter.dev/docs/deployment/ios)
 
 A few resources to get you started if this is your first Flutter project:
 
@@ -25,7 +45,7 @@ samples, guidance on mobile development, and a full API reference.
 
 ## Contributing
 
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+You can contribute to the Application and it will be greatly aprreciated. For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Contact / Social Media
 
