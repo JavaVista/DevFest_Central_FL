@@ -6,11 +6,11 @@ A Flutter App developed for the most MAGICAL 🎆 developers conference in Flori
 
 <center>
 
-|             Dark Theme                |              Light Theme              |
-| :----------------------------------:  | :----------------------------------:  |
-| ![](./assets/images/dark_home.png)    | ![](./assets/images/light_home.png)   |
-| ![](./assets/images/dark_team.png)    | ![](./assets/images/light_team.png)   |
-| ![](./assets/images/dark_map.png)     | ![](./assets/images/light_map.png)    |
+|           Dark Theme             |            Light Theme            |
+|:--------------------------------:|:---------------------------------:|
+|![](./assets/images/dark_home.png)|![](./assets/images/light_home.png)|
+|![](./assets/images/dark_team.png)|![](./assets/images/light_team.png)|
+|![](./assets/images/dark_map.png) |![](./assets/images/light_map.png) |
 
 </center>
 
@@ -34,7 +34,7 @@ We hope to see you there.  🙋‍♀️🙋🏿‍♂️ → Get your ticket to
 ## Getting Started
 
 1. [Fork repository](https://github.com/iampawan/GDG-DevFest-App/fork) and clone your fork locally
-2. Install [Flutter 1.7.8](https://flutter.dev/docs/get-started/install)
+2. Install [Flutter 1.9.1 +hotfix.4](https://flutter.dev/docs/get-started/install)
 3. Install [Android Studio / IntelliJ / VSCode](https://flutter.dev/docs/development/tools/android-studio)
 4. [Preparing Release for Android](https://flutter.dev/docs/deployment/android)
 5. [Preparing Release for iOS](https://flutter.dev/docs/deployment/ios)
