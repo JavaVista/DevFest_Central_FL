@@ -8,7 +8,7 @@
          FlutterApplication and put your custom class here. -->
     <application
         android:name="io.flutter.app.FlutterApplication"
-        android:label="devfestcenfl"
+        android:label="DevFest Florida"
         android:icon="@mipmap/ic_launcher">
         <meta-data android:name="com.google.android.geo.API_KEY"
                android:value="AIzaSyAdYTJjwSCzEtTXlPTpeQ6tkrxHnuoxx0Y"/>
@@ -31,5 +31,6 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+         <uses-permission android:name="android.permission.INTERNET"/>
     </application>
 </manifest>
