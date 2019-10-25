@@ -22,6 +22,7 @@ class TeamsData {
 }
 
 class Team {
+  int id;
   String name;
   String desc;
   String job;
@@ -34,6 +35,7 @@ class Team {
   //String contribution;
 
   Team({
+    this.id,
     this.name,
     this.desc,
     this.job,
@@ -47,6 +49,7 @@ class Team {
   });
 
   Team.fromJson(Map<String, dynamic> json) {
+    id = json['id'];
     name = json['name'];
     desc = json['desc'];
     job = json['job'];
@@ -61,6 +64,7 @@ class Team {
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['id'] = this.id;
     data['name'] = this.name;
     data['desc'] = this.desc;
     data['job'] = this.job;
@@ -77,6 +81,7 @@ class Team {
 
 List<Team> teams = [
   Team(
+    id: 1,
     name: "Hendrix Tavarez",
     desc: "Lead Organizer",
     //contribution: "Google CEO",
@@ -87,6 +92,7 @@ List<Team> teams = [
     githubUrl: "https://github.com/lockerfish",
   ),
   Team(
+    id: 2,
     name: "Michael Rosario",
     desc: "Organizer",
     //contribution: "Logistics and travels",
@@ -97,6 +103,7 @@ List<Team> teams = [
     githubUrl: "https://github.com/",
   ),
   Team(
+    id: 3,
     name: "Siva G",
     desc: "Organizer",
     //contribution: "Founder",
@@ -107,34 +114,47 @@ List<Team> teams = [
     githubUrl: "https://github.com/",
   ),
   Team(
+    id: 4,
     name: "Christi Kapp",
     desc: "Organizer",
     //contribution: "Logistics",
-    image:
-        "https://devfestflorida.org/images/people/christi_kapp.png",
+    image: "https://devfestflorida.org/images/people/christi_kapp.png",
     fbUrl: "https://www.facebook.com/devfestflorida/",
     twitterUrl: "https://twitter.com/devfestfl/",
     linkedinUrl: "https://www.linkedin.com/in/artinmotionllc/",
     githubUrl: "https://github.com/",
   ),
   Team(
+    id: 5,
     name: "Anita Kirkovska",
     desc: "Organizer",
     //contribution: "Logistics",
-    image:"https://devfestflorida.org/images/people/anita_kirkovska.jpg",
+    image: "https://devfestflorida.org/images/people/anita_kirkovska.jpg",
     fbUrl: "https://www.facebook.com/anitakirkovska",
     twitterUrl: "https://twitter.com/anitakirkovska",
     linkedinUrl: "https://www.linkedin.com/in/anitakirkovska",
     githubUrl: "https://github.com/",
   ),
   Team(
+    id: 6,
     name: "Marina Trajkovska",
     desc: "Organizer",
     //contribution: "Logistics",
-    image:"https://devfestflorida.org/images/people/marina_trajkovska.jpg",
+    image: "https://devfestflorida.org/images/people/marina_trajkovska.jpg",
     fbUrl: "https://www.facebook.com/marinatrajk",
     twitterUrl: "https://twitter.com/marinatrajk",
     linkedinUrl: "https://www.linkedin.com/in/marinatrajk/",
     githubUrl: "https://github.com/",
+  ),
+  Team(
+    id: 6,
+    name: "Javier Carrion",
+    desc: "Organizer",
+    //contribution: "Social",
+    image: "https://devfestflorida.org/images/people/javier_carrion.jpg",
+    fbUrl: "https://www.facebook.com/devfestflorida/",
+    twitterUrl: "https://twitter.com/seetechnologic",
+    linkedinUrl: "https://www.linkedin.com/in/technologic/",
+    githubUrl: "https://github.com/JavaVista",
   ),
 ];

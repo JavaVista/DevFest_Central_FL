@@ -17,11 +17,11 @@ class SpeakersPage extends StatelessWidget {
           children: <Widget>[
             IconButton(
               icon: Icon(
-                FontAwesomeIcons.facebookF,
+                FontAwesomeIcons.link,
                 size: 15,
               ),
               onPressed: () {
-                launch(speaker.fbUrl);
+                launch(speaker.linkUrl);
               },
             ),
             IconButton(

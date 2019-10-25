@@ -9,6 +9,7 @@ class SponsorPage extends StatelessWidget {
   Widget build(BuildContext context) {
     // var _homeBloc = HomeBloc();
     return DevScaffold(
+    // TODO: Change ListView to ListView.builder()
       body: ListView(
         children: <Widget>[
           SponsorImage(

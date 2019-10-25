@@ -15,7 +15,7 @@ class SessionDetail extends StatelessWidget {
 
   //var index;
 
-  SessionDetail({Key key, @required this.session}) : super(key: key);
+  const SessionDetail({Key key, @required this.session}) : super(key: key);
 
   Widget socialActions(context, Speaker speaker) => FittedBox(
         child: Row(
@@ -27,7 +27,7 @@ class SessionDetail extends StatelessWidget {
                 size: 15,
               ),
               onPressed: () {
-                launch(speaker.fbUrl);
+                launch(speaker.linkUrl);
               },
             ),
             IconButton(
