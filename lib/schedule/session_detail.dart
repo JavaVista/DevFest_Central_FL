@@ -27,7 +27,7 @@ class SessionDetail extends StatelessWidget {
                 size: 15,
               ),
               onPressed: () {
-                launch(speaker.fbUrl);
+                launch(speaker.linkUrl);
               },
             ),
             IconButton(

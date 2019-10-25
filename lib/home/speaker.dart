@@ -1,4 +1,3 @@
-
 class SpeakersData {
   List<Speaker> speakers;
 
@@ -28,7 +27,7 @@ class Speaker {
   String speakerImage;
   String speakerInfo;
   String speakerId;
-  String fbUrl;
+  String linkUrl;
   String twitterUrl;
   String linkedinUrl;
   String githubUrl;
@@ -41,7 +40,7 @@ class Speaker {
       this.speakerImage,
       this.speakerInfo,
       this.speakerId,
-      this.fbUrl,
+      this.linkUrl,
       this.twitterUrl,
       this.linkedinUrl,
       this.githubUrl,
@@ -54,7 +53,7 @@ class Speaker {
     speakerImage = json['speaker_image'];
     speakerInfo = json['speaker_info'];
     speakerId = json['speaker_id'];
-    fbUrl = json['fb_url'];
+    linkUrl = json['link_url'];
     twitterUrl = json['twitter_url'];
     linkedinUrl = json['linkedin_url'];
     githubUrl = json['github_url'];
@@ -69,7 +68,7 @@ class Speaker {
     data['speaker_image'] = this.speakerImage;
     data['speaker_info'] = this.speakerInfo;
     data['speaker_id'] = this.speakerId;
-    data['fb_url'] = this.fbUrl;
+    data['link_url'] = this.linkUrl;
     data['twitter_url'] = this.twitterUrl;
     data['linkedin_url'] = this.linkedinUrl;
     data['github_url'] = this.githubUrl;
@@ -81,43 +80,88 @@ class Speaker {
 
 List<Speaker> speakers = [
   Speaker(
+    speakerSession: "Machine Learning for everybody",
+    speakerImage: "https://devfestflorida.org/images/people/faisal_abid.jpg",
+    speakerName: "Faisal Abid",
+    speakerDesc: "Co-Founder, dydx.dev",
+    linkUrl: "https://devfestflorida.org",
+    githubUrl: "https://github.com/FaisalAbid",
+    linkedinUrl: "https://www.linkedin.com/in/faisalabid/",
+    twitterUrl: "https://twitter.com/FaisalAbid",
+  ),
+  Speaker(
+    speakerSession: "Serverless Containers with Knative and Cloud Run",
+    speakerImage:
+        "https://storage.googleapis.com/hoverboard-experimental.appspot.com/images/people/optim/mete_atamel.jpg",
+    speakerName: "Mete Atamel",
+    speakerDesc:
+        "Developer Advocate at Google, focused on helping developers with Google Cloud.",
+    linkUrl: "https://devfestflorida.org",
+    githubUrl: "https://github.com/meteatamel",
+    linkedinUrl: "https://www.linkedin.com/company/devfestflorida/",
+    twitterUrl: "https://twitter.com/meteatamel",
+  ),
+  Speaker(
+    speakerSession: "??",
+    speakerImage: "https://devfestflorida.org/images/people/rody_davis.jpg",
+    speakerName: "Rody Davis",
+    speakerDesc: "Full stack mobile developer, CrossMedia LLC",
+    linkUrl: "https://devfestflorida.org",
+    githubUrl: "https://github.com/AppleEducate",
+    linkedinUrl: "https://www.linkedin.com/in/rodydavis/",
+    twitterUrl: "https://twitter.com/rodydavis",
+  ),
+  Speaker(
+    speakerSession: "??",
+    speakerImage:
+        "https://devfestflorida.org/images/people/loiane_groner.jpg",
+    speakerName: "Loiane Groner",
+    speakerDesc: "Business Analyst and Senior Java/HTML5/JavaScript Developer, Citibank",
+    linkUrl: "https://loiane.com/",
+    githubUrl: "https://github.com/",
+    linkedinUrl: "https://www.linkedin.com/company/devfestflorida/",
+    twitterUrl: "https://twitter.com/loiane",
+  ),
+  Speaker(
+    speakerSession: "??",
+    speakerImage:
+        "https://devfestflorida.org/images/people/dylan_israel.jpg",
+    speakerName: "Dylan Israel",
+    speakerDesc: "Senior Software Engineer, Price Waterhouse Coopers",
+    linkUrl: "https://devfestflorida.org",
+    githubUrl: "https://github.com/PizzaPokerGuy",
+    linkedinUrl: "https://www.linkedin.com/in/dylan310/",
+    twitterUrl: "https://twitter.com/PizzaPokerGuy",
+  ),
+  Speaker(
     speakerSession: "What is new with Android 10 UI",
     speakerImage:
         "https://pbs.twimg.com/profile_images/1123009913679011840/lb-cCjyA_400x400.png",
     speakerName: "Murat Yener",
     speakerDesc: "Developer Advocate for Android at Google.",
-    fbUrl: "https://www.facebook.com/devfestflorida/",
+    linkUrl: "https://devfestflorida.org",
     githubUrl: "https://github.com/",
     linkedinUrl: "https://www.linkedin.com/company/devfestflorida/",
     twitterUrl: "https://twitter.com/yenerm",
   ),
   Speaker(
-    speakerSession: "Machine Learning for everybody",
-    speakerImage:
-        "https://devfestflorida.org/images/people/faisal_abid.jpg",
-    speakerName: "Faisal Abid",
-    speakerDesc: "Google Developer Expert, Entrepreneur, and Engineer.",
-    fbUrl: "https://www.facebook.com/devfestflorida/",
-    githubUrl: "https://github.com/",
-    linkedinUrl: "https://www.linkedin.com/in/faisalabid/",
-    twitterUrl: "https://twitter.com/faisalabid",
-  ),
-  Speaker(
     speakerSession: "Pair Programming is a skill worth developing",
-    speakerImage: "https://pbs.twimg.com/profile_images/1737828590/CassCropped_Web__400x400.jpg",
+    speakerImage:
+        "https://pbs.twimg.com/profile_images/1737828590/CassCropped_Web__400x400.jpg",
     speakerName: "Cassidy Swallow",
     speakerDesc: "Android Developer at Pluralsight",
-    fbUrl: "https://www.facebook.com/devfestflorida/",
+    linkUrl: "https://devfestflorida.org",
     githubUrl: "https://github.com/",
     linkedinUrl: "https://www.linkedin.com/company/devfestflorida/",
     twitterUrl: "https://twitter.com/cantocass",
   ),
   Speaker(
     speakerSession: "Leading Lady: Leading A Team with Happiness",
-    speakerImage: "https://pbs.twimg.com/profile_images/1111460047547174913/B_6NmGd3_400x400.jpg",
+    speakerImage:
+        "https://pbs.twimg.com/profile_images/1111460047547174913/B_6NmGd3_400x400.jpg",
     speakerName: "Jenell Pizarro",
     speakerDesc: "UX Developer and lead at Capco",
-    fbUrl: "https://www.facebook.com/devfestflorida/",
+    linkUrl: "https://devfestflorida.org",
     githubUrl: "https://github.com/",
     linkedinUrl: "https://www.linkedin.com/company/devfestflorida/",
     twitterUrl: "https://twitter.com/nellarro",
@@ -126,19 +170,21 @@ List<Speaker> speakers = [
     speakerSession: "How companies internally innovate",
     speakerImage: "https://i.stack.imgur.com/IHLNO.jpg",
     speakerName: "Vanessa Zabala",
-    speakerDesc: "Director of Impact Development for the Orlando Economic Partnership.",
-    fbUrl: "https://www.facebook.com/devfestflorida/",
+    speakerDesc:
+        "Director of Impact Development for the Orlando Economic Partnership.",
+    linkUrl: "https://devfestflorida.org",
     githubUrl: "https://github.com/",
     linkedinUrl: "https://www.linkedin.com/in/vanessazabala/",
     twitterUrl: "https://twitter.com/devfestfl/",
   ),
   Speaker(
-    speakerSession: "Mind-Reading with Adaptive and Intelligent User Interfaces",
+    speakerSession:
+        "Mind-Reading with Adaptive and Intelligent User Interfaces",
     speakerImage:
         "https://pbs.twimg.com/profile_images/619677584805208064/RwwbnNpi_400x400.jpg",
     speakerName: "David Khourshid",
     speakerDesc: "Software Engineer for Microsoft, a tech author, and speaker.",
-    fbUrl: "https://www.facebook.com/devfestflorida/",
+    linkUrl: "https://devfestflorida.org",
     githubUrl: "https://github.com/",
     linkedinUrl: "https://www.linkedin.com/company/devfestflorida/",
     twitterUrl: "https://twitter.com/davidkpiano",
@@ -149,7 +195,7 @@ List<Speaker> speakers = [
         "https://d33wubrfki0l68.cloudfront.net/a95f98cfbb6e2703edc6db4f87502d93b1851760/927aa/events/2018-seattle/speakers/jen-tong.jpg",
     speakerName: "Jen Tong",
     speakerDesc: "Security Advocate on Google Cloud Platform",
-    fbUrl: "https://www.facebook.com/devfestflorida/",
+    linkUrl: "https://devfestflorida.org",
     githubUrl: "https://github.com/mimming",
     linkedinUrl: "https://www.linkedin.com/company/devfestflorida/",
     twitterUrl: "https://twitter.com/mimmingcodes",
@@ -158,20 +204,11 @@ List<Speaker> speakers = [
     speakerSession: "Why we switch Angular to Flutter?",
     speakerImage: "https://i.stack.imgur.com/IHLNO.jpg",
     speakerName: "João Luiz S. Kestering",
-    speakerDesc: "Software Engineer on Modus Create with post-degree in Software Architecture",
-    fbUrl: "https://www.facebook.com/devfestflorida/",
+    speakerDesc:
+        "Software Engineer on Modus Create with post-degree in Software Architecture",
+    linkUrl: "https://devfestflorida.org",
     githubUrl: "https://github.com/",
     linkedinUrl: "https://www.linkedin.com/company/devfestflorida/",
     twitterUrl: "https://twitter.com/devfestfl/",
-  ),
-  Speaker(
-    speakerSession: "Serverless Containers with Knative and Cloud Run",
-    speakerImage: "https://avatars0.githubusercontent.com/u/1177542?s=400&v=4",
-    speakerName: "Mete Atamel",
-    speakerDesc: "Developer Advocate at Google, focused on helping developers with Google Cloud.",
-    fbUrl: "https://www.facebook.com/devfestflorida/",
-    githubUrl: "https://github.com/meteatamel",
-    linkedinUrl: "https://www.linkedin.com/company/devfestflorida/",
-    twitterUrl: "https://twitter.com/meteatamel",
   ),
 ];
