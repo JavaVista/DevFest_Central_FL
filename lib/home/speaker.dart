@@ -95,7 +95,7 @@ List<Speaker> speakers = [
         "https://storage.googleapis.com/hoverboard-experimental.appspot.com/images/people/optim/mete_atamel.jpg",
     speakerName: "Mete Atamel",
     speakerDesc:
-        "Developer Advocate at Google, focused on helping developers with Google Cloud.",
+        "Developer Advocate, Google",
     linkUrl: "https://devfestflorida.org",
     githubUrl: "https://github.com/meteatamel",
     linkedinUrl: "https://www.linkedin.com/company/devfestflorida/",
@@ -146,7 +146,7 @@ List<Speaker> speakers = [
     speakerSession:
         "Mind-Reading with Adaptive and Intelligent User Interfaces",
     speakerImage:
-        "https://pbs.twimg.com/profile_images/619677584805208064/RwwbnNpi_400x400.jpg",
+        "https://devfestflorida.org/images/people/david_khourshid.jpg",
     speakerName: "David Khourshid",
     speakerDesc: "Software Engineer, Microsoft",
     linkUrl: "https://devfestflorida.org",

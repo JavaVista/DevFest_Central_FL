@@ -144,7 +144,7 @@ List<Session> sessions = [
     speakerImage:
         "https://devfestflorida.org/images/people/faisal_abid.jpg",
     speakerName: "Faisal Abid",
-    speakerDesc: "Google Developer Expert, Entrepreneur, and Engineer.",
+    speakerDesc: "Co-Founder, dydx.dev",
     track: "startup",
   ),
   Session(
@@ -154,9 +154,9 @@ List<Session> sessions = [
     sessionTitle: "Mind-Reading with Adaptive and Intelligent User Interfaces",
     sessionDesc: "What if you could predict user behavior with smart UIs? In this talk, we will explore how we can make adaptive and intelligent user interfaces that learn from how individual users use your apps, and personalize the interface and features just for them, in real-time. With probability-driven statecharts, decision trees, reinforcement learning and more, UIs can be developed in such a way that it automatically adapts to the user's behavior.",
     speakerImage:
-        "https://pbs.twimg.com/profile_images/619677584805208064/RwwbnNpi_400x400.jpg",
+        "https://devfestflorida.org/images/people/david_khourshid.jpg",
     speakerName: "David Khourshid",
-    speakerDesc: "Software Engineer for Microsoft, a tech author, and speaker.",
+    speakerDesc: "Software Engineer, Microsoft",
     track: "web",
   ),
   Session(
@@ -166,9 +166,9 @@ List<Session> sessions = [
     sessionTitle: "Why we switch Angular to Flutter?",
     sessionDesc: "It's a duo talk with Rody Davis about why we switched Angular to Flutter and why we took this decision based on the scope changes that we did during the MVPs for Ampstor.",
     speakerImage:
-        "https://i.stack.imgur.com/IHLNO.jpg",
+        "https://devfestflorida.org/images/people/joao_kestering.jpg",
     speakerName: "João Luiz S. Kestering",
-    speakerDesc: "Software Engineer on Modus Create with post-degree in Software Architecture",
+    speakerDesc: "Senior Software Engineer, Modus Create",
     track: "web",
   ),
    Session(
@@ -178,9 +178,9 @@ List<Session> sessions = [
     sessionTitle: "Leading Lady: Leading A Team with Happiness",
     sessionDesc: "Leading a team of developers is, most assuredly, not a cake walk. But how do we make every moment as sweet as possible? How can you as a leader on your team, whether on the team or as management create an environment that is fruitful for yourself, your direct manager, and your team?\nThis interactive talk will include audience bug fixes (via CodePen), anecdotes, tips, and overall -- happiness. ",
     speakerImage:
-        "https://pbs.twimg.com/profile_images/1111460047547174913/B_6NmGd3_400x400.jpg",
+        "https://devfestflorida.org/images/people/jenell_pizarro.jpg",
     speakerName: "Jenell Pizarro",
-    speakerDesc: "UX Developer and lead at Capco",
+    speakerDesc: "UX Developer, Capco",
     track: "startup",
   ),
   Session(
@@ -190,9 +190,9 @@ List<Session> sessions = [
     sessionTitle: "Pair Programming is a skill worth developing",
     sessionDesc: "Pair Programming usually gets a bad rap from people who have only tried it for a few days while onboarding at a new company and then were left alone from then on. Like many things, there are best practices for pair programming, and concrete skills to learn that will improve the quality of your code and time to completion.",
     speakerImage:
-        "https://pbs.twimg.com/profile_images/1737828590/CassCropped_Web__400x400.jpg",
+        "https://devfestflorida.org/images/people/cassidy_swallow.jpg",
     speakerName: "Cassidy Swallow",
-    speakerDesc: "Android Developer at Pluralsight",
+    speakerDesc: "Android Developer, Pluralsight",
     track: "startup",
   ),
   Session(
@@ -202,9 +202,9 @@ List<Session> sessions = [
     sessionTitle: "Help Keep the Internet Safe with WebAuthn",
     sessionDesc: "Account takeovers continue to be part of major cyber security incidents. Decades of password education haven't helped, and probably made things worse. Email and password lists numbering into the billions have shown up on the dark web. Phishing campaigns have become more targeted and more effective than ever. Sometimes it seems like we're losing the battle.\nThere is hope, though! The WebAuthn protocol provides a stronger, easier way for users to authenticate themselves. It uses secure hardware and asymmetric cryptography to provide a strong addition to passwords, or a complete replacement. Best of all, it's easy to implement, and already supported by services you're using today.\nCome to this talk to learn how WebAuthn works, how you can use it to protect your accounts, and how to add support to your software. WebAuthn is a powerful tool to help keep the Internet safe, but it's up to us to use it.",
     speakerImage:
-        "https://d33wubrfki0l68.cloudfront.net/a95f98cfbb6e2703edc6db4f87502d93b1851760/927aa/events/2018-seattle/speakers/jen-tong.jpg",
+        "https://devfestflorida.org/images/people/jen_tong.jpg",
     speakerName: "Jen Tong",
-    speakerDesc: "Security Advocate on Google Cloud Platform",
+    speakerDesc: "Security Advocate, Google",
     track: "web",
   ),
    Session(
@@ -238,9 +238,9 @@ List<Session> sessions = [
     sessionTitle: "Serverless Containers with Knative and Cloud Run",
     sessionDesc: "When you build a serverless app, you either tie yourself to a cloud provider, or you end up building your own serverless stack. Knative provides a better choice. Open-source Knative extends Kubernetes to provide a set of middleware components for container-based serverless apps that can run anywhere. In this talk, we’ll explore Knative components (serving, eventing, build) and also take a look at its managed cousin Cloud Run on Google Cloud.",
     speakerImage:
-        "https://avatars0.githubusercontent.com/u/1177542?s=400&v=4",
+        "https://storage.googleapis.com/hoverboard-experimental.appspot.com/images/people/optim/mete_atamel.jpg",
     speakerName: "Mete Atamel",
-    speakerDesc: "Developer Advocate at Google, focused on helping developers with Google Cloud.",
+    speakerDesc: "Developer Advocate, Google",
     track: "web",
   ),
   Session(
