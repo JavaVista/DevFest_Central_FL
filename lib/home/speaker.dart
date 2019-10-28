@@ -77,7 +77,7 @@ class Speaker {
     return data;
   }
 }
-
+//*  Speaker hardcoded data
 List<Speaker> speakers = [
   Speaker(
     speakerSession: "Machine Learning for everybody",
@@ -113,10 +113,10 @@ List<Speaker> speakers = [
   ),
   Speaker(
     speakerSession: "??",
-    speakerImage:
-        "https://devfestflorida.org/images/people/loiane_groner.jpg",
+    speakerImage: "https://devfestflorida.org/images/people/loiane_groner.jpg",
     speakerName: "Loiane Groner",
-    speakerDesc: "Business Analyst and Senior Java/HTML5/JavaScript Developer, Citibank",
+    speakerDesc:
+        "Business Analyst and Senior Java/HTML5/JavaScript Developer, Citibank",
     linkUrl: "https://loiane.com/",
     githubUrl: "https://github.com/",
     linkedinUrl: "https://www.linkedin.com/company/devfestflorida/",
@@ -124,14 +124,123 @@ List<Speaker> speakers = [
   ),
   Speaker(
     speakerSession: "??",
-    speakerImage:
-        "https://devfestflorida.org/images/people/dylan_israel.jpg",
+    speakerImage: "https://devfestflorida.org/images/people/dylan_israel.jpg",
     speakerName: "Dylan Israel",
     speakerDesc: "Senior Software Engineer, Price Waterhouse Coopers",
     linkUrl: "https://devfestflorida.org",
     githubUrl: "https://github.com/PizzaPokerGuy",
     linkedinUrl: "https://www.linkedin.com/in/dylan310/",
     twitterUrl: "https://twitter.com/PizzaPokerGuy",
+  ),
+  Speaker(
+    speakerSession: "Why we switch Angular to Flutter?",
+    speakerImage: "https://devfestflorida.org/images/people/joao_kestering.jpg",
+    speakerName: "João Luiz S. Kestering",
+    speakerDesc: "Senior Software Engineer, Modus Create",
+    linkUrl: "https://devfestflorida.org",
+    githubUrl: "https://github.com/joaoluizSK",
+    linkedinUrl: "https://www.linkedin.com/in/joao-luiz-s-kestering-4883a543/",
+    twitterUrl: "https://twitter.com/devfestfl/",
+  ),
+  Speaker(
+    speakerSession:
+        "Mind-Reading with Adaptive and Intelligent User Interfaces",
+    speakerImage:
+        "https://pbs.twimg.com/profile_images/619677584805208064/RwwbnNpi_400x400.jpg",
+    speakerName: "David Khourshid",
+    speakerDesc: "Software Engineer, Microsoft",
+    linkUrl: "https://devfestflorida.org",
+    githubUrl: "https://github.com/davidkpiano",
+    linkedinUrl: "https://www.linkedin.com/in/davidkpiano/",
+    twitterUrl: "https://twitter.com/DavidKPiano",
+  ),
+  Speaker(
+    speakerSession: "??",
+    speakerImage:
+        "https://devfestflorida.org/images/people/sivamuthu_kumar.jpg",
+    speakerName: "Sivamuthu Kumar",
+    speakerDesc: "Software architect, Computer Enterprises Inc",
+    linkUrl: "https://devfestflorida.org",
+    githubUrl: "https://github.com/ksivamuthu",
+    linkedinUrl: "https://www.linkedin.com/in/ksivamuthu/",
+    twitterUrl: "https://twitter.com/ksivamuthu",
+  ),
+  Speaker(
+    speakerSession: "??",
+    speakerImage:
+        "https://devfestflorida.org/images/people/kyle_paul.jpg",
+    speakerName: "Kyle Paul",
+    speakerDesc: "Software architect, Google",
+    linkUrl: "https://devfestflorida.org",
+    githubUrl: "https://github.com/neojato",
+    linkedinUrl: "https://www.linkedin.com/in/kylepaul/",
+    twitterUrl: "https://twitter.com/kpaul86",
+  ),
+    Speaker(
+    speakerSession: "Leading Lady: Leading A Team with Happiness",
+    speakerImage:
+        "https://devfestflorida.org/images/people/jenell_pizarro.jpg",
+    speakerName: "Jenell Pizarro",
+    speakerDesc: "UX Developer, Capco",
+    linkUrl: "https://devfestflorida.org",
+    githubUrl: "https://github.com/nellarro",
+    linkedinUrl: "https://www.linkedin.com/in/jenell-pizarro/",
+    twitterUrl: "https://twitter.com/nellarro",
+  ),
+  Speaker(
+    speakerSession: "??",
+    speakerImage:
+        "https://devfestflorida.org/images/people/zach_sais.jpg",
+    speakerName: "Zach Sais",
+    speakerDesc: "Customer Engineer, Google",
+    linkUrl: "https://devfestflorida.org",
+    githubUrl: "https://github.com/zsais",
+    linkedinUrl: "https://www.linkedin.com/in/zachsais/",
+    twitterUrl: "https://twitter.com/devfestfl/",
+  ),
+    Speaker(
+    speakerSession: "Pair Programming is a skill worth developing",
+    speakerImage:
+        "https://devfestflorida.org/images/people/cassidy_swallow.jpg",
+    speakerName: "Cassidy Swallow",
+    speakerDesc: "Android Developer, Pluralsight",
+    linkUrl: "https://devfestflorida.org",
+    githubUrl: "https://www.github.com/cantocass",
+    linkedinUrl: "https://www.linkedin.com/in/cassidyswallow",
+    twitterUrl: "https://twitter.com/CantoCass",
+  ),
+    Speaker(
+    speakerSession: "Help Keep the Internet Safe with WebAuthn",
+    speakerImage:
+        "https://devfestflorida.org/images/people/jen_tong.jpg",
+    speakerName: "Jen Tong",
+    speakerDesc: "Security Advocate, Google",
+    linkUrl: "https://devfestflorida.org",
+    githubUrl: "https://github.com/mimming",
+    linkedinUrl: "https://www.linkedin.com/in/mimming/",
+    twitterUrl: "https://twitter.com/MimmingCodes",
+  ),
+   Speaker(
+    speakerSession: "??",
+    speakerImage:
+        "https://devfestflorida.org/images/people/michael_rosario.jpg",
+    speakerName: "Michael Rosario",
+    speakerDesc: "Senior software engineer, Design Interactive",
+    linkUrl: "https://devfestflorida.org",
+    githubUrl: "https://github.com/michaelprosario",
+    linkedinUrl: "https://www.linkedin.com/in/michaelprosario",
+    twitterUrl: "https://www.twitter.com/michaelrosario",
+  ),
+   Speaker(
+    speakerSession: "??",
+    speakerImage:
+        "https://devfestflorida.org/images/people/lee_warrick.jpg",
+    speakerName: "Lee Warrick",
+    speakerDesc: "Front-end developer, Realtruck.com",
+    linkUrl: "https://devfestflorida.org",
+    githubUrl: "https://github.com/",
+    linkedinUrl: "https://www.linkedin.com/in/lee-warrick",
+    twitterUrl: "https://twitter.com/leewarrickjr",
   ),
   Speaker(
     speakerSession: "What is new with Android 10 UI",
@@ -145,28 +254,6 @@ List<Speaker> speakers = [
     twitterUrl: "https://twitter.com/yenerm",
   ),
   Speaker(
-    speakerSession: "Pair Programming is a skill worth developing",
-    speakerImage:
-        "https://pbs.twimg.com/profile_images/1737828590/CassCropped_Web__400x400.jpg",
-    speakerName: "Cassidy Swallow",
-    speakerDesc: "Android Developer at Pluralsight",
-    linkUrl: "https://devfestflorida.org",
-    githubUrl: "https://github.com/",
-    linkedinUrl: "https://www.linkedin.com/company/devfestflorida/",
-    twitterUrl: "https://twitter.com/cantocass",
-  ),
-  Speaker(
-    speakerSession: "Leading Lady: Leading A Team with Happiness",
-    speakerImage:
-        "https://pbs.twimg.com/profile_images/1111460047547174913/B_6NmGd3_400x400.jpg",
-    speakerName: "Jenell Pizarro",
-    speakerDesc: "UX Developer and lead at Capco",
-    linkUrl: "https://devfestflorida.org",
-    githubUrl: "https://github.com/",
-    linkedinUrl: "https://www.linkedin.com/company/devfestflorida/",
-    twitterUrl: "https://twitter.com/nellarro",
-  ),
-  Speaker(
     speakerSession: "How companies internally innovate",
     speakerImage: "https://i.stack.imgur.com/IHLNO.jpg",
     speakerName: "Vanessa Zabala",
@@ -175,40 +262,6 @@ List<Speaker> speakers = [
     linkUrl: "https://devfestflorida.org",
     githubUrl: "https://github.com/",
     linkedinUrl: "https://www.linkedin.com/in/vanessazabala/",
-    twitterUrl: "https://twitter.com/devfestfl/",
-  ),
-  Speaker(
-    speakerSession:
-        "Mind-Reading with Adaptive and Intelligent User Interfaces",
-    speakerImage:
-        "https://pbs.twimg.com/profile_images/619677584805208064/RwwbnNpi_400x400.jpg",
-    speakerName: "David Khourshid",
-    speakerDesc: "Software Engineer for Microsoft, a tech author, and speaker.",
-    linkUrl: "https://devfestflorida.org",
-    githubUrl: "https://github.com/",
-    linkedinUrl: "https://www.linkedin.com/company/devfestflorida/",
-    twitterUrl: "https://twitter.com/davidkpiano",
-  ),
-  Speaker(
-    speakerSession: "Help Keep the Internet Safe with WebAuthn",
-    speakerImage:
-        "https://d33wubrfki0l68.cloudfront.net/a95f98cfbb6e2703edc6db4f87502d93b1851760/927aa/events/2018-seattle/speakers/jen-tong.jpg",
-    speakerName: "Jen Tong",
-    speakerDesc: "Security Advocate on Google Cloud Platform",
-    linkUrl: "https://devfestflorida.org",
-    githubUrl: "https://github.com/mimming",
-    linkedinUrl: "https://www.linkedin.com/company/devfestflorida/",
-    twitterUrl: "https://twitter.com/mimmingcodes",
-  ),
-  Speaker(
-    speakerSession: "Why we switch Angular to Flutter?",
-    speakerImage: "https://i.stack.imgur.com/IHLNO.jpg",
-    speakerName: "João Luiz S. Kestering",
-    speakerDesc:
-        "Software Engineer on Modus Create with post-degree in Software Architecture",
-    linkUrl: "https://devfestflorida.org",
-    githubUrl: "https://github.com/",
-    linkedinUrl: "https://www.linkedin.com/company/devfestflorida/",
     twitterUrl: "https://twitter.com/devfestfl/",
   ),
 ];
