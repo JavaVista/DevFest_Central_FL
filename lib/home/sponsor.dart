@@ -85,4 +85,33 @@ List<Sponsor> sponsors = [
     desc: "Silver Sponsor",
     url: 'https://www.capgemini.com/',
   ),
+  Sponsor(
+    name: "Flutter Developers Group",
+    image:
+        "https://devfestflorida.org/images/logos/flutterdevs.jpg",
+    desc: "Community Partner",
+    url: 'https://www.meetup.com/flutterdevs/',
+  ),
+  Sponsor(
+    name: "Thunder Nerds",
+    image:
+    
+        "http://thundernerdshoo.com/wp-content/uploads/2016/05/thunder-nerds-rule.png",
+    desc: "Community Partner",
+    url: 'https://www.thundernerds.io/',
+  ),
+  Sponsor(
+    name: "Google Developers",
+    image:
+        "https://www.dicoding.com/blog/wp-content/uploads/2018/11/Google-Developer-Challenge.png",
+    desc: "Community Partner",
+    url: 'https://developers.google.com/',
+  ),
+  Sponsor(
+    name: "Orlando Devs",
+    image:
+        "https://devfestflorida.org/images/logos/odevs.png",
+    desc: "Community Partner",
+    url: 'https://orlandodevs.com/',
+  ),
 ];
