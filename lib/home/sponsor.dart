@@ -1,18 +1,44 @@
+class SponsorsData {
+  List<Sponsor> sponsors;
+
+  SponsorsData({this.sponsors});
+
+  SponsorsData.fromJson(Map<String, dynamic> json) {
+    if (json['sponsors'] != null) {
+      sponsors = new List<Sponsor>();
+      json['sponsors'].forEach((v) {
+        sponsors.add(Sponsor.fromJson(v));
+      });
+    }
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    if (this.sponsors != null) {
+      data['sponsors'] = this.sponsors.map((v) => v.toJson()).toList();
+    }
+    return data;
+  }
+}
+
 class Sponsor {
   String name;
   String image;
   String desc;
   String url;
-  String logo;
 
-  Sponsor({this.name, this.image, this.desc, this.url, this.logo});
+  Sponsor({
+    this.name,
+    this.image,
+    this.desc,
+    this.url,
+  });
 
   Sponsor.fromJson(Map<String, dynamic> json) {
     name = json['name'];
     image = json['image'];
     desc = json['desc'];
     url = json['url'];
-    logo = json['logo'];
   }
 
   Map<String, dynamic> toJson() {
@@ -21,7 +47,42 @@ class Sponsor {
     data['image'] = this.image;
     data['desc'] = this.desc;
     data['url'] = this.url;
-    data['logo'] = this.logo;
     return data;
   }
 }
+
+List<Sponsor> sponsors = [
+  Sponsor(
+    name: "Google Developer Groups",
+    image:
+        "https://developers.google.com/community/gdg/images/logo-lockup-gdg-horizontal.png",
+    desc: "Platinum Sponsor",
+    url: 'https://developers.google.com/community/gdg/',
+  ),
+  Sponsor(
+    name: "Neoware Studios",
+    image: "https://devfestflorida.org/images/logos/STUDIOSLOGO_WITHTM.png",
+    desc: "Platinum Sponsor",
+    url: 'https://www.neowarestudios.com/',
+  ),
+  Sponsor(
+    name: "Women Techmakers",
+    image:
+        "https://media.licdn.com/dms/image/C510BAQETwAo-7dXL0A/company-logo_400_400/0?e=1580342400&v=beta&t=3IWqGcAajpul9FA8fozX6PTBQcRJra9TAWutiuSFWow",
+    desc: "Copper Sponsor",
+    url: 'https://www.womentechmakers.com/',
+  ),
+  Sponsor(
+    name: "DataPsy",
+    image: "https://devfestflorida.org/images/logos/datapsy.png",
+    desc: "Copper Sponsor",
+    url: 'http://www.datapsy.com/',
+  ),
+  Sponsor(
+    name: "Capgemini",
+    image:
+        "https://www.capgemini.com/wp-content/uploads/2017/10/capgemini_logo_hi-resolution.jpg?w=300",
+    desc: "Silver Sponsor",
+    url: 'https://www.capgemini.com/',
+  ),
+];

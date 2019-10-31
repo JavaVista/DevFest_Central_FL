@@ -3,7 +3,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class Devfest {
   static const String app_name = "Devfestcentfl";
-  static const String app_version = "Version 1.0.0";
+  static const String app_version = "Version 1.1.0";
   static const int app_version_code = 1;
   static const String app_color = "#ffd7167";
   static Color primaryAppColor = Colors.white;
@@ -15,7 +15,7 @@ class Devfest {
 
   static const String banner_light = "assets/images/banner_light.png";
   static const String banner_dark = "assets/images/banner_dark.png";
-  
+
 
   //*  Texts
   static const String welcomeText = "Welcome to GDG DevFest Florida \n🌴🏖";
