@@ -125,7 +125,7 @@ List<Speaker> speakers = [
     speakerSession: "??",
     speakerImage: "https://devfestflorida.org/images/people/dylan_israel.jpg",
     speakerName: "Dylan Israel",
-    speakerDesc: "Senior Software Engineer, Price Waterhouse Coopers",
+    speakerDesc: "Senior Software Engineer, PricewaterhouseCoopers",
     linkUrl: "https://devfestflorida.org",
     githubUrl: "https://github.com/PizzaPokerGuy",
     linkedinUrl: "https://www.linkedin.com/in/dylan310/",
