@@ -48,7 +48,7 @@ class SessionList extends StatelessWidget {
                   ]),
             ),
             leading: Hero(
-              tag: allSessions[index].speakerImage,
+              tag: allSessions[index].sessionId,
               child: CircleAvatar(
                 radius: 30,
                 backgroundImage:
