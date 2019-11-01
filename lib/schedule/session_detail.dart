@@ -108,7 +108,7 @@ class SessionDetail extends StatelessWidget {
               ),
               Text(
                 session.sessionDesc,
-                textAlign: TextAlign.center,
+                textAlign: TextAlign.left,
                 style:
                     Theme.of(context).textTheme.caption.copyWith(fontSize: 13),
               ),

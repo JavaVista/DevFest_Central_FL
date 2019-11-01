@@ -77,6 +77,7 @@ class Speaker {
     return data;
   }
 }
+
 //*  Speaker hardcoded data
 List<Speaker> speakers = [
   Speaker(
@@ -94,15 +95,14 @@ List<Speaker> speakers = [
     speakerImage:
         "https://storage.googleapis.com/hoverboard-experimental.appspot.com/images/people/optim/mete_atamel.jpg",
     speakerName: "Mete Atamel",
-    speakerDesc:
-        "Developer Advocate, Google",
+    speakerDesc: "Developer Advocate, Google",
     linkUrl: "https://devfestflorida.org",
     githubUrl: "https://github.com/meteatamel",
     linkedinUrl: "https://www.linkedin.com/company/devfestflorida/",
     twitterUrl: "https://twitter.com/meteatamel",
   ),
   Speaker(
-    speakerSession: "??",
+    speakerSession: "A Startup story - Moving from Angular to Flutter",
     speakerImage: "https://devfestflorida.org/images/people/rody_davis.jpg",
     speakerName: "Rody Davis",
     speakerDesc: "Full stack mobile developer, CrossMedia LLC",
@@ -112,11 +112,10 @@ List<Speaker> speakers = [
     twitterUrl: "https://twitter.com/rodydavis",
   ),
   Speaker(
-    speakerSession: "??",
+    speakerSession: "Creating real time applications with Angular and Firebase",
     speakerImage: "https://devfestflorida.org/images/people/loiane_groner.jpg",
     speakerName: "Loiane Groner",
-    speakerDesc:
-        "Business Analyst and Senior Java/HTML5/JavaScript Developer, Citibank",
+    speakerDesc: "Business Analyst and Senior Developer, Citibank",
     linkUrl: "https://loiane.com/",
     githubUrl: "https://github.com/",
     linkedinUrl: "https://www.linkedin.com/company/devfestflorida/",
@@ -133,7 +132,7 @@ List<Speaker> speakers = [
     twitterUrl: "https://twitter.com/PizzaPokerGuy",
   ),
   Speaker(
-    speakerSession: "Why we switch Angular to Flutter?",
+    speakerSession: "A Startup story - Moving from Angular to Flutter",
     speakerImage: "https://devfestflorida.org/images/people/joao_kestering.jpg",
     speakerName: "João Luiz S. Kestering",
     speakerDesc: "Senior Software Engineer, Modus Create",
@@ -155,7 +154,7 @@ List<Speaker> speakers = [
     twitterUrl: "https://twitter.com/DavidKPiano",
   ),
   Speaker(
-    speakerSession: "??",
+    speakerSession: "Cloud IoT - Bringing Machine Learning to the Edge",
     speakerImage:
         "https://devfestflorida.org/images/people/sivamuthu_kumar.jpg",
     speakerName: "Sivamuthu Kumar",
@@ -166,9 +165,8 @@ List<Speaker> speakers = [
     twitterUrl: "https://twitter.com/ksivamuthu",
   ),
   Speaker(
-    speakerSession: "??",
-    speakerImage:
-        "https://devfestflorida.org/images/people/kyle_paul.jpg",
+    speakerSession: "Are you prepared for the next type of search?",
+    speakerImage: "https://devfestflorida.org/images/people/kyle_paul.jpg",
     speakerName: "Kyle Paul",
     speakerDesc: "Software architect, Google",
     linkUrl: "https://devfestflorida.org",
@@ -176,10 +174,9 @@ List<Speaker> speakers = [
     linkedinUrl: "https://www.linkedin.com/in/kylepaul/",
     twitterUrl: "https://twitter.com/kpaul86",
   ),
-    Speaker(
+  Speaker(
     speakerSession: "Leading Lady: Leading A Team with Happiness",
-    speakerImage:
-        "https://devfestflorida.org/images/people/jenell_pizarro.jpg",
+    speakerImage: "https://devfestflorida.org/images/people/jenell_pizarro.jpg",
     speakerName: "Jenell Pizarro",
     speakerDesc: "UX Developer, Capco",
     linkUrl: "https://devfestflorida.org",
@@ -188,9 +185,9 @@ List<Speaker> speakers = [
     twitterUrl: "https://twitter.com/nellarro",
   ),
   Speaker(
-    speakerSession: "??",
-    speakerImage:
-        "https://devfestflorida.org/images/people/zach_sais.jpg",
+    speakerSession:
+        "Securing Sensitive Data with Google Cloud's Data Loss Prevention API",
+    speakerImage: "https://devfestflorida.org/images/people/zach_sais.jpg",
     speakerName: "Zach Sais",
     speakerDesc: "Customer Engineer, Google",
     linkUrl: "https://devfestflorida.org",
@@ -198,7 +195,7 @@ List<Speaker> speakers = [
     linkedinUrl: "https://www.linkedin.com/in/zachsais/",
     twitterUrl: "https://twitter.com/devfestfl/",
   ),
-    Speaker(
+  Speaker(
     speakerSession: "Pair Programming is a skill worth developing",
     speakerImage:
         "https://devfestflorida.org/images/people/cassidy_swallow.jpg",
@@ -209,10 +206,9 @@ List<Speaker> speakers = [
     linkedinUrl: "https://www.linkedin.com/in/cassidyswallow",
     twitterUrl: "https://twitter.com/CantoCass",
   ),
-    Speaker(
+  Speaker(
     speakerSession: "Help Keep the Internet Safe with WebAuthn",
-    speakerImage:
-        "https://devfestflorida.org/images/people/jen_tong.jpg",
+    speakerImage: "https://devfestflorida.org/images/people/jen_tong.jpg",
     speakerName: "Jen Tong",
     speakerDesc: "Security Advocate, Google",
     linkUrl: "https://devfestflorida.org",
@@ -220,8 +216,8 @@ List<Speaker> speakers = [
     linkedinUrl: "https://www.linkedin.com/in/mimming/",
     twitterUrl: "https://twitter.com/MimmingCodes",
   ),
-   Speaker(
-    speakerSession: "??",
+  Speaker(
+    speakerSession: "Getting Started with ARCore",
     speakerImage:
         "https://devfestflorida.org/images/people/michael_rosario.jpg",
     speakerName: "Michael Rosario",
@@ -231,10 +227,10 @@ List<Speaker> speakers = [
     linkedinUrl: "https://www.linkedin.com/in/michaelprosario",
     twitterUrl: "https://www.twitter.com/michaelrosario",
   ),
-   Speaker(
-    speakerSession: "??",
-    speakerImage:
-        "https://devfestflorida.org/images/people/lee_warrick.jpg",
+  Speaker(
+    speakerSession:
+        "Demistytifying PWAs: How to Create Native-like Apps with JavaScript",
+    speakerImage: "https://devfestflorida.org/images/people/lee_warrick.jpg",
     speakerName: "Lee Warrick",
     speakerDesc: "Front-end developer, Realtruck.com",
     linkUrl: "https://devfestflorida.org",
