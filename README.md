@@ -15,7 +15,7 @@ A Flutter App developed for the most MAGICAL 🎆 developers conference in Flori
 ### <p align="center">Conference information 🍊</p>
 
 
-DevFest Florida is a yearly Google Developers conference taking place on Central Florida. Run by GDG Sun Coast, GDG Space Coast and GDG Central Florida and covering Web, Mobile, Startup, IoT, VR/AR, Cloud, Machine Learning and much more. Join us and the Local Developer Experts, Googlers and Startups to learn about the latest and greatest on your favorite technology stacks and business processes. https://devfestflorida.org/
+DevFest Florida is a yearly Google Developers conference taking place on Central Florida. Run by GDG Sun Coast, GDG Space Coast and GDG Central Florida and covering Web, Mobile, Startup, IoT, VR/AR, Cloud, Machine Learning and much more. Join us and the Local Developer Experts, Googlers and Startups to learn about the latest and greatest on your favorite technology stacks and business processes.
 
 The event is for the tech community and run by volunteers. Our goal is to raise awareness, and create actionable learning to ensure the success of our tech community.
 
@@ -27,7 +27,7 @@ The event is for the tech community and run by volunteers. Our goal is to raise 
 
 #DevFest #DevFestFL
 
-We hope to see you there.  🙋‍♀️🙋🏿‍♂️ → Get your ticket today at https://devfestflorida.eventbrite.com
+We hope to see you there.  🙋‍♀️🙋🏿‍♂️ → Get your ticket today at 👉 devfestflorida.org
 
 ## Getting Started
 
