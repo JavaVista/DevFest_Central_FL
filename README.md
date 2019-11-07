@@ -6,13 +6,9 @@ A Flutter App developed for the most MAGICAL 🎆 developers conference in Flori
 
 <center>
 
-|              Dark Theme               |               Light Theme             |             Dark Theme               |               Light Theme             |
+|              Light/Dark Theme               |               Light/Dark Theme             |             Light/Dark Theme               |               Light/Dark Theme             |
 |   :--------------------------------:  |   :---------------------------------: |   :--------------------------------:  |   :---------------------------------: |
-|   ![](./assets/images/dark_home.png)  | ![](./assets/images/light_home.png) |   ![](./assets/images/dark_team.png)  |   ![](./assets/images/light_team.png) |
-
-|             Dark Theme               |               Light Theme             |
-|   :--------------------------------:  |   :---------------------------------: |
-|   ![](./assets/images/dark_map.png)   |   ![](./assets/images/light_map.png) |
+|   ![](./assets/images/screenshot_1v2.png)  | ![](./assets/images/screenshot_2v2.png) |   ![](./assets/images/screenshot_3v2.png)  |   ![](./assets/images/screenshot_4v2.png) |
 
 </center>
 
