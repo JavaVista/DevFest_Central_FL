@@ -1,4 +1,4 @@
-# The GDG DevFest Florida App 🌴🏖
+# The GDG DevFest Florida App 🌴🏖️
 
 A Flutter App developed for the most MAGICAL 🎆 developers conference in Florida. This app keeps you tied in to the event with the schedule, speaker information, and location information.
 
