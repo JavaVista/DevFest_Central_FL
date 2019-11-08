@@ -23,18 +23,21 @@ class _MapPageState extends State<MapPage> {
     super.initState();
   }
 
-  final CameraPosition _kGooglePlex = CameraPosition(
+  final CameraPosition _neowareStudios = CameraPosition(
     target: eventLocation,
-    zoom: 14.4746,
+    zoom: 14,
   );
 
   Set<Marker> _createMarker() {
     return <Marker>[
       Marker(
-          markerId: MarkerId("marker_1"),
+          markerId: MarkerId("neoware_marker_1"),
           position: eventLocation,
           icon: BitmapDescriptor.defaultMarkerWithHue(
             BitmapDescriptor.hueOrange,
+          ),
+          infoWindow: InfoWindow(
+            title: 'DevFest 2019 🌴🏖️ (Neoware Studios)',
           )),
     ].toSet();
   }
@@ -72,7 +75,7 @@ class _MapPageState extends State<MapPage> {
               myLocationButtonEnabled: true,
               myLocationEnabled: true,
               markers: _createMarker(),
-              initialCameraPosition: _kGooglePlex,
+              initialCameraPosition: _neowareStudios,
               onMapCreated: (GoogleMapController controller) {
                 _controller = controller;
                 isMapCreated = true;
@@ -94,13 +97,15 @@ class _MapPageState extends State<MapPage> {
                           TextSpan(
                               text:
                                   "1485 Oviedo Mall Boulevard, Oviedo, FL 32765",
-                              style: Theme.of(context).textTheme.subtitle.copyWith(
-                              fontSize: 14,
-                              fontWeight: FontWeight.normal,
-                              color: Tools.multiColors[Random().nextInt(4)],
-                            )
-
-                              ),
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .subtitle
+                                  .copyWith(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.normal,
+                                    color:
+                                        Tools.multiColors[Random().nextInt(4)],
+                                  )),
                         ]),
                   )),
             )
