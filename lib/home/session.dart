@@ -149,7 +149,7 @@ List<Session> sessions = [
     sessionTitle: "How companies internally innovate",
     sessionDesc:
         "Vanessa Zabala is the Director of Impact Development for the Orlando Economic Partnership, leading the organization’s internal intrapreneurship initiatives and deploying innovation capacity programs to external stakeholders.\n\nCurrently, she is an adjunct professor at Rollins College teaching intrapreneurship. As an active member in the community, she is on the board of Rebuild Globally, West Lakes Partnership, and the Chair of conferences for the Organization of Women in International Trade.",
-    speakerImage: "https://i.stack.imgur.com/IHLNO.jpg",
+    speakerImage: "https://devfestflorida.org/images/people/vanessa_zabala.jpg", //"https://i.stack.imgur.com/IHLNO.jpg",
     speakerName: "Vanessa Zabala",
     speakerDesc:
         "Director of Impact Development for the Orlando Economic Partnership.",

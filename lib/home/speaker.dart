@@ -251,7 +251,7 @@ List<Speaker> speakers = [
   ),
   Speaker(
     speakerSession: "How companies internally innovate",
-    speakerImage: "https://i.stack.imgur.com/IHLNO.jpg",
+    speakerImage: "https://devfestflorida.org/images/people/vanessa_zabala.jpg", //"https://i.stack.imgur.com/IHLNO.jpg",
     speakerName: "Vanessa Zabala",
     speakerDesc:
         "Director of Impact Development for the Orlando Economic Partnership.",
