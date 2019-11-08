@@ -86,6 +86,13 @@ List<Sponsor> sponsors = [
     url: 'https://www.capgemini.com/',
   ),
   Sponsor(
+    name: "TEKsystems",
+    image:
+        "https://www.premiertalentpartners.com/wp-content/uploads/2018/11/teksystems-logo.jpg",
+    desc: "Silver Sponsor",
+    url: 'https://www.teksystems.com/',
+  ),
+  Sponsor(
     name: "Flutter Developers Group",
     image:
         "https://devfestflorida.org/images/logos/flutterdevs.jpg",
@@ -95,7 +102,7 @@ List<Sponsor> sponsors = [
   Sponsor(
     name: "Thunder Nerds",
     image:
-    
+
         "http://thundernerdshoo.com/wp-content/uploads/2016/05/thunder-nerds-rule.png",
     desc: "Community Partner",
     url: 'https://www.thundernerds.io/',
@@ -113,5 +120,12 @@ List<Sponsor> sponsors = [
         "https://devfestflorida.org/images/logos/odevs.png",
     desc: "Community Partner",
     url: 'https://orlandodevs.com/',
+  ),
+  Sponsor(
+    name: "JetBrains",
+    image:
+        "https://pbs.twimg.com/profile_images/675318355075682304/U5Dp5_C2_400x400.png",
+    desc: "Community Partner",
+    url: 'https://www.jetbrains.com/',
   ),
 ];
