@@ -38,6 +38,7 @@ class _MapPageState extends State<MapPage> {
           ),
           infoWindow: InfoWindow(
             title: 'DevFest 2019 🌴🏖️ (Neoware Studios)',
+            snippet: "1485 Oviedo Mall Boulevard, Oviedo, FL 32765",
           )),
     ].toSet();
   }

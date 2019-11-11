@@ -3,7 +3,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class Devfest {
   static const String app_name = "Devfestcentfl";
-  static const String app_version = "Version 1.1.0";
+  static const String app_version = "Version 1.2.0";
   static const int app_version_code = 1;
   static const String app_color = "#ffd7167";
   static Color primaryAppColor = Colors.white;
@@ -18,7 +18,7 @@ class Devfest {
 
 
   //*  Texts
-  static const String welcomeText = "Welcome to GDG DevFest Florida \n🌴🏖";
+  static const String welcomeText = "Welcome to GDG DevFest Florida \n🌴🏖️";
   static const String subtitleText = "The most MAGICAL developers conference";
   static const String descText =
       '''DevFests are community-led, developer events hosted by GDG chapters around the globe focused on community building & learning about Google’s technologies. Each DevFest is inspired by and uniquely tailored to the needs of the developer community and region that hosts it.''';
