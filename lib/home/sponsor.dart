@@ -66,19 +66,6 @@ List<Sponsor> sponsors = [
     url: 'https://www.neowarestudios.com/',
   ),
   Sponsor(
-    name: "Women Techmakers",
-    image:
-        "https://media.licdn.com/dms/image/C510BAQETwAo-7dXL0A/company-logo_400_400/0?e=1580342400&v=beta&t=3IWqGcAajpul9FA8fozX6PTBQcRJra9TAWutiuSFWow",
-    desc: "Copper Sponsor",
-    url: 'https://www.womentechmakers.com/',
-  ),
-  Sponsor(
-    name: "DataPsy",
-    image: "https://devfestflorida.org/images/logos/datapsy.png",
-    desc: "Copper Sponsor",
-    url: 'http://www.datapsy.com/',
-  ),
-  Sponsor(
     name: "Capgemini",
     image:
         "https://www.capgemini.com/wp-content/uploads/2017/10/capgemini_logo_hi-resolution.jpg?w=300",
@@ -93,16 +80,33 @@ List<Sponsor> sponsors = [
     url: 'https://www.teksystems.com/',
   ),
   Sponsor(
-    name: "Flutter Developers Group",
+    name: "Women Techmakers",
     image:
-        "https://devfestflorida.org/images/logos/flutterdevs.jpg",
+        "https://media.licdn.com/dms/image/C510BAQETwAo-7dXL0A/company-logo_400_400/0?e=1580342400&v=beta&t=3IWqGcAajpul9FA8fozX6PTBQcRJra9TAWutiuSFWow",
+    desc: "Copper Sponsor",
+    url: 'https://www.womentechmakers.com/',
+  ),
+  Sponsor(
+    name: "DataPsy",
+    image: "https://devfestflorida.org/images/logos/datapsy.png",
+    desc: "Copper Sponsor",
+    url: 'http://www.datapsy.com/',
+  ),
+  Sponsor(
+    name: "Atlantic.Net",
+    image: "https://devfestflorida.org/images/logos/atlantic-net.png",
+    desc: "Copper Sponsor",
+    url: 'https://www.atlantic.net/',
+  ),
+  Sponsor(
+    name: "Flutter Developers Group",
+    image: "https://devfestflorida.org/images/logos/flutterdevs.jpg",
     desc: "Community Partner",
     url: 'https://www.meetup.com/flutterdevs/',
   ),
   Sponsor(
     name: "Thunder Nerds",
     image:
-
         "http://thundernerdshoo.com/wp-content/uploads/2016/05/thunder-nerds-rule.png",
     desc: "Community Partner",
     url: 'https://www.thundernerds.io/',
@@ -116,8 +120,7 @@ List<Sponsor> sponsors = [
   ),
   Sponsor(
     name: "Orlando Devs",
-    image:
-        "https://devfestflorida.org/images/logos/odevs.png",
+    image: "https://devfestflorida.org/images/logos/odevs.png",
     desc: "Community Partner",
     url: 'https://orlandodevs.com/',
   ),
