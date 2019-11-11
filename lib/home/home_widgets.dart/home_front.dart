@@ -77,8 +77,7 @@ class HomeFront extends StatelessWidget {
             IconButton(
               icon: Icon(FontAwesomeIcons.meetup),
               onPressed: () async {
-                await _launchURL(
-                    "https://www.meetup.com/GDG-Central-Florida/events/253755546/");
+                await _launchURL("https://www.meetup.com/GDG-Central-Florida/");
               },
             ),
             IconButton(
@@ -106,14 +105,15 @@ class HomeFront extends StatelessWidget {
             icon: Icons.schedule,
             color: Colors.red,
             title: Devfest.schedule_text,
-            onPressed: () => Navigator.pushNamed(context, SchedulePage.routeName),
+            onPressed: () =>
+                Navigator.pushNamed(context, SchedulePage.routeName),
           ),
-           ActionCard(
+          ActionCard(
             icon: Icons.person,
             color: Colors.green,
             title: Devfest.speakers_text,
-            onPressed: () => Navigator.pushNamed(context, SpeakersPage.routeName),
-
+            onPressed: () =>
+                Navigator.pushNamed(context, SpeakersPage.routeName),
           ),
           ActionCard(
             icon: Icons.people,
@@ -125,7 +125,8 @@ class HomeFront extends StatelessWidget {
             icon: Icons.attach_money,
             color: Colors.purple,
             title: Devfest.sponsor_text,
-            onPressed: () => Navigator.pushNamed(context, SponsorPage.routeName),
+            onPressed: () =>
+                Navigator.pushNamed(context, SponsorPage.routeName),
           ),
           ActionCard(
             icon: Icons.question_answer,
@@ -230,8 +231,8 @@ class ActionCard extends StatelessWidget {
             Text(
               title,
               style: Theme.of(context).textTheme.title.copyWith(
-                fontSize: 14,
-              ),
+                    fontSize: 14,
+                  ),
             )
           ],
         ),
