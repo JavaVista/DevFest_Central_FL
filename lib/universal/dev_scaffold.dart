@@ -39,8 +39,7 @@ class DevScaffold extends StatelessWidget {
               ),
               IconButton(
                 onPressed: () => Share.share(
-                    //TODO:Change URL link
-                    "Download the DevFest Florida App and share with your tech friends.\nPlayStore - https://devfestflorida.org/"),
+                    "Download the DevFest Florida App and share with your tech friends.\nPlayStore - https://play.google.com/store/apps/details?id=org.devfestflorida.devfestcenfl"),
                 icon: Icon(
                   Icons.share,
                   size: 25,

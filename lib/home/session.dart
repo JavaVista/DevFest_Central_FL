@@ -127,7 +127,7 @@ List<Session> sessions = [
     speakerName: "Vanessa Zabala",
     speakerDesc:
         "Director of Impact Development for the Orlando Economic Partnership.",
-    track: "other",
+    track: "startup",
   ),
   // 11:00 AM - 11:50 AM
    Session(
@@ -162,7 +162,7 @@ List<Session> sessions = [
     sessionTitle: "Startups Do's and Don'ts",
     sessionDesc:
         "Panel: Startups Do's and Don'ts.\n\nDimitar Jovevski, Ph.D. - Founder pixel.mk and Patrick VanDusen - Founder Viewstub",
-    speakerImage: "https://i.stack.imgur.com/IHLNO.jpg",
+    speakerImage: "https://devfestflorida.org/images/people/dimitar_jovevski.jpg",
     speakerName: "Dimitar Jovevski, Ph.D. and Patrick VanDusen",
     speakerDesc:
         "Dimitar Jovevski, Ph.D. - Founder pixel.mk and Patrick VanDusen - Founder Viewstub",
@@ -199,7 +199,7 @@ List<Session> sessions = [
     sessionTitle: "Streann: The Batman & Robin startup strategy",
     sessionDesc:
         "Streann: The Batman & Robin startup strategy.\n\nGio Punzo and Antonio Calderón - Co-Founders Streann Media",
-    speakerImage: "https://i.stack.imgur.com/IHLNO.jpg",
+    speakerImage: "https://devfestflorida.org/images/people/gio_punzo.jpg",
     speakerName: "Gio Punzo and Antonio Calderón",
     speakerDesc: "Gio Punzo and Antonio Calderón - Co-Founders Streann Media",
     track: "startup",

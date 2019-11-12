@@ -8,8 +8,9 @@ import 'package:flutter/material.dart';
 
 class SessionList extends StatelessWidget {
   final List<Session> allSessions;
+  final List<Session> other;
 
-  const SessionList({Key key, @required this.allSessions}) : super(key: key);
+  const SessionList({Key key, @required this.allSessions, this.other}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

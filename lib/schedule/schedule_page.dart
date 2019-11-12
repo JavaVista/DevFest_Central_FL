@@ -12,6 +12,7 @@ class SchedulePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var other = sessions.where((s) => s.track == "other").toList();
     var webSessions = sessions.where((s) => s.track == "web").toList();
     var mobileSessions = sessions.where((s) => s.track == "mobile").toList();
     var startupsSessions = sessions.where((s) => s.track == "startup").toList();
@@ -52,6 +53,7 @@ class SchedulePage extends StatelessWidget {
           children: <Widget>[
             SessionList(
               allSessions: webSessions,
+              other: other,
             ),
             SessionList(
               allSessions: mobileSessions,
