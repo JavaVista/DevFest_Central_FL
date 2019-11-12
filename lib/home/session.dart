@@ -89,8 +89,7 @@ class Session {
 
 //*  Sessions hardcoded data
 final desc = "Presentation TBD";
-final activity =
-    "Community Room - Get your badge, coffee and meet new friends";
+final activity = "Community Room - Get your badge, coffee and meet new friends";
 
 //* Tracks can be web, mobile and startups (Make it web if the track type is not clear.)
 List<Session> sessions = [
@@ -99,7 +98,8 @@ List<Session> sessions = [
     sessionStartTime: "9:00 AM",
     sessionTotalTime: "30 Mins",
     sessionTitle: "Registration & Morning Coffee",
-    sessionDesc: "Community Room - Get your badge, coffee and meet new friends.",
+    sessionDesc:
+        "Community Room - Get your badge, coffee and meet new friends.",
     speakerImage: "https://i.stack.imgur.com/IHLNO.jpg",
     speakerName: "Welcome",
     speakerDesc: "Welcome to DevFest Florida",
@@ -130,20 +130,21 @@ List<Session> sessions = [
     track: "startup",
   ),
   // 11:00 AM - 11:50 AM
-   Session(
-    sessionId: 14,
+  Session(
+    sessionId: 4,
     sessionStartTime: "11:00 AM",
     sessionTotalTime: "40 Mins",
-    sessionTitle: "Creating real time applications with Angular and Firebase",
+    sessionTitle: "Serverless Containers with Knative and Cloud Run",
     sessionDesc:
-        "In this talk you'll learn how you can Firebase to add a backend to your Angular application very quickly. We can store and synchronize data in real time, authenticate users, develop additional functionalities with cloud functions, host and deploy and much more!\n\nCome see why Angular and Firebase is a combination that is on Fire!",
-    speakerImage: "https://devfestflorida.org/images/people/loiane_groner.jpg",
-    speakerName: "Loiane Groner",
-    speakerDesc: "Business Analyst and Senior Developer, Citibank",
+        "When you build a serverless app, you either tie yourself to a cloud provider, or you end up building your own serverless stack. Knative provides a better choice.\n\nOpen-source Knative extends Kubernetes to provide a set of middleware components for container-based serverless apps that can run anywhere. In this talk, we’ll explore Knative components (serving, eventing, build) and also take a look at its managed cousin Cloud Run on Google Cloud.",
+    speakerImage:
+        "https://storage.googleapis.com/hoverboard-experimental.appspot.com/images/people/optim/mete_atamel.jpg",
+    speakerName: "Mete Atamel",
+    speakerDesc: "Developer Advocate, Google",
     track: "web",
   ),
-   Session(
-    sessionId: 8,
+  Session(
+    sessionId: 5,
     sessionStartTime: "11:00 AM",
     sessionTotalTime: "40 Mins",
     sessionTitle: "What is new with Android 10 UI",
@@ -155,14 +156,15 @@ List<Session> sessions = [
     speakerDesc: "Developer Advocate for Android at Google.",
     track: "mobile",
   ),
-   Session(
-    sessionId: 20,
+  Session(
+    sessionId: 6,
     sessionStartTime: "11:00 AM",
     sessionTotalTime: "40 Mins",
     sessionTitle: "Startups Do's and Don'ts",
     sessionDesc:
         "Panel: Startups Do's and Don'ts.\n\nDimitar Jovevski, Ph.D. - Founder pixel.mk and Patrick VanDusen - Founder Viewstub",
-    speakerImage: "https://devfestflorida.org/images/people/dimitar_jovevski.jpg",
+    speakerImage:
+        "https://devfestflorida.org/images/people/dimitar_jovevski.jpg",
     speakerName: "Dimitar Jovevski, Ph.D. and Patrick VanDusen",
     speakerDesc:
         "Dimitar Jovevski, Ph.D. - Founder pixel.mk and Patrick VanDusen - Founder Viewstub",
@@ -170,7 +172,7 @@ List<Session> sessions = [
   ),
 // 11:55 AM - 12:45 PM
   Session(
-    sessionId: 4,
+    sessionId: 7,
     sessionStartTime: "11:55 AM",
     sessionTotalTime: "40 Mins",
     sessionTitle: "Help Keep the Internet Safe with WebAuthn",
@@ -181,19 +183,20 @@ List<Session> sessions = [
     speakerDesc: "Security Advocate, Google",
     track: "web",
   ),
-   Session(
-    sessionId: 25,
+  Session(
+    sessionId: 8,
     sessionStartTime: "11:55 AM",
     sessionTotalTime: "40 Mins",
     sessionTitle: "Build Cross Platform Apps with Flutter",
-    sessionDesc: "Flutter built apps compared alongside their Android/iOS counterparts are nearly identical and the difference is becoming imperceptible with every release. What does this mean for the future of client development when technology is democratized in such a way where you can write once and truly run everywhere, any client, on any platform? We’ll take a deep dive into Flutter, how it achieves an almost identical look and feel to its’ Android/iOS counterparts and whats on the roadmap for Flutter (Web & IoT).",
+    sessionDesc:
+        "Flutter built apps compared alongside their Android/iOS counterparts are nearly identical and the difference is becoming imperceptible with every release. What does this mean for the future of client development when technology is democratized in such a way where you can write once and truly run everywhere, any client, on any platform? We’ll take a deep dive into Flutter, how it achieves an almost identical look and feel to its’ Android/iOS counterparts and whats on the roadmap for Flutter (Web & IoT).",
     speakerImage: "https://devfestflorida.org/images/people/faisal_abid.jpg",
     speakerName: "Faisal Abid",
     speakerDesc: "Co-Founder, dydx.dev",
     track: "mobile",
   ),
- Session(
-    sessionId: 13,
+  Session(
+    sessionId: 9,
     sessionStartTime: "11:55 AM",
     sessionTotalTime: "40 Mins",
     sessionTitle: "Streann: The Batman & Robin startup strategy",
@@ -204,7 +207,7 @@ List<Session> sessions = [
     speakerDesc: "Gio Punzo and Antonio Calderón - Co-Founders Streann Media",
     track: "startup",
   ),
- // 12:45 PM - 01:15 PM
+  // 12:45 PM - 01:15 PM
   Session(
     sessionId: 10,
     sessionStartTime: "12:45 PM",
@@ -216,7 +219,7 @@ List<Session> sessions = [
     speakerDesc: "Lunch DevFest Florida",
     track: "other",
   ),
-    // 01:20 PM - 02:10 PM
+  // 01:20 PM - 02:10 PM
   Session(
     sessionId: 11,
     sessionStartTime: "1:20 PM",
@@ -230,8 +233,8 @@ List<Session> sessions = [
     speakerDesc: "Senior Software Engineer, PricewaterhouseCoopers",
     track: "web",
   ),
-   Session(
-    sessionId: 22,
+  Session(
+    sessionId: 12,
     sessionStartTime: "1:20 PM",
     sessionTotalTime: "40 Mins",
     sessionTitle: "ML Kit: On-device machine learning for mobile developers",
@@ -242,32 +245,32 @@ List<Session> sessions = [
     speakerDesc: "UX Engineer, Google",
     track: "mobile",
   ),
-   Session(
-    sessionId: 23,
+  Session(
+    sessionId: 13,
     sessionStartTime: "1:20 PM",
     sessionTotalTime: "40 Mins",
     sessionTitle: "You don’t deserve senior devs",
-    sessionDesc: "Orlando has a major hurdle to overcome on its way to becoming a tech hub. We've got a ton of great Junior developers, and a ton of job openings for Senior Developers. We've all come across this mismatch of availability and opportunity either as applicants ourselves, or as our teams look to fill gaps and scale. So where does this mismatch come from? Orlando has a startup mentality, focused on bringing products to customers as fast as possible and with as little as possible. This means companies are trying to deliver more with less, looking for top talent that can deliver on tight deadlines. We also don't have major tech companies you might find in Silicon Valley in our area with the resources and scale to take junior developers and spend the time and money training them into more accomplished developers.\n\nHowever, all is not lost. It's possible to leverage Orlando's large pool of Junior talent without sacrificing the bottom line. This talk is about how startups and companies can employ some junior talent and also the benefits that juniors bring to a company: better retention, communication, more maintainable codebases, etc. I'd also like to explain how junior developers provide huge benefits for an established team, and how they can provide opportunities for senior team members to improve their mentorship and leadership skills. I've spoken about this topic as a guest on the gun.io podcast: https://www.gun.io/frontier/2019/episode-99",
+    sessionDesc:
+        "Orlando has a major hurdle to overcome on its way to becoming a tech hub. We've got a ton of great Junior developers, and a ton of job openings for Senior Developers. We've all come across this mismatch of availability and opportunity either as applicants ourselves, or as our teams look to fill gaps and scale. So where does this mismatch come from? Orlando has a startup mentality, focused on bringing products to customers as fast as possible and with as little as possible. This means companies are trying to deliver more with less, looking for top talent that can deliver on tight deadlines. We also don't have major tech companies you might find in Silicon Valley in our area with the resources and scale to take junior developers and spend the time and money training them into more accomplished developers.\n\nHowever, all is not lost. It's possible to leverage Orlando's large pool of Junior talent without sacrificing the bottom line. This talk is about how startups and companies can employ some junior talent and also the benefits that juniors bring to a company: better retention, communication, more maintainable codebases, etc. I'd also like to explain how junior developers provide huge benefits for an established team, and how they can provide opportunities for senior team members to improve their mentorship and leadership skills. I've spoken about this topic as a guest on the gun.io podcast: https://www.gun.io/frontier/2019/episode-99",
     speakerImage: "https://devfestflorida.org/images/people/lee_warrick.jpg",
     speakerName: "Lee Warrick,",
     speakerDesc: "Front-end developer, Realtruck.com",
     track: "startup",
   ),
-    // 02:15 PM - 03:05 PM
-     Session(
-    sessionId: 7,
+  // 02:15 PM - 03:05 PM
+  Session(
+    sessionId: 14,
     sessionStartTime: "2:15 PM",
     sessionTotalTime: "40 Mins",
-    sessionTitle: "Serverless Containers with Knative and Cloud Run",
+    sessionTitle: "Creating real time applications with Angular and Firebase",
     sessionDesc:
-        "When you build a serverless app, you either tie yourself to a cloud provider, or you end up building your own serverless stack. Knative provides a better choice.\n\nOpen-source Knative extends Kubernetes to provide a set of middleware components for container-based serverless apps that can run anywhere. In this talk, we’ll explore Knative components (serving, eventing, build) and also take a look at its managed cousin Cloud Run on Google Cloud.",
-    speakerImage:
-        "https://storage.googleapis.com/hoverboard-experimental.appspot.com/images/people/optim/mete_atamel.jpg",
-    speakerName: "Mete Atamel",
-    speakerDesc: "Developer Advocate, Google",
+        "In this talk you'll learn how you can Firebase to add a backend to your Angular application very quickly. We can store and synchronize data in real time, authenticate users, develop additional functionalities with cloud functions, host and deploy and much more!\n\nCome see why Angular and Firebase is a combination that is on Fire!",
+    speakerImage: "https://devfestflorida.org/images/people/loiane_groner.jpg",
+    speakerName: "Loiane Groner",
+    speakerDesc: "Business Analyst and Senior Developer, Citibank",
     track: "web",
   ),
-   Session(
+  Session(
     sessionId: 15,
     sessionStartTime: "2:15 PM",
     sessionTotalTime: "40 Mins",
@@ -279,8 +282,8 @@ List<Session> sessions = [
     speakerDesc: "Co-Founder, dydx.dev",
     track: "mobile",
   ),
- Session(
-    sessionId: 6,
+  Session(
+    sessionId: 16,
     sessionStartTime: "2:15 PM",
     sessionTotalTime: "40 Mins",
     sessionTitle: "Pair Programming is a skill worth developing",
@@ -292,9 +295,9 @@ List<Session> sessions = [
     speakerDesc: "Android Developer, Pluralsight",
     track: "startup",
   ),
- // 03:10 PM - 04:00 PM
- Session(
-    sessionId: 12,
+  // 03:10 PM - 04:00 PM
+  Session(
+    sessionId: 17,
     sessionStartTime: "3:10 PM",
     sessionTotalTime: "40 Mins",
     sessionTitle: "Are you prepared for the next type of search?",
@@ -306,7 +309,7 @@ List<Session> sessions = [
     track: "web",
   ),
   Session(
-    sessionId: 5,
+    sessionId: 18,
     sessionStartTime: "3:10 PM",
     sessionTotalTime: "30 Mins",
     sessionTitle: "Cloud IoT - Bringing Machine Learning to the Edge",
@@ -319,7 +322,7 @@ List<Session> sessions = [
     track: "mobile",
   ),
   Session(
-    sessionId: 9,
+    sessionId: 19,
     sessionStartTime: "3:10 PM",
     sessionTotalTime: "40 Mins",
     sessionTitle: "How we built our product: Moving from Angular to Flutter",
@@ -330,9 +333,9 @@ List<Session> sessions = [
     speakerDesc: "Co-founders and Software Engineers, Ampstor",
     track: "startup",
   ),
- // 04:00 PM - 04:20 PM
- Session(
-    sessionId: 17,
+  // 04:00 PM - 04:20 PM
+  Session(
+    sessionId: 20,
     sessionStartTime: "4:00 PM",
     sessionTotalTime: "20 Mins",
     sessionTitle: "Break 🍪🍹☕️",
@@ -357,7 +360,7 @@ List<Session> sessions = [
     track: "web",
   ),
   Session(
-    sessionId: 24,
+    sessionId: 22,
     sessionStartTime: "4:20 PM",
     sessionTotalTime: "20 Mins",
     sessionTitle:
@@ -370,7 +373,7 @@ List<Session> sessions = [
     track: "mobile",
   ),
   Session(
-    sessionId: 16,
+    sessionId: 23,
     sessionStartTime: "4:20 PM",
     sessionTotalTime: "20 Mins",
     sessionTitle: "Leading Lady: Leading A Team with Happiness",
@@ -383,7 +386,7 @@ List<Session> sessions = [
   ),
 // 04:55 PM - 05:25 PM
   Session(
-    sessionId: 18,
+    sessionId: 24,
     sessionStartTime: "4:55 PM",
     sessionTotalTime: "20 Mins",
     sessionTitle:
@@ -396,7 +399,7 @@ List<Session> sessions = [
     track: "web",
   ),
   Session(
-    sessionId: 19,
+    sessionId: 25,
     sessionStartTime: "4:55 PM",
     sessionTotalTime: "40 Mins",
     sessionTitle: "Getting Started with ARCore",
@@ -409,7 +412,7 @@ List<Session> sessions = [
     track: "mobile",
   ),
   Session(
-    sessionId: 21,
+    sessionId: 26,
     sessionStartTime: "4:55 PM",
     sessionTotalTime: "40 Mins",
     sessionTitle: "Presentation TBD",
@@ -421,7 +424,7 @@ List<Session> sessions = [
   ),
   // 05:30 PM - 08:00 PM
   Session(
-    sessionId: 26,
+    sessionId: 27,
     sessionStartTime: "5:30 PM",
     sessionTotalTime: "30 Mins",
     sessionTitle: "Closing Remarks",
@@ -432,14 +435,15 @@ List<Session> sessions = [
     track: "other",
   ),
   Session(
-    sessionId: 26,
+    sessionId: 28,
     sessionStartTime: "6:00 PM",
     sessionTotalTime: "120 Mins",
     sessionTitle: "After Party - Happily Ever After - Arcade Edition",
     sessionDesc: activity,
     speakerImage: "https://i.stack.imgur.com/IHLNO.jpg",
     speakerName: "Thank you! from DevFest Florida.",
-    speakerDesc: "After Party: - The after party will immediately follow the conference",
+    speakerDesc:
+        "After Party: - The after party will immediately follow the conference",
     track: "other",
   ),
   //* image placeholder - single person //"https://i.stack.imgur.com/IHLNO.jpg",
