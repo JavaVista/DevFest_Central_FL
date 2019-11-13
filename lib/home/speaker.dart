@@ -330,7 +330,7 @@ List<Speaker> speakers = [
     speakerImage:
         "https://devfestflorida.org/images/people/dimitar_jovevski.jpg",
     speakerName: "Dimitar Jovevski, Ph.D.",
-    speakerDesc: "Founder pixel.mk",
+    speakerDesc: "Founder piksel.mk",
     linkUrl: "https://devfestflorida.org",
     githubUrl: "https://github.com/",
     linkedinUrl: "https://www.linkedin.com/in/dimitar-jovevski/",

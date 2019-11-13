@@ -93,7 +93,7 @@ final activity = "Community Room - Get your badge, coffee and meet new friends";
 final peopleImage =
     "https://icon-library.net//images/users-icon-png/users-icon-png-8.jpg";
 final personImage =
-    "https://icon-library.net//images/user-icon-png-transparent/user-icon-png-transparent-27.jpg" ;
+    "https://icon-library.net//images/user-icon-png-transparent/user-icon-png-transparent-27.jpg";
 
 //* Tracks can be web, mobile and startups (Make it web if the track type is not clear.)
 List<Session> sessions = [
@@ -104,7 +104,8 @@ List<Session> sessions = [
     sessionTitle: "Registration & Morning Coffee 📝📛☕",
     sessionDesc:
         "Community Room:\nGet your badge, coffee and meet new friends.",
-    speakerImage: "https://icon-library.net//images/registration-icon/registration-icon-3.jpg",
+    speakerImage:
+        "https://icon-library.net//images/registration-icon/registration-icon-3.jpg",
     speakerName: "Community Room",
     speakerDesc: "Welcome to DevFest Florida",
     track: "other",
@@ -218,7 +219,8 @@ List<Session> sessions = [
     sessionTotalTime: "30 Mins",
     sessionTitle: "Break for Lunch",
     sessionDesc: activity,
-    speakerImage: "https://icon-library.net//images/lunch-icon-png/lunch-icon-png-11.jpg" ,
+    speakerImage:
+        "https://icon-library.net//images/lunch-icon-png/lunch-icon-png-11.jpg",
     speakerName: "Lunch",
     speakerDesc: "Lunch DevFest Florida",
     track: "other",
@@ -343,7 +345,8 @@ List<Session> sessions = [
     sessionTotalTime: "20 Mins",
     sessionTitle: "Snack break 🍪🍹☕️",
     sessionDesc: desc,
-    speakerImage: "https://icon-library.net//images/hot-coffee-icon/hot-coffee-icon-17.jpg",
+    speakerImage:
+        "https://icon-library.net//images/hot-coffee-icon/hot-coffee-icon-17.jpg",
     speakerName: "Break",
     speakerDesc: "Snack break at DevFest Florida",
     track: "other",
@@ -442,11 +445,12 @@ List<Session> sessions = [
     sessionStartTime: "6:00 PM",
     sessionTotalTime: "120 Mins",
     sessionTitle: "After Party: Happily Ever After - Arcade Edition\n🎉🕹️🍹",
-    sessionDesc: "After Party:\nThe after party will immediately follow the conference",
-    speakerImage: "https://icon-library.net//images/disco-icon/disco-icon-18.jpg",
+    sessionDesc:
+        "After Party:\nThe after party will immediately follow the conference",
+    speakerImage:
+        "https://icon-library.net//images/disco-icon/disco-icon-18.jpg",
     speakerName: "Let's have some magical fun!",
-    speakerDesc:
-        "After Party",
+    speakerDesc: "After Party",
     track: "other",
   ),
 ];
