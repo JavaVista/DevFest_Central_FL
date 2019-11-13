@@ -52,6 +52,7 @@ class SessionList extends StatelessWidget {
               tag: allSessions[index].sessionId,
               child: CircleAvatar(
                 radius: 30,
+                backgroundColor: Colors.white,
                 backgroundImage:
                     CachedNetworkImageProvider(allSessions[index].speakerImage),
               ),

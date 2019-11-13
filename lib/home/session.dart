@@ -90,6 +90,10 @@ class Session {
 //*  Sessions hardcoded data
 final desc = "Presentation TBD";
 final activity = "Community Room - Get your badge, coffee and meet new friends";
+final peopleImage =
+    "https://icon-library.net//images/users-icon-png/users-icon-png-8.jpg";
+final personImage =
+    "https://icon-library.net//images/user-icon-png-transparent/user-icon-png-transparent-27.jpg" ;
 
 //* Tracks can be web, mobile and startups (Make it web if the track type is not clear.)
 List<Session> sessions = [
@@ -97,11 +101,11 @@ List<Session> sessions = [
     sessionId: 1,
     sessionStartTime: "9:00 AM",
     sessionTotalTime: "30 Mins",
-    sessionTitle: "Registration & Morning Coffee",
+    sessionTitle: "Registration & Morning Coffee 📝📛☕",
     sessionDesc:
-        "Community Room - Get your badge, coffee and meet new friends.",
-    speakerImage: "https://i.stack.imgur.com/IHLNO.jpg",
-    speakerName: "Welcome",
+        "Community Room:\nGet your badge, coffee and meet new friends.",
+    speakerImage: "https://icon-library.net//images/registration-icon/registration-icon-3.jpg",
+    speakerName: "Community Room",
     speakerDesc: "Welcome to DevFest Florida",
     track: "other",
   ),
@@ -109,9 +113,9 @@ List<Session> sessions = [
     sessionId: 2,
     sessionStartTime: "9:30 AM",
     sessionTotalTime: "30 Mins",
-    sessionTitle: "Welcome Remarks",
+    sessionTitle: "Welcome Remarks 👋",
     sessionDesc: "The Devfest Florida's organizing team opening remarks.",
-    speakerImage: "https://i.stack.imgur.com/IHLNO.jpg",
+    speakerImage: peopleImage,
     speakerName: "DevFest Florida's organizing team",
     speakerDesc: "Welcome Remarks DevFest Florida",
     track: "other",
@@ -127,7 +131,7 @@ List<Session> sessions = [
     speakerName: "Vanessa Zabala",
     speakerDesc:
         "Director of Impact Development for the Orlando Economic Partnership.",
-    track: "startup",
+    track: "other",
   ),
   // 11:00 AM - 11:50 AM
   Session(
@@ -162,12 +166,12 @@ List<Session> sessions = [
     sessionTotalTime: "40 Mins",
     sessionTitle: "Startups Do's and Don'ts",
     sessionDesc:
-        "Panel: Startups Do's and Don'ts.\n\nDimitar Jovevski, Ph.D. - Founder pixel.mk and Patrick VanDusen - Founder Viewstub",
+        "Panel: Startups Do's and Don'ts.\n\nDimitar Jovevski, Ph.D. - Founder piksel.mk and Patrick VanDusen - Founder Viewstub",
     speakerImage:
         "https://devfestflorida.org/images/people/dimitar_jovevski.jpg",
     speakerName: "Dimitar Jovevski, Ph.D. and Patrick VanDusen",
     speakerDesc:
-        "Dimitar Jovevski, Ph.D. - Founder pixel.mk and Patrick VanDusen - Founder Viewstub",
+        "Dimitar Jovevski, Ph.D. - Founder piksel.mk and Patrick VanDusen - Founder Viewstub",
     track: "startup",
   ),
 // 11:55 AM - 12:45 PM
@@ -214,7 +218,7 @@ List<Session> sessions = [
     sessionTotalTime: "30 Mins",
     sessionTitle: "Break for Lunch",
     sessionDesc: activity,
-    speakerImage: "https://i.stack.imgur.com/IHLNO.jpg",
+    speakerImage: "https://icon-library.net//images/lunch-icon-png/lunch-icon-png-11.jpg" ,
     speakerName: "Lunch",
     speakerDesc: "Lunch DevFest Florida",
     track: "other",
@@ -227,8 +231,7 @@ List<Session> sessions = [
     sessionTitle: "Clean TypeScript & Testing",
     sessionDesc:
         "Utilize TypeScript to make a more testable, maintainable and readable code base.",
-    speakerImage:
-        "https://devfestflorida.org/images/people/dylan_israel.jpg", //"https://i.stack.imgur.com/IHLNO.jpg",
+    speakerImage: "https://devfestflorida.org/images/people/dylan_israel.jpg",
     speakerName: "Dylan C. Israel",
     speakerDesc: "Senior Software Engineer, PricewaterhouseCoopers",
     track: "web",
@@ -338,11 +341,11 @@ List<Session> sessions = [
     sessionId: 20,
     sessionStartTime: "4:00 PM",
     sessionTotalTime: "20 Mins",
-    sessionTitle: "Break 🍪🍹☕️",
+    sessionTitle: "Snack break 🍪🍹☕️",
     sessionDesc: desc,
-    speakerImage: "https://i.stack.imgur.com/IHLNO.jpg",
-    speakerName: "Break 🍪🍹☕️",
-    speakerDesc: "Break DevFest Florida",
+    speakerImage: "https://icon-library.net//images/hot-coffee-icon/hot-coffee-icon-17.jpg",
+    speakerName: "Break",
+    speakerDesc: "Snack break at DevFest Florida",
     track: "other",
   ),
   // 04:20 PM - 04:50 PM
@@ -417,7 +420,7 @@ List<Session> sessions = [
     sessionTotalTime: "40 Mins",
     sessionTitle: "Presentation TBD",
     sessionDesc: desc,
-    speakerImage: "https://i.stack.imgur.com/IHLNO.jpg",
+    speakerImage: personImage,
     speakerName: "TBD",
     speakerDesc: desc,
     track: "startup",
@@ -427,10 +430,10 @@ List<Session> sessions = [
     sessionId: 27,
     sessionStartTime: "5:30 PM",
     sessionTotalTime: "30 Mins",
-    sessionTitle: "Closing Remarks",
+    sessionTitle: "Closing Remarks 🙏",
     sessionDesc: activity,
-    speakerImage: "https://i.stack.imgur.com/IHLNO.jpg",
-    speakerName: "Thank you!",
+    speakerImage: peopleImage,
+    speakerName: "Thank you from DevFest Florida!",
     speakerDesc: "Closing Remarks at the Community Room",
     track: "other",
   ),
@@ -438,13 +441,12 @@ List<Session> sessions = [
     sessionId: 28,
     sessionStartTime: "6:00 PM",
     sessionTotalTime: "120 Mins",
-    sessionTitle: "After Party - Happily Ever After - Arcade Edition",
-    sessionDesc: activity,
-    speakerImage: "https://i.stack.imgur.com/IHLNO.jpg",
-    speakerName: "Thank you! from DevFest Florida.",
+    sessionTitle: "After Party: Happily Ever After - Arcade Edition\n🎉🕹️🍹",
+    sessionDesc: "After Party:\nThe after party will immediately follow the conference",
+    speakerImage: "https://icon-library.net//images/disco-icon/disco-icon-18.jpg",
+    speakerName: "Let's have some magical fun!",
     speakerDesc:
-        "After Party: - The after party will immediately follow the conference",
+        "After Party",
     track: "other",
   ),
-  //* image placeholder - single person //"https://i.stack.imgur.com/IHLNO.jpg",
 ];

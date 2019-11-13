@@ -12,12 +12,12 @@ class SchedulePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var other = sessions.where((s) => s.track == "other").toList();
+    var otherSessions = sessions.where((s) => s.track == "other").toList();
     var webSessions = sessions.where((s) => s.track == "web").toList();
     var mobileSessions = sessions.where((s) => s.track == "mobile").toList();
     var startupsSessions = sessions.where((s) => s.track == "startup").toList();
     return DefaultTabController(
-      length: 3,
+      length: 4,
       child: DevScaffold(
         title: "Schedule",
         tabBar: TabBar(
@@ -26,6 +26,13 @@ class SchedulePage extends StatelessWidget {
           isScrollable: false,
           labelStyle: TextStyle(fontSize: 12),
           tabs: <Widget>[
+            Tab(
+              child: Text("Activity"),
+              icon: Icon(
+                FontAwesomeIcons.users,
+                size: 20,
+              ),
+            ),
             Tab(
               child: Text("Web"),
               icon: Icon(
@@ -52,8 +59,10 @@ class SchedulePage extends StatelessWidget {
         body: TabBarView(
           children: <Widget>[
             SessionList(
+              allSessions: otherSessions,
+            ),
+            SessionList(
               allSessions: webSessions,
-              other: other,
             ),
             SessionList(
               allSessions: mobileSessions,
