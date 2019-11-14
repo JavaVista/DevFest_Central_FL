@@ -122,6 +122,15 @@ class SpeakersPage extends StatelessWidget {
                           speakers[index].speakerSession,
                           style: Theme.of(context).textTheme.caption,
                         ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          "Location: ${speakers[index].location}",
+                          style: Theme.of(context).textTheme.caption.copyWith(
+                            color: Tools.multiColors[Random().nextInt(4)]
+                          ),
+                        ),
                         socialActions(context, speakers[index]),
                       ],
                     ),
