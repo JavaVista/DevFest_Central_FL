@@ -105,6 +105,29 @@ class SessionDetail extends StatelessWidget {
                     ),
               ),
               SizedBox(
+                height: 5,
+              ),
+              Text(
+                "Content Level: ${session.contentLevel}",
+                textAlign: TextAlign.center,
+                style: Theme.of(context).textTheme.subtitle.copyWith(
+                      fontSize: 13,
+                      fontStyle: FontStyle.italic,
+                    ),
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              Text(
+                "Location: ${session.location}",
+                textAlign: TextAlign.center,
+                style: Theme.of(context).textTheme.caption.copyWith(
+                      fontSize: 13,
+                      fontStyle: FontStyle.normal,
+                      color: Tools.multiColors[Random().nextInt(4)],
+                    ),
+              ),
+              SizedBox(
                 height: 10,
               ),
               Text(
