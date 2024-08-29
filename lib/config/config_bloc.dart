@@ -11,20 +11,31 @@ class ConfigBloc extends Bloc<ConfigEvent, ConfigState> {
     return _configBlocSingleton;
   }
 
-  ConfigBloc._internal() : super(UnConfigState());
+  ConfigBloc._internal() : super(UnConfigState()) {
+    on<DarkModeEvent>((event, emit) async {
+      try {
+        emit(UnConfigState());
+        final newState = await event.applyAsync(currentState: state, bloc: this);
+        emit(newState);
+      } catch (exception, stackTrace) {
+        _logger.severe('Error in DarkModeEvent', exception, stackTrace);
+        emit(state);
+      }
+    });
+
+    on<LoadConfigEvent>((event, emit) async {
+      try {
+        emit(UnConfigState());
+        final newState = await event.applyAsync(currentState: state, bloc: this);
+        emit(newState);
+      } catch (exception, stackTrace) {
+        _logger.severe('Error in LoadConfigEvent', exception, stackTrace);
+        emit(state);
+      }
+    });
+  }
+
   bool darkModeOn = false;
 
   ConfigState get initialState => UnConfigState();
-
-  Stream<ConfigState> mapEventToState(
-    ConfigEvent event,
-  ) async* {
-    try {
-      yield UnConfigState();
-      yield await event.applyAsync(currentState: state, bloc: this);
-    } catch (exception, stackTrace) {
-      _logger.severe('Error in ConfigEvent', exception, stackTrace);
-      yield state;
-    }
-  }
 }
