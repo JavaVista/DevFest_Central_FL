@@ -1,69 +1,84 @@
 import 'dart:math';
 
-import 'package:devfestcenfl/config/config_bloc.dart';
-import 'package:devfestcenfl/universal/dev_scaffold.dart';
-import 'package:devfestcenfl/utils/tools.dart';
+import 'package:devfestfl/config/config_bloc.dart';
+import 'package:devfestfl/universal/dev_scaffold.dart';
+import 'package:devfestfl/utils/tools.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class MapPage extends StatefulWidget {
   static const String routeName = "/map";
+
+  const MapPage({Key? key}) : super(key: key);
   @override
-  _MapPageState createState() => _MapPageState();
+  MapPageState createState() => MapPageState();
 }
 
-class _MapPageState extends State<MapPage> {
-  GoogleMapController _controller;
+class MapPageState extends State<MapPage> {
   bool isMapCreated = false;
-  static final LatLng eventLocation = LatLng(28.663151, -81.233940);
+  static const LatLng eventLocation = LatLng(28.663151, -81.233940);
+  String? mapStyle;
 
   @override
   void initState() {
     super.initState();
+    loadMapStyle();
   }
 
-  final CameraPosition _neowareStudios = CameraPosition(
+  final CameraPosition _neowareStudios = const CameraPosition(
     target: eventLocation,
     zoom: 14,
   );
 
-  Set<Marker> _createMarker() {
-    return <Marker>[
-      Marker(
-          markerId: MarkerId("neoware_marker_1"),
-          position: eventLocation,
-          icon: BitmapDescriptor.defaultMarkerWithHue(
-            BitmapDescriptor.hueOrange,
-          ),
-          infoWindow: InfoWindow(
-            title: 'DevFest 2019 🌴🏖️ (Neoware Studios)',
-            snippet: "1485 Oviedo Mall Boulevard, Oviedo, FL 32765",
-          )),
-    ].toSet();
+//   void setMapStyle(String mapStyle) {
+//   _controller.setMapStyle(mapStyle);
+// }
+
+  Future<void> loadMapStyle() async {
+    mapStyle = await DefaultAssetBundle.of(context)
+        .loadString('assets/map_style.json');
+    setState(() {});
   }
 
-  changeMapMode() {
-    if (ConfigBloc().darkModeOn) {
-      getJsonFile("assets/maptheme/nightmode.json").then(setMapStyle);
-    } else {
-      getJsonFile("assets/maptheme/daymode.json").then(setMapStyle);
-    }
+  Set<Marker> _createMarker() {
+    return <Marker>{
+      Marker(
+        markerId: const MarkerId("neoware_marker_1"),
+        position: eventLocation,
+        icon: BitmapDescriptor.defaultMarkerWithHue(
+          BitmapDescriptor.hueOrange,
+        ),
+        infoWindow: const InfoWindow(
+          title: 'DevFest 2019 🌴🏖️ (Neoware Studios)',
+          snippet: "1485 Oviedo Mall Boulevard, Oviedo, FL 32765",
+        ),
+      ),
+    };
+  }
+
+void changeMapMode() {
+    getJsonFile(ConfigBloc().darkModeOn
+        ? "assets/maptheme/nightmode.json"
+        : "assets/maptheme/daymode.json"
+    ).then((style) {
+      setState(() {
+        mapStyle = style;
+      });
+    });
   }
 
   Future<String> getJsonFile(String path) async {
     return await rootBundle.loadString(path);
   }
 
-  void setMapStyle(String mapStyle) {
-    _controller.setMapStyle(mapStyle);
-  }
-
   @override
   Widget build(BuildContext context) {
+    // Call changeMapMode if the map is created
     if (isMapCreated) {
       changeMapMode();
     }
+
     return DevScaffold(
       body: Padding(
         padding: const EdgeInsets.only(top: 1.0),
@@ -78,37 +93,38 @@ class _MapPageState extends State<MapPage> {
               markers: _createMarker(),
               initialCameraPosition: _neowareStudios,
               onMapCreated: (GoogleMapController controller) {
-                _controller = controller;
                 isMapCreated = true;
                 changeMapMode();
                 setState(() {});
               },
+              // Added these two parameters that were missing before
+              mapToolbarEnabled: false,
+              zoomControlsEnabled: false,
+              // Removed the 'styles' parameter as it's not a valid parameter for GoogleMap
             ),
             IgnorePointer(
               child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: RichText(
-                    textAlign: TextAlign.center,
-                    text: TextSpan(
-                        text: "Neoware Studios, Oviedo Mall\n",
-                        style: Theme.of(context).textTheme.title.copyWith(
-                              fontWeight: FontWeight.bold,
+                padding: const EdgeInsets.all(8.0),
+                child: RichText(
+                  textAlign: TextAlign.center,
+                  text: TextSpan(
+                    text: "Neoware Studios, Oviedo Mall\n",
+                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                          fontWeight: FontWeight.bold,
+                        ),
+                    children: [
+                      TextSpan(
+                        text: "1485 Oviedo Mall Boulevard, Oviedo, FL 32765",
+                        style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                              fontSize: 14,
+                              fontWeight: FontWeight.normal,
+                              color: Tools.multiColors[Random().nextInt(4)],
                             ),
-                        children: [
-                          TextSpan(
-                              text:
-                                  "1485 Oviedo Mall Boulevard, Oviedo, FL 32765",
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .subtitle
-                                  .copyWith(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.normal,
-                                    color:
-                                        Tools.multiColors[Random().nextInt(4)],
-                                  )),
-                        ]),
-                  )),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             )
           ],
         ),

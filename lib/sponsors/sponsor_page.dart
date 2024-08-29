@@ -1,9 +1,9 @@
 import 'dart:math';
 
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:devfestcenfl/home/sponsor.dart';
-import 'package:devfestcenfl/universal/dev_scaffold.dart';
-import 'package:devfestcenfl/utils/tools.dart';
+import 'package:devfestfl/home/sponsor.dart';
+import 'package:devfestfl/universal/dev_scaffold.dart';
+import 'package:devfestfl/utils/tools.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -11,17 +11,19 @@ import 'package:url_launcher/url_launcher.dart';
 class SponsorPage extends StatelessWidget {
   static const String routeName = "/sponsor";
 
+  const SponsorPage({Key? key}) : super(key: key);
+
   Widget socialActions(context, Sponsor sponsor) => FittedBox(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             IconButton(
-              icon: Icon(
+              icon: const Icon(
                 FontAwesomeIcons.link,
                 size: 15,
               ),
               onPressed: () {
-                launch(sponsor.url);
+                launchUrl(Uri.parse(sponsor.url));
               },
             ),
           ],
@@ -53,7 +55,7 @@ class SponsorPage extends StatelessWidget {
                           //placeholder: (context, url) => CircularProgressIndicator(),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 20,
                       ),
                       Expanded(
@@ -68,22 +70,22 @@ class SponsorPage extends StatelessWidget {
                               children: <Widget>[
                                 Text(
                                   sponsors[index].name,
-                                  style: Theme.of(context).textTheme.title,
+                                  style: Theme.of(context).textTheme.titleLarge,
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 5,
                                 ),
                               ],
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Text(
                               sponsors[index].desc,
                               style: Theme.of(context)
                                   .textTheme
-                                  .subtitle
-                                  .copyWith(
+                                  .titleSmall
+                                  ?.copyWith(
                                     fontSize: 14,
                                     fontWeight: FontWeight.bold,
                                     color:
@@ -91,7 +93,7 @@ class SponsorPage extends StatelessWidget {
                                   ),
                             ),
                             socialActions(context, sponsors[index]),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                           ],

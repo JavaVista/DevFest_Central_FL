@@ -1,16 +1,16 @@
 import 'dart:math';
 
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:devfestcenfl/home/session.dart';
-import 'package:devfestcenfl/schedule/session_detail.dart';
-import 'package:devfestcenfl/utils/tools.dart';
+import 'package:devfestfl/home/session.dart';
+import 'package:devfestfl/schedule/session_detail.dart';
+import 'package:devfestfl/utils/tools.dart';
 import 'package:flutter/material.dart';
 
 class SessionList extends StatelessWidget {
   final List<Session> allSessions;
   final List<Session> other;
 
-  const SessionList({Key key, @required this.allSessions, this.other}) : super(key: key);
+  const SessionList({Key? key, required this.allSessions, required this.other}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -38,12 +38,12 @@ class SessionList extends StatelessWidget {
                   text: "${allSessions[index].sessionStartTime}\n",
                   style: Theme.of(context)
                       .textTheme
-                      .title
-                      .copyWith(fontSize: 14, fontWeight: FontWeight.bold),
+                      .titleLarge
+                      ?.copyWith(fontSize: 14, fontWeight: FontWeight.bold),
                   children: [
                     TextSpan(
                         text: allSessions[index].sessionTotalTime,
-                        style: Theme.of(context).textTheme.subtitle.copyWith(
+                        style: Theme.of(context).textTheme.titleSmall?.copyWith(
                               fontSize: 12,
                             ))
                   ]),
@@ -61,21 +61,21 @@ class SessionList extends StatelessWidget {
               text: TextSpan(
                   text: "${allSessions[index].sessionTitle}\n",
                   style:
-                      Theme.of(context).textTheme.title.copyWith(fontSize: 16),
+                      Theme.of(context).textTheme.titleLarge?.copyWith(fontSize: 16),
                   children: [
                     TextSpan(
                         text: allSessions[index].speakerName,
-                        style: Theme.of(context).textTheme.subtitle.copyWith(
+                        style: Theme.of(context).textTheme.titleSmall?.copyWith(
                               fontSize: 14,
                               fontWeight: FontWeight.bold,
                               color: Tools.multiColors[Random().nextInt(4)],
                             ),
-                        children: [])
+                        children: const [])
                   ]),
             ),
             subtitle: Text(
               allSessions[index].speakerDesc,
-              style: Theme.of(context).textTheme.caption.copyWith(
+              style: Theme.of(context).textTheme.bodySmall?.copyWith(
                     fontSize: 10,
                   ),
             ),

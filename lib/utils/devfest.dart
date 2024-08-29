@@ -2,19 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class Devfest {
-  static const String app_name = "Devfestcentfl";
-  static const String app_version = "Version 1.3.0";
-  static const int app_version_code = 1;
-  static const String app_color = "#ffd7167";
+  static const String appName = "Devfestcentfl";
+  static const String appVersion = "Version 1.3.0";
+  static const int appVersionCode = 1;
+  static const String appColor = "#ffd7167";
   static Color primaryAppColor = Colors.white;
   static Color secondaryAppColor = Colors.black;
-  static const String google_sans_family = "GoogleSans";
+  static const String googleSansFamily = "GoogleSans";
   static bool isDebugMode = true;
 
   //* Images
 
-  static const String banner_light = "assets/images/banner_light.png";
-  static const String banner_dark = "assets/images/banner_dark.png";
+  static const String bannerLight = "assets/images/banner_light.png";
+  static const String bannerDark = "assets/images/banner_dark.png";
 
 
   //*  Texts
@@ -23,9 +23,9 @@ class Devfest {
   static const String descText =
       '''DevFests are community-led, developer events hosted by GDG chapters around the globe focused on community building & learning about Google’s technologies. Each DevFest is inspired by and uniquely tailored to the needs of the developer community and region that hosts it.''';
 
-  static const String loading_text = "Loading...";
-  static const String try_again_text = "Try Again";
-  static const String some_error_text = "Some error";
+  static const String loadingText = "Loading...";
+  static const String tryAgainText = "Try Again";
+  static const String someErrorText = "Some error";
   static const String signInText = "Sign In";
   static const String signInGoogleText = "Sign in with google";
   static const String signOutText = "Sign Out";
@@ -40,14 +40,14 @@ class Devfest {
       "It seems like your internet connection is not active.";
 
 //* ActionTexts
-  static const String schedule_text = "Schedule";
-  static const String speakers_text = "Speakers";
-  static const String team_text = "Team";
-  static const String sponsor_text = "Sponsors";
-  static const String faq_text = "FAQ";
-  static const String map_text = "Location";
+  static const String scheduleText = "Schedule";
+  static const String speakersText = "Speakers";
+  static const String teamText = "Team";
+  static const String sponsorText = "Sponsors";
+  static const String faqText = "FAQ";
+  static const String mapText = "Location";
 
   //* Preferences
-  static SharedPreferences prefs;
+  static SharedPreferences? prefs;
   static const String darkModePref = "darkModePref";
 }

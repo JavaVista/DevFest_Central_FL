@@ -1,21 +1,23 @@
-import 'package:devfestcenfl/config/config_bloc.dart';
-import 'package:devfestcenfl/faq/faq_page.dart';
-import 'package:devfestcenfl/map/map_page.dart';
-import 'package:devfestcenfl/schedule/schedule_page.dart';
-import 'package:devfestcenfl/speakers/speakers_page.dart';
-import 'package:devfestcenfl/sponsors/sponsor_page.dart';
-import 'package:devfestcenfl/team/team_page.dart';
-import 'package:devfestcenfl/universal/image_card.dart';
-import 'package:devfestcenfl/utils/devfest.dart';
-import 'package:devfestcenfl/utils/tools.dart';
+import 'package:devfestfl/config/config_bloc.dart';
+import 'package:devfestfl/faq/faq_page.dart';
+import 'package:devfestfl/map/map_page.dart';
+import 'package:devfestfl/schedule/schedule_page.dart';
+import 'package:devfestfl/speakers/speakers_page.dart';
+import 'package:devfestfl/sponsors/sponsor_page.dart';
+import 'package:devfestfl/team/team_page.dart';
+import 'package:devfestfl/universal/image_card.dart';
+import 'package:devfestfl/utils/devfest.dart';
+import 'package:devfestfl/utils/tools.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class HomeFront extends StatelessWidget {
+  const HomeFront({Key? key}) : super(key: key);
+
   _launchURL(String url) async {
-    if (await canLaunch(url)) {
-      await launch(url);
+    if (await canLaunchUrl(Uri.parse(url))) {
+      await launchUrl(Uri.parse(url));
     } else {
       throw 'Could not launch $url';
     }
@@ -24,23 +26,23 @@ class HomeFront extends StatelessWidget {
   List<Widget> devFestTexts(context) => [
         Text(
           Devfest.welcomeText,
-          style: Theme.of(context).textTheme.headline,
+          style: Theme.of(context).textTheme.headlineSmall,
           textAlign: TextAlign.center,
         ),
-        SizedBox(
+        const SizedBox(
           height: 5,
         ),
         Text(
           Devfest.subtitleText,
-          style: Theme.of(context).textTheme.subtitle,
+          style: Theme.of(context).textTheme.titleSmall,
           textAlign: TextAlign.center,
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         Text(
           Devfest.descText,
-          style: Theme.of(context).textTheme.caption,
+          style: Theme.of(context).textTheme.bodySmall,
           textAlign: TextAlign.center,
         ),
       ];
@@ -50,38 +52,38 @@ class HomeFront extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
             IconButton(
-              icon: Icon(FontAwesomeIcons.facebookF),
+              icon: const Icon(FontAwesomeIcons.facebookF),
               onPressed: () async {
                 await _launchURL("https://www.facebook.com/devfestflorida/");
               },
             ),
             IconButton(
-              icon: Icon(FontAwesomeIcons.twitter),
+              icon: const Icon(FontAwesomeIcons.twitter),
               onPressed: () async {
                 await _launchURL("https://twitter.com/devfestfl");
               },
             ),
             IconButton(
-              icon: Icon(FontAwesomeIcons.linkedinIn),
+              icon: const Icon(FontAwesomeIcons.linkedinIn),
               onPressed: () async {
                 _launchURL("https://www.linkedin.com/company/devfestflorida/");
               },
             ),
             IconButton(
-              icon: Icon(FontAwesomeIcons.youtube),
+              icon: const Icon(FontAwesomeIcons.youtube),
               onPressed: () async {
                 await _launchURL(
                     "https://www.youtube.com/channel/UCKy_rozojea4PZHCVYHqKwg");
               },
             ),
             IconButton(
-              icon: Icon(FontAwesomeIcons.meetup),
+              icon: const Icon(FontAwesomeIcons.meetup),
               onPressed: () async {
                 await _launchURL("https://www.meetup.com/GDG-Central-Florida/");
               },
             ),
             IconButton(
-              icon: Icon(FontAwesomeIcons.envelope),
+              icon: const Icon(FontAwesomeIcons.envelope),
               onPressed: () async {
                 var emailUrl =
                     '''mailto:suavejavi@gmail.com?subject=I Need Support - DevFest Florida 🌴🏖 App&body=Thanks for reaching out! I'd be more than happy to help you. Please, provide below a description of the issue and your contact information.
@@ -104,40 +106,40 @@ class HomeFront extends StatelessWidget {
           ActionCard(
             icon: Icons.schedule,
             color: Colors.red,
-            title: Devfest.schedule_text,
+            title: Devfest.scheduleText,
             onPressed: () =>
                 Navigator.pushNamed(context, SchedulePage.routeName),
           ),
           ActionCard(
             icon: Icons.person,
             color: Colors.green,
-            title: Devfest.speakers_text,
+            title: Devfest.speakersText,
             onPressed: () =>
                 Navigator.pushNamed(context, SpeakersPage.routeName),
           ),
           ActionCard(
             icon: Icons.people,
             color: Colors.amber,
-            title: Devfest.team_text,
+            title: Devfest.teamText,
             onPressed: () => Navigator.pushNamed(context, TeamPage.routeName),
           ),
           ActionCard(
             icon: Icons.attach_money,
             color: Colors.purple,
-            title: Devfest.sponsor_text,
+            title: Devfest.sponsorText,
             onPressed: () =>
                 Navigator.pushNamed(context, SponsorPage.routeName),
           ),
           ActionCard(
             icon: Icons.question_answer,
             color: Colors.brown,
-            title: Devfest.faq_text,
+            title: Devfest.faqText,
             onPressed: () => Navigator.pushNamed(context, FaqPage.routeName),
           ),
           ActionCard(
             icon: Icons.map,
             color: Colors.blue,
-            title: Devfest.map_text,
+            title: Devfest.mapText,
             onPressed: () => Navigator.pushNamed(context, MapPage.routeName),
           ),
         ],
@@ -153,27 +155,27 @@ class HomeFront extends StatelessWidget {
           children: <Widget>[
             ImageCard(
               img: ConfigBloc().darkModeOn
-                  ? Devfest.banner_dark
-                  : Devfest.banner_light,
+                  ? Devfest.bannerDark
+                  : Devfest.bannerLight,
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             ...devFestTexts(context),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             newActions(context),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             socialActions(context),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Text(
-              Devfest.app_version,
-              style: Theme.of(context).textTheme.caption.copyWith(fontSize: 10),
+              Devfest.appVersion,
+              style: Theme.of(context).textTheme.bodySmall?.copyWith(fontSize: 10),
             )
           ],
         ),
@@ -188,13 +190,13 @@ class ActionCard extends StatelessWidget {
   final String title;
   final Color color;
 
-  const ActionCard({Key key, this.onPressed, this.icon, this.title, this.color})
+  const ActionCard({Key? key, required this.onPressed, required this.icon, required this.title, required this.color})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
     return InkWell(
       borderRadius: BorderRadius.circular(8),
-      onTap: onPressed,
+      onTap: () => onPressed(),
       child: Ink(
         height: MediaQuery.of(context).size.height * 0.1,
         width: MediaQuery.of(context).size.width * 0.2,
@@ -206,14 +208,14 @@ class ActionCard extends StatelessWidget {
             boxShadow: !ConfigBloc().darkModeOn
                 ? [
                     BoxShadow(
-                      color: Colors.grey[300],
+                      color: Colors.grey[300]!,
                       blurRadius: 10,
                       spreadRadius: 5,
                     )
                   ]
                 : [
                     BoxShadow(
-                      color: Colors.blue[200],
+                      color: Colors.blue[200]!,
                       blurRadius: 10,
                       spreadRadius: 5,
                     )
@@ -225,12 +227,12 @@ class ActionCard extends StatelessWidget {
               icon,
               color: color,
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Text(
               title,
-              style: Theme.of(context).textTheme.title.copyWith(
+              style: Theme.of(context).textTheme.titleLarge?.copyWith(
                     fontSize: 14,
                   ),
             )

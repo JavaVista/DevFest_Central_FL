@@ -1,11 +1,10 @@
-import 'package:devfestcenfl/home/session.dart';
+import 'package:devfestfl/home/session.dart';
 import 'package:equatable/equatable.dart';
 import 'package:meta/meta.dart';
 
 @immutable
 abstract class HomeState extends Equatable {
-  HomeState([Iterable props]) : super();
-
+  const HomeState([Iterable props = const []]) : super();
   /// Copy object for use in action
   HomeState getStateCopy();
 }
@@ -21,15 +20,14 @@ class UnHomeState extends HomeState {
   }
 
   @override
-  List<Object> get props => null;
-}
+  List<Object> get props => [];}
 
 /// Initialized
 class InHomeState extends HomeState {
   final SessionsData sessionsData;
 
   InHomeState({
-    this.sessionsData,
+    required this.sessionsData,
   }) : super([sessionsData]);
 
   @override
@@ -38,27 +36,25 @@ class InHomeState extends HomeState {
   @override
   HomeState getStateCopy() {
     return InHomeState(
-      sessionsData: this.sessionsData,
+      sessionsData: sessionsData,
     );
   }
 
   @override
-  List<Object> get props => null;
-}
+  List<Object> get props => [];}
 
 class ErrorHomeState extends HomeState {
   final String errorMessage;
 
-  ErrorHomeState(this.errorMessage);
+  const ErrorHomeState(this.errorMessage);
 
   @override
   String toString() => 'ErrorHomeState';
 
   @override
   HomeState getStateCopy() {
-    return ErrorHomeState(this.errorMessage);
+    return ErrorHomeState(errorMessage);
   }
 
   @override
-  List<Object> get props => null;
-}
+  List<Object> get props => [];}

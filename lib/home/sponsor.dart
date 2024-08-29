@@ -1,11 +1,10 @@
 class SponsorsData {
   List<Sponsor> sponsors;
 
-  SponsorsData({this.sponsors});
+  SponsorsData({required this.sponsors});
 
-  SponsorsData.fromJson(Map<String, dynamic> json) {
+  SponsorsData.fromJson(Map<String, dynamic> json) : sponsors = [] {
     if (json['sponsors'] != null) {
-      sponsors = new List<Sponsor>();
       json['sponsors'].forEach((v) {
         sponsors.add(Sponsor.fromJson(v));
       });
@@ -13,11 +12,9 @@ class SponsorsData {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.sponsors != null) {
-      data['sponsors'] = this.sponsors.map((v) => v.toJson()).toList();
-    }
-    return data;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['sponsors'] = sponsors.map((v) => v.toJson()).toList();
+      return data;
   }
 }
 
@@ -28,25 +25,23 @@ class Sponsor {
   String url;
 
   Sponsor({
-    this.name,
-    this.image,
-    this.desc,
-    this.url,
+    required this.name,
+    required this.image,
+    required this.desc,
+    required this.url,
   });
 
-  Sponsor.fromJson(Map<String, dynamic> json) {
-    name = json['name'];
-    image = json['image'];
-    desc = json['desc'];
-    url = json['url'];
-  }
-
+  Sponsor.fromJson(Map<String, dynamic> json)
+      : name = json['name'] ?? '',
+        image = json['image'] ?? '',
+        desc = json['desc'] ?? '',
+        url = json['url'] ?? '';
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['name'] = this.name;
-    data['image'] = this.image;
-    data['desc'] = this.desc;
-    data['url'] = this.url;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['name'] = name;
+    data['image'] = image;
+    data['desc'] = desc;
+    data['url'] = url;
     return data;
   }
 }

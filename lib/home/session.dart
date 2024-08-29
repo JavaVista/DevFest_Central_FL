@@ -1,11 +1,10 @@
 class SessionsData {
   List<Session> sessions;
 
-  SessionsData({this.sessions});
+  SessionsData({required this.sessions});
 
-  SessionsData.fromJson(Map<String, dynamic> json) {
+  SessionsData.fromJson(Map<String, dynamic> json) : sessions = [] {
     if (json['sessions'] != null) {
-      sessions = new List<Session>();
       json['sessions'].forEach((v) {
         sessions.add(Session.fromJson(v));
       });
@@ -13,11 +12,9 @@ class SessionsData {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.sessions != null) {
-      data['sessions'] = this.sessions.map((v) => v.toJson()).toList();
-    }
-    return data;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['sessions'] = sessions.map((v) => v.toJson()).toList();
+      return data;
   }
 }
 
@@ -34,79 +31,77 @@ class Session {
   String speakerDesc;
   String speakerImage;
   String speakerInfo;
-  String speakerId;
+  int speakerId;
   String track;
   String location;
 
   Session({
-    this.sessionId,
-    this.sessionTitle,
-    this.sessionDesc,
-    this.contentLevel,
-    this.sessionImage,
-    this.sessionStartTime,
-    this.sessionTotalTime,
-    this.sessionLink,
-    this.speakerName,
-    this.speakerDesc,
-    this.speakerImage,
-    this.speakerInfo,
-    this.speakerId,
-    this.track,
-    this.location,
+    required this.sessionId,
+    required this.sessionTitle,
+    required this.sessionDesc,
+    required this.contentLevel,
+    required this.sessionImage,
+    required this.sessionStartTime,
+    required this.sessionTotalTime,
+    required this.sessionLink,
+    required this.speakerName,
+    required this.speakerDesc,
+    required this.speakerImage,
+    required this.speakerInfo,
+    required this.speakerId,
+    required this.track,
+    required this.location,
   });
 
-  Session.fromJson(Map<String, dynamic> json) {
-    sessionId = json['session_id'];
-    sessionTitle = json['session_title'];
-    sessionDesc = json['session_desc'];
-    contentLevel = json['content_level'];
-    sessionImage = json['session_image'];
-    sessionStartTime = json['session_start_time'];
-    sessionTotalTime = json['session_total_time'];
-    sessionLink = json['session_link'];
-    speakerName = json['speaker_name'];
-    speakerDesc = json['speaker_desc'];
-    speakerImage = json['speaker_image'];
-    speakerInfo = json['speaker_info'];
-    speakerId = json['speaker_id'];
-    track = json['track'];
-    location = json['location'];
-  }
-
+  Session.fromJson(Map<String, dynamic> json)
+      : sessionId = json['session_id'] ?? 0,
+        sessionTitle = json['session_title'] ?? '',
+        sessionDesc = json['session_desc'] ?? '',
+        contentLevel = json['content_level'] ?? '',
+        sessionImage = json['session_image'] ?? '',
+        sessionStartTime = json['session_start_time'] ?? '',
+        sessionTotalTime = json['session_total_time'] ?? '',
+        sessionLink = json['session_link'] ?? '',
+        speakerName = json['speaker_name'] ?? '',
+        speakerDesc = json['speaker_desc'] ?? '',
+        speakerImage = json['speaker_image'] ?? '',
+        speakerInfo = json['speaker_info'] ?? '',
+        speakerId = json['speaker_id'] ?? '',
+        track = json['track'] ?? '',
+        location = json['location'] ?? '';
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['session_id'] = this.sessionId;
-    data['session_title'] = this.sessionTitle;
-    data['session_desc'] = this.sessionDesc;
-    data['content_level'] = this.contentLevel;
-    data['session_image'] = this.sessionImage;
-    data['session_start_time'] = this.sessionStartTime;
-    data['session_total_time'] = this.sessionTotalTime;
-    data['session_link'] = this.sessionLink;
-    data['speaker_name'] = this.speakerName;
-    data['speaker_desc'] = this.speakerDesc;
-    data['speaker_image'] = this.speakerImage;
-    data['speaker_info'] = this.speakerInfo;
-    data['speaker_id'] = this.speakerId;
-    data['track'] = this.track;
-    data['location'] = this.location;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['session_id'] = sessionId;
+    data['session_title'] = sessionTitle;
+    data['session_desc'] = sessionDesc;
+    data['content_level'] = contentLevel;
+    data['session_image'] = sessionImage;
+    data['session_start_time'] = sessionStartTime;
+    data['session_total_time'] = sessionTotalTime;
+    data['session_link'] = sessionLink;
+    data['speaker_name'] = speakerName;
+    data['speaker_desc'] = speakerDesc;
+    data['speaker_image'] = speakerImage;
+    data['speaker_info'] = speakerInfo;
+    data['speaker_id'] = speakerId;
+    data['track'] = track;
+    data['location'] = location;
     return data;
   }
 }
 
 //*  Sessions hardcoded data
-final desc = "Presentation TBD";
-final activity = "Community Room - Get your badge, coffee and meet new friends";
-final peopleImage =
+const desc = "Presentation TBD";
+const activity = "Community Room - Get your badge, coffee and meet new friends";
+const peopleImage =
     "https://icon-library.net//images/users-icon-png/users-icon-png-8.jpg";
-final personImage =
+const personImage =
     "https://icon-library.net//images/user-icon-png-transparent/user-icon-png-transparent-27.jpg";
-final contentLevel = "All Skills";
-final communityRoom = "Community Room";
-final webRoom = "Mythical Web 🕸";
-final mobileRoom = "Sorcerer Mobile 📱";
-final startupRoom = "Enchanted Startup 🔥";
+const contentLevel = "All Skills";
+const communityRoom = "Community Room";
+const webRoom = "Mythical Web 🕸";
+const mobileRoom = "Sorcerer Mobile 📱";
+const startupRoom = "Enchanted Startup 🔥";
 
 //* Tracks can be web, mobile and startups (Make it web if the track type is not clear.)
 List<Session> sessions = [
@@ -118,10 +113,14 @@ List<Session> sessions = [
     sessionDesc:
         "Community Room:\nGet your badge, coffee and meet new friends.",
     contentLevel: contentLevel,
+    sessionImage: "",
+    sessionLink: "",
     speakerImage:
         "https://icon-library.net//images/registration-icon/registration-icon-3.jpg",
     speakerName: "Hi and Welcome 🙋‍♀️🙋🏿‍♂️!",
     speakerDesc: "Welcome to DevFest Florida",
+    speakerInfo: "",
+    speakerId: 0,
     track: "other",
     location: communityRoom
   ),
@@ -136,38 +135,49 @@ List<Session> sessions = [
     speakerName: "DevFest Florida's organizing team",
     speakerDesc: "Welcome Remarks DevFest Florida",
     track: "other",
-    location: webRoom
+    location: webRoom,
+    sessionImage: "",
+    sessionLink: "",
+    speakerInfo: "",
+    speakerId: 0
   ),
-  Session(
-    sessionId: 3,
-    sessionStartTime: "10:00 AM",
-    sessionTotalTime: "40 Mins",
-    sessionTitle: "Keynote - How companies internally innovate?",
-    contentLevel: contentLevel,
-    sessionDesc:
-        "Vanessa Zabala is the Director of Impact Development for the Orlando Economic Partnership, leading the organization’s internal intrapreneurship initiatives and deploying innovation capacity programs to external stakeholders.\n\nCurrently, she is an adjunct professor at Rollins College teaching intrapreneurship. As an active member in the community, she is on the board of Rebuild Globally, West Lakes Partnership, and the Chair of conferences for the Organization of Women in International Trade.",
-    speakerImage: "https://devfestflorida.org/images/people/vanessa_zabala.jpg",
-    speakerName: "Vanessa Zabala",
-    speakerDesc:
-        "Director of Impact Development for the Orlando Economic Partnership.",
-    track: "other",
-    location: webRoom
-  ),
-  // 11:00 AM - 11:50 AM
+Session(
+  sessionId: 3,
+  sessionStartTime: "10:00 AM",
+  sessionTotalTime: "40 Mins",
+  sessionTitle: "Keynote - How companies internally innovate?",
+  contentLevel: contentLevel,
+  sessionDesc:
+      "Vanessa Zabala is the Director of Impact Development for the Orlando Economic Partnership, leading the organization's internal intrapreneurship initiatives and deploying innovation capacity programs to external stakeholders.\n\nCurrently, she is an adjunct professor at Rollins College teaching intrapreneurship. As an active member in the community, she is on the board of Rebuild Globally, West Lakes Partnership, and the Chair of conferences for the Organization of Women in International Trade.",
+  speakerImage: "https://devfestflorida.org/images/people/vanessa_zabala.jpg",
+  speakerName: "Vanessa Zabala",
+  speakerDesc:
+      "Director of Impact Development for the Orlando Economic Partnership.",
+  track: "other",
+  location: webRoom,
+  sessionImage: "",
+  sessionLink: "",
+  speakerInfo: "",
+  speakerId: 0,
+),  // 11:00 AM - 11:50 AM
   Session(
     sessionId: 4,
     sessionStartTime: "11:00 AM",
     sessionTotalTime: "40 Mins",
     sessionTitle: "Serverless Containers with Knative and Cloud Run",
     sessionDesc:
-        "When you build a serverless app, you either tie yourself to a cloud provider, or you end up building your own serverless stack. Knative provides a better choice.\n\nOpen-source Knative extends Kubernetes to provide a set of middleware components for container-based serverless apps that can run anywhere. In this talk, we’ll explore Knative components (serving, eventing, build) and also take a look at its managed cousin Cloud Run on Google Cloud.",
+        "When you build a serverless app, you either tie yourself to a cloud provider, or you end up building your own serverless stack. Knative provides a better choice.\n\nOpen-source Knative extends Kubernetes to provide a set of middleware components for container-based serverless apps that can run anywhere. In this talk, we'll explore Knative components (serving, eventing, build) and also take a look at its managed cousin Cloud Run on Google Cloud.",
     contentLevel: 'Intermediate',
     speakerImage:
         "https://storage.googleapis.com/hoverboard-experimental.appspot.com/images/people/optim/mete_atamel.jpg",
     speakerName: "Mete Atamel",
     speakerDesc: "Developer Advocate, Google",
     track: "web",
-    location: webRoom
+    location: webRoom,
+    sessionImage: "",
+    sessionLink: "",
+    speakerInfo: "",
+    speakerId: 0,
   ),
   Session(
     sessionId: 5,
@@ -175,14 +185,18 @@ List<Session> sessions = [
     sessionTotalTime: "40 Mins",
     sessionTitle: "What is new with Android 10 UI",
     sessionDesc:
-        "New UI Features are the most visible changes to your app users. As the OS and the other apps move forward, your app can easily left out with a broken experience.\n\nCome to this talk to learn more about new UI features that can make your application stand out. You’ll learn how to implement the new Android Q UI features that will bring your app’s User Experience to a new level.",
+        "New UI Features are the most visible changes to your app users. As the OS and the other apps move forward, your app can easily left out with a broken experience.\n\nCome to this talk to learn more about new UI features that can make your application stand out. You'll learn how to implement the new Android Q UI features that will bring your app's User Experience to a new level.",
     contentLevel: 'Intermediate',
     speakerImage:
         "https://pbs.twimg.com/profile_images/1123009913679011840/lb-cCjyA_400x400.png",
     speakerName: "Murat Yener",
     speakerDesc: "Developer Advocate for Android at Google.",
     track: "mobile",
-    location: mobileRoom
+    location: mobileRoom,
+    sessionImage: "", // Added required parameter
+    sessionLink: "", // Added required parameter
+    speakerInfo: "", // Added required parameter
+    speakerId: 0, // Added required parameter
   ),
   Session(
     sessionId: 6,
@@ -198,7 +212,11 @@ List<Session> sessions = [
     speakerDesc:
         "Dimitar Jovevski, Ph.D. - Founder piksel.mk and Patrick VanDusen - Founder Viewstub",
     track: "startup",
-    location: startupRoom
+    location: startupRoom,
+    sessionImage: "",
+    sessionLink: "",
+    speakerInfo: "",
+    speakerId: 0,
   ),
 // 11:55 AM - 12:45 PM
   Session(
@@ -213,7 +231,11 @@ List<Session> sessions = [
     speakerName: "Jen Tong",
     speakerDesc: "Security Advocate, Google",
     track: "web",
-    location: webRoom
+    location: webRoom,
+    sessionImage: "",
+    sessionLink: "",
+    speakerInfo: "",
+    speakerId: 0,
   ),
   Session(
     sessionId: 8,
@@ -221,13 +243,17 @@ List<Session> sessions = [
     sessionTotalTime: "40 Mins",
     sessionTitle: "Build Cross Platform Apps with Flutter",
     sessionDesc:
-        "Flutter built apps compared alongside their Android/iOS counterparts are nearly identical and the difference is becoming imperceptible with every release. What does this mean for the future of client development when technology is democratized in such a way where you can write once and truly run everywhere, any client, on any platform? We’ll take a deep dive into Flutter, how it achieves an almost identical look and feel to its’ Android/iOS counterparts and whats on the roadmap for Flutter (Web & IoT).",
+        "Flutter built apps compared alongside their Android/iOS counterparts are nearly identical and the difference is becoming imperceptible with every release. What does this mean for the future of client development when technology is democratized in such a way where you can write once and truly run everywhere, any client, on any platform? We'll take a deep dive into Flutter, how it achieves an almost identical look and feel to its' Android/iOS counterparts and whats on the roadmap for Flutter (Web & IoT).",
     contentLevel: 'Beginner',
     speakerImage: "https://devfestflorida.org/images/people/faisal_abid.jpg",
     speakerName: "Faisal Abid",
     speakerDesc: "Co-Founder, dydx.dev",
     track: "mobile",
-    location: mobileRoom
+    location: mobileRoom,
+    sessionImage: "",
+    sessionLink: "",
+    speakerInfo: "",
+    speakerId: 0,
   ),
   Session(
     sessionId: 9,
@@ -241,24 +267,31 @@ List<Session> sessions = [
     speakerName: "Gio Punzo and Antonio Calderón",
     speakerDesc: "Gio Punzo and Antonio Calderón - Co-Founders Streann Media",
     track: "startup",
-    location: startupRoom
+    location: startupRoom,
+    sessionImage: "",
+    sessionLink: "",
+    speakerInfo: "",
+    speakerId: 0,
   ),
   // 12:45 PM - 01:15 PM
-  Session(
-    sessionId: 10,
-    sessionStartTime: "12:45 PM",
-    sessionTotalTime: "30 Mins",
-    sessionTitle: "Break for Lunch",
-    sessionDesc: activity,
-    contentLevel: contentLevel,
-    speakerImage:
-        "https://icon-library.net//images/lunch-icon-png/lunch-icon-png-11.jpg",
-    speakerName: "Lunch",
-    speakerDesc: "Lunch provided by DevFest Florida",
-    track: "other",
-    location: webRoom
-  ),
-  // 01:20 PM - 02:10 PM
+Session(
+  sessionId: 10,
+  sessionStartTime: "12:45 PM",
+  sessionTotalTime: "30 Mins",
+  sessionTitle: "Break for Lunch",
+  sessionDesc: activity,
+  contentLevel: contentLevel,
+  speakerImage:
+      "https://icon-library.net//images/lunch-icon-png/lunch-icon-png-11.jpg",
+  speakerName: "Lunch",
+  speakerDesc: "Lunch provided by DevFest Florida",
+  track: "other",
+  location: webRoom,
+  sessionImage: "",
+  sessionLink: "",
+  speakerInfo: "",
+  speakerId: 0,
+),  // 01:20 PM - 02:10 PM
   Session(
     sessionId: 11,
     sessionStartTime: "1:20 PM",
@@ -271,7 +304,11 @@ List<Session> sessions = [
     speakerName: "Dylan C. Israel",
     speakerDesc: "Senior Software Engineer, PricewaterhouseCoopers",
     track: "web",
-    location: webRoom
+    location: webRoom,
+    sessionImage: "",
+    sessionLink: "",
+    speakerInfo: "",
+    speakerId: 0,
   ),
   Session(
     sessionId: 12,
@@ -279,19 +316,23 @@ List<Session> sessions = [
     sessionTotalTime: "40 Mins",
     sessionTitle: "ML Kit: On-device machine learning for mobile developers",
     sessionDesc:
-        "Machine Learning is everywhere it seems, and its usefulness is growing daily. In this session you'll get a deep dive into Machine Learning, and a tour of the options available to you to add on-device machine learning to your mobile app. Whether you want ready-to-use APIs for common use cases like detecting faces or labeling images or you have experience developing your own custom models, ML Kit can help. We’ll cover the basics of implementing machine learning into your app, so you can build a more powerful user experience.",
+        "Machine Learning is everywhere it seems, and its usefulness is growing daily. In this session you'll get a deep dive into Machine Learning, and a tour of the options available to you to add on-device machine learning to your mobile app. Whether you want ready-to-use APIs for common use cases like detecting faces or labeling images or you have experience developing your own custom models, ML Kit can help. We'll cover the basics of implementing machine learning into your app, so you can build a more powerful user experience.",
     contentLevel: 'Intermediate',
     speakerImage: "https://devfestflorida.org/images/people/erik_haddad.jpg",
     speakerName: "Erik Haddad",
     speakerDesc: "UX Engineer, Google",
     track: "mobile",
-    location: mobileRoom
+    location: mobileRoom,
+    sessionImage: "",
+    sessionLink: "",
+    speakerInfo: "",
+    speakerId: 0,
   ),
   Session(
     sessionId: 13,
     sessionStartTime: "1:20 PM",
     sessionTotalTime: "40 Mins",
-    sessionTitle: "You don’t deserve senior devs",
+    sessionTitle: "You don't deserve senior devs",
     sessionDesc:
         "Orlando has a major hurdle to overcome on its way to becoming a tech hub. We've got a ton of great Junior developers, and a ton of job openings for Senior Developers. We've all come across this mismatch of availability and opportunity either as applicants ourselves, or as our teams look to fill gaps and scale. So where does this mismatch come from? Orlando has a startup mentality, focused on bringing products to customers as fast as possible and with as little as possible. This means companies are trying to deliver more with less, looking for top talent that can deliver on tight deadlines. We also don't have major tech companies you might find in Silicon Valley in our area with the resources and scale to take junior developers and spend the time and money training them into more accomplished developers.\n\nHowever, all is not lost. It's possible to leverage Orlando's large pool of Junior talent without sacrificing the bottom line. This talk is about how startups and companies can employ some junior talent and also the benefits that juniors bring to a company: better retention, communication, more maintainable codebases, etc. I'd also like to explain how junior developers provide huge benefits for an established team, and how they can provide opportunities for senior team members to improve their mentorship and leadership skills. I've spoken about this topic as a guest on the gun.io podcast: https://www.gun.io/frontier/2019/episode-99",
     contentLevel: 'Beginner',
@@ -299,7 +340,11 @@ List<Session> sessions = [
     speakerName: "Lee Warrick,",
     speakerDesc: "Front-end developer, Realtruck.com",
     track: "startup",
-    location: startupRoom
+    location: startupRoom,
+    sessionImage: "",
+    sessionLink: "",
+    speakerInfo: "",
+    speakerId: 0
   ),
   // 02:15 PM - 03:05 PM
   Session(
@@ -314,7 +359,11 @@ List<Session> sessions = [
     speakerName: "Loiane Groner",
     speakerDesc: "Business Analyst and Senior Developer, Citibank",
     track: "web",
-    location: webRoom
+    location: webRoom,
+    sessionImage: "",
+    sessionLink: "",
+    speakerInfo: "",
+    speakerId: 0
   ),
   Session(
     sessionId: 15,
@@ -328,7 +377,11 @@ List<Session> sessions = [
     speakerName: "Faisal Abid",
     speakerDesc: "Co-Founder, dydx.dev",
     track: "mobile",
-    location: mobileRoom
+    location: mobileRoom,
+    sessionImage: "",
+    sessionLink: "",
+    speakerInfo: "",
+    speakerId: 0
   ),
   Session(
     sessionId: 16,
@@ -343,7 +396,11 @@ List<Session> sessions = [
     speakerName: "Cassidy Swallow",
     speakerDesc: "Android Developer, Pluralsight",
     track: "startup",
-    location: startupRoom
+    location: startupRoom,
+    sessionImage: "",
+    sessionLink: "",
+    speakerInfo: "",
+    speakerId: 0
   ),
   // 03:10 PM - 04:00 PM
   Session(
@@ -352,13 +409,17 @@ List<Session> sessions = [
     sessionTotalTime: "40 Mins",
     sessionTitle: "Are you prepared for the next type of search?",
     sessionDesc:
-        "Voice is quickly becoming the new standard for search and most businesses are not ready for it. Using Actions on Google, developers are able to design, build, and distribute fully-customizable conversational applications.\n\nActions on Google is a developer platform that lets you create software to extend the functionality of the Google Assistant, Google’s virtual personal assistant, across more than 500 million devices, including smart speakers, phones, cars, TVs, headphones, watches, and much more. In this session, you’ll learn the fundamentals needed for building Actions on Google, including Voice UI (VUI) & conversational design, what tools are available, some resources to get you started, and more!",
+        "Voice is quickly becoming the new standard for search and most businesses are not ready for it. Using Actions on Google, developers are able to design, build, and distribute fully-customizable conversational applications.\n\nActions on Google is a developer platform that lets you create software to extend the functionality of the Google Assistant, Google's virtual personal assistant, across more than 500 million devices, including smart speakers, phones, cars, TVs, headphones, watches, and much more. In this session, you'll learn the fundamentals needed for building Actions on Google, including Voice UI (VUI) & conversational design, what tools are available, some resources to get you started, and more!",
     contentLevel: 'Beginner',
     speakerImage: "https://devfestflorida.org/images/people/kyle_paul.jpg",
     speakerName: "Kyle Paul",
     speakerDesc: "Software architect, Google",
     track: "web",
-    location: webRoom
+    location: webRoom,
+    sessionImage: "",
+    sessionLink: "",
+    speakerInfo: "",
+    speakerId: 0
   ),
   Session(
     sessionId: 18,
@@ -373,7 +434,11 @@ List<Session> sessions = [
     speakerName: "Sivamuthu Kumar",
     speakerDesc: "Software architect, Computer Enterprises Inc",
     track: "mobile",
-    location: mobileRoom
+    location: mobileRoom,
+    sessionImage: "",
+    sessionLink: "",
+    speakerInfo: "",
+    speakerId: 0
   ),
   Session(
     sessionId: 19,
@@ -387,24 +452,31 @@ List<Session> sessions = [
     speakerName: "Rody Davis and João Luiz S. Kestering",
     speakerDesc: "Co-founders and Software Engineers, Ampstor",
     track: "startup",
-    location: startupRoom
+    location: startupRoom,
+    sessionImage: "",
+    sessionLink: "",
+    speakerInfo: "",
+    speakerId: 0
   ),
   // 04:00 PM - 04:20 PM
-  Session(
-    sessionId: 20,
-    sessionStartTime: "4:00 PM",
-    sessionTotalTime: "20 Mins",
-    sessionTitle: "Snack break 🍪🍹☕️",
-    sessionDesc: desc,
-    contentLevel: contentLevel,
-    speakerImage:
-        "https://icon-library.net//images/hot-coffee-icon/hot-coffee-icon-17.jpg",
-    speakerName: "Break",
-    speakerDesc: "Snack break provided by DevFest Florida",
-    track: "other",
-    location: webRoom
-  ),
-  // 04:20 PM - 04:50 PM
+Session(
+  sessionId: 20,
+  sessionStartTime: "4:00 PM",
+  sessionTotalTime: "20 Mins",
+  sessionTitle: "Snack break 🍪🍹☕️",
+  sessionDesc: desc,
+  contentLevel: contentLevel,
+  speakerImage:
+      "https://icon-library.net//images/hot-coffee-icon/hot-coffee-icon-17.jpg",
+  speakerName: "Break",
+  speakerDesc: "Snack break provided by DevFest Florida",
+  track: "other",
+  location: webRoom,
+  sessionImage: "",
+  sessionLink: "",
+  speakerInfo: "",
+  speakerId: 0
+),  // 04:20 PM - 04:50 PM
   Session(
     sessionId: 21,
     sessionStartTime: "04:20 PM",
@@ -418,7 +490,11 @@ List<Session> sessions = [
     speakerName: "David Khourshid",
     speakerDesc: "Software Engineer, Microsoft",
     track: "web",
-    location: webRoom
+    location: webRoom,
+    sessionImage: "",
+    sessionLink: "",
+    speakerInfo: "",
+    speakerId: 0
   ),
   Session(
     sessionId: 22,
@@ -427,13 +503,17 @@ List<Session> sessions = [
     sessionTitle:
         "Securing Sensitive Data with Google Cloud's Data Loss Prevention API",
     sessionDesc:
-        "Every organization has sensitive data they must protect: from addresses and credit card numbers to medical patient records and intellectual property, the list goes on. These types of info are typically referred to as personally identifiable information (PII) or protected health information (PHI).\n\nFor businesses with this data, securing the network is just half the fun. What happens if a bad actor is already inside your network and starts poking around the data? You need some way of disguising, or obfuscating, the data in such a way that it’s unidentifiable to unauthorized eyes. In this talk, Zach will present his best practices for securing PII with Google Cloud's Data Loss Prevention API.",
+        "Every organization has sensitive data they must protect: from addresses and credit card numbers to medical patient records and intellectual property, the list goes on. These types of info are typically referred to as personally identifiable information (PII) or protected health information (PHI).\n\nFor businesses with this data, securing the network is just half the fun. What happens if a bad actor is already inside your network and starts poking around the data? You need some way of disguising, or obfuscating, the data in such a way that it's unidentifiable to unauthorized eyes. In this talk, Zach will present his best practices for securing PII with Google Cloud's Data Loss Prevention API.",
     contentLevel: 'Beginner',
     speakerImage: "https://devfestflorida.org/images/people/zach_sais.jpg",
     speakerName: "Zach Sais",
     speakerDesc: "Customer Engineer, Google",
     track: "mobile",
-    location: mobileRoom
+    location: mobileRoom,
+    sessionImage: "",
+    sessionLink: "",
+    speakerInfo: "",
+    speakerId: 0
   ),
   Session(
     sessionId: 23,
@@ -447,7 +527,11 @@ List<Session> sessions = [
     speakerName: "Jenell Pizarro",
     speakerDesc: "UX Developer, Capco",
     track: "startup",
-    location: startupRoom
+    location: startupRoom,
+    sessionImage: "",
+    sessionLink: "",
+    speakerInfo: "",
+    speakerId: 0
   ),
 // 04:55 PM - 05:25 PM
   Session(
@@ -463,7 +547,11 @@ List<Session> sessions = [
     speakerName: "Lee Warrick,",
     speakerDesc: "Front-end developer, Realtruck.com",
     track: "web",
-    location: webRoom
+    location: webRoom,
+    sessionImage: "",
+    sessionLink: "",
+    speakerInfo: "",
+    speakerId: 0
   ),
   Session(
     sessionId: 25,
@@ -478,7 +566,11 @@ List<Session> sessions = [
     speakerName: "Michael Rosario",
     speakerDesc: "Senior software engineer, Design Interactive",
     track: "mobile",
-    location: mobileRoom
+    location: mobileRoom,
+    sessionImage: "",
+    sessionLink: "",
+    speakerInfo: "",
+    speakerId: 0
   ),
   Session(
     sessionId: 26,
@@ -491,7 +583,11 @@ List<Session> sessions = [
     speakerName: "TBD",
     speakerDesc: desc,
     track: "startup",
-    location: startupRoom
+    location: startupRoom,
+    sessionImage: "",
+    sessionLink: "",
+    speakerInfo: "",
+    speakerId: 0
   ),
   // 05:30 PM - 08:00 PM
   Session(
@@ -505,7 +601,11 @@ List<Session> sessions = [
     speakerName: "Thank you from DevFest Florida!",
     speakerDesc: "Closing Remarks at the Community Room",
     track: "other",
-    location: communityRoom
+    location: communityRoom,
+    sessionImage: "",
+    sessionLink: "",
+    speakerInfo: "",
+    speakerId: 0
   ),
   Session(
     sessionId: 28,
@@ -520,6 +620,10 @@ List<Session> sessions = [
     speakerName: "Let's have some magical fun!",
     speakerDesc: "After Party",
     track: "other",
-    location: webRoom
+    location: webRoom,
+    sessionImage: "",
+    sessionLink: "",
+    speakerInfo: "",
+    speakerId: 0
   ),
 ];

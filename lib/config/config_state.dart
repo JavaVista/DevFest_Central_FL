@@ -17,8 +17,7 @@ class UnConfigState extends ConfigState {
   }
 
   @override
-  List<Object> get props => null;
-}
+  List<Object> get props => [];}
 
 class InConfigState extends ConfigState {
   @override
@@ -30,22 +29,20 @@ class InConfigState extends ConfigState {
   }
 
   @override
-  List<Object> get props => null;
-}
+  List<Object> get props => [];}
 
 class ErrorConfigState extends ConfigState {
   final String errorMessage;
 
-  ErrorConfigState(this.errorMessage);
+  const ErrorConfigState(this.errorMessage);
 
   @override
   String toString() => 'ErrorConfigState';
 
   @override
   ConfigState getStateCopy() {
-    return ErrorConfigState(this.errorMessage);
+    return ErrorConfigState(errorMessage);
   }
 
   @override
-  List<Object> get props => null;
-}
+  List<Object> get props => [];}

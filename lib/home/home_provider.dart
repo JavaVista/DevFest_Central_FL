@@ -1,14 +1,14 @@
 
-/* import 'package:devfestcenfl/home/session.dart';
-import 'package:devfestcenfl/utils/devfest.dart';
+import 'package:devfestfl/constants.dart';
+import 'package:devfestfl/home/session.dart';
+import 'package:devfestfl/interfaces/i_client.dart';
 
 abstract class IHomeProvider {
   Future<SessionsData> getSessions();
 }
 
 class HomeProvider implements IHomeProvider {
-  IClient _client;
-
+  late IClient _client;
 
    @override
   Future<SessionsData> getSessions() async {
@@ -21,6 +21,6 @@ class HomeProvider implements IHomeProvider {
     throw Exception(result.networkServiceResponse.message);
   }
 
-} */
+}
 
 

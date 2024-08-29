@@ -1,4 +1,4 @@
-import 'package:devfestcenfl/utils/devfest.dart';
+import 'package:devfestfl/utils/devfest.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -8,7 +8,7 @@ import 'config/config_page.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setSystemUIOverlayStyle(
-    SystemUiOverlayStyle(statusBarColor: Colors.transparent),
+    const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
   );
 
   SystemChrome.setPreferredOrientations(
@@ -16,5 +16,5 @@ Future<void> main() async {
 
   Devfest.prefs = await SharedPreferences.getInstance();
 
-  runApp(ConfigPage());
+  runApp(const ConfigPage());
 }

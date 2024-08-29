@@ -5,49 +5,44 @@ import 'home_widgets.dart/home_front.dart';
 import 'index.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({
-    Key key,
-    @required HomeBloc homeBloc,
-  })  : _homeBloc = homeBloc,
-        super(key: key);
-
-  final HomeBloc _homeBloc;
+  final HomeBloc homeBloc;
+  
+  const HomeScreen({Key? key, required this.homeBloc}) : super(key: key);
 
   @override
-  HomeScreenState createState() {
-    return HomeScreenState(_homeBloc);
-  }
+  State<HomeScreen> createState() => HomeScreenState();
 }
 
 class HomeScreenState extends State<HomeScreen> {
-  final HomeBloc _homeBloc;
-  HomeScreenState(this._homeBloc);
+  late final HomeBloc _homeBloc;
 
   @override
   void initState() {
     super.initState();
-    this._homeBloc.dispatch(LoadHomeEvent());
+    _homeBloc = HomeBloc();
+    _homeBloc.add(LoadHomeEvent());
   }
 
   @override
   void dispose() {
+    _homeBloc.close();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<HomeBloc, HomeState>(
-      bloc: widget._homeBloc,
+      bloc: _homeBloc,
       builder: (context, currentState) {
         if (currentState is UnHomeState) {
-          return Center(
+          return const Center(
             child: CircularProgressIndicator(),
           );
         }
 
-        return HomeFront();
-
+        return const HomeFront();
       },
     );
   }
 }
+
