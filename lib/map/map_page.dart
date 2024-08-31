@@ -19,11 +19,13 @@ class MapPageState extends State<MapPage> {
   bool isMapCreated = false;
   static const LatLng eventLocation = LatLng(28.663151, -81.233940);
   String? mapStyle;
+  String? lightMapStyle;
+  String? darkMapStyle;
 
   @override
   void initState() {
     super.initState();
-    loadMapStyle();
+    loadMapStyles();
   }
 
   final CameraPosition _neowareStudios = const CameraPosition(
@@ -31,14 +33,17 @@ class MapPageState extends State<MapPage> {
     zoom: 14,
   );
 
-//   void setMapStyle(String mapStyle) {
-//   _controller.setMapStyle(mapStyle);
-// }
+  Future<void> loadMapStyles() async {
+    lightMapStyle = await rootBundle.loadString('assets/maptheme/daymode.json');
+    darkMapStyle =
+        await rootBundle.loadString('assets/maptheme/nightmode.json');
 
-  Future<void> loadMapStyle() async {
-    mapStyle = await DefaultAssetBundle.of(context)
-        .loadString('assets/map_style.json');
-    setState(() {});
+    // Set initial map style based on current theme
+    mapStyle = ConfigBloc().darkModeOn ? darkMapStyle : lightMapStyle;
+
+    if (mounted) {
+      setState(() {});
+    }
   }
 
   Set<Marker> _createMarker() {
@@ -57,14 +62,9 @@ class MapPageState extends State<MapPage> {
     };
   }
 
-void changeMapMode() {
-    getJsonFile(ConfigBloc().darkModeOn
-        ? "assets/maptheme/nightmode.json"
-        : "assets/maptheme/daymode.json"
-    ).then((style) {
-      setState(() {
-        mapStyle = style;
-      });
+  void changeMapMode() {
+    setState(() {
+      mapStyle = ConfigBloc().darkModeOn ? darkMapStyle : lightMapStyle;
     });
   }
 
@@ -97,10 +97,9 @@ void changeMapMode() {
                 changeMapMode();
                 setState(() {});
               },
-              // Added these two parameters that were missing before
+              style: mapStyle,
               mapToolbarEnabled: false,
               zoomControlsEnabled: false,
-              // Removed the 'styles' parameter as it's not a valid parameter for GoogleMap
             ),
             IgnorePointer(
               child: Padding(
