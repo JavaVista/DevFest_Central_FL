@@ -64,8 +64,14 @@ Distributed under the MIT License. Note: Copyright and license text of third par
 See the [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.md)
 for more information.
 
-#### Note:
-Project was original created from the following versions:
+### Versions:
 
-Flutter Version: 1.9.1 
-Dart SDK Version: Between 2.5.0 and 3.0.0.
+#### Current Versions:
+
+* Flutter Version: 3.24.0
+* Dart SDK Version: 3.5.0
+
+#### Project was original created from the following versions:
+
+* Flutter Version: 1.9.1 
+* Dart SDK Version: Between 2.5.0 and 3.0.0.

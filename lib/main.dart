@@ -15,6 +15,5 @@ Future<void> main() async {
       [DeviceOrientation.portraitDown, DeviceOrientation.portraitUp]);
 
   Devfest.prefs = await SharedPreferences.getInstance();
-
   runApp(const ConfigPage());
 }
