@@ -6,7 +6,7 @@ class Speaker {
   String bio;
   String tagLine;
   String profilePicture;
-  List<Session> sessions;
+  List<SessionOfSpeaker> sessions;
   List<Link> links;
 
   Speaker({
@@ -31,7 +31,7 @@ class Speaker {
       tagLine: json['tagLine'],
       profilePicture: json['profilePicture'],
       sessions: (json['sessions'] as List)
-          .map((session) => Session.fromJson(session))
+          .map((session) => SessionOfSpeaker.fromJson(session))
           .toList(),
       links:
           (json['links'] as List).map((link) => Link.fromJson(link)).toList(),
@@ -53,14 +53,14 @@ class Speaker {
   }
 }
 
-class Session {
+class SessionOfSpeaker {
   int id;
   String name;
 
-  Session({required this.id, required this.name});
+  SessionOfSpeaker({required this.id, required this.name});
 
-  factory Session.fromJson(Map<String, dynamic> json) {
-    return Session(
+  factory SessionOfSpeaker.fromJson(Map<String, dynamic> json) {
+    return SessionOfSpeaker(
       id: json['id'],
       name: json['name'],
     );

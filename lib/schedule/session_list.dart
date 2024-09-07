@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:devfestfl/home/session.dart';
-import 'package:devfestfl/schedule/session_detail.dart';
+//import 'package:devfestfl/schedule/session_detail.dart';
 import 'package:devfestfl/utils/tools.dart';
 import 'package:flutter/material.dart';
 
@@ -22,59 +22,63 @@ class SessionList extends StatelessWidget {
           elevation: 0.0,
           child: ListTile(
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => SessionDetail(
-                    session: allSessions[index],
-                  ),
-                ),
-              );
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(
+              //     builder: (context) => SessionDetail(
+              //       session: allSessions[index],
+              //     ),
+              //   ),
+              // );
             },
             isThreeLine: true,
             trailing: RichText(
               textAlign: TextAlign.center,
               text: TextSpan(
-                  text: "${allSessions[index].sessionStartTime}\n",
-                  style: Theme.of(context)
-                      .textTheme
-                      .titleLarge
-                      ?.copyWith(fontSize: 14, fontWeight: FontWeight.bold),
-                  children: [
-                    TextSpan(
-                        text: allSessions[index].sessionTotalTime,
-                        style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                              fontSize: 12,
-                            ))
-                  ]),
+                text: "${allSessions[index].startsAt}\n",
+                style: Theme.of(context)
+                    .textTheme
+                    .titleLarge
+                    ?.copyWith(fontSize: 14, fontWeight: FontWeight.bold),
+                children: [
+                  TextSpan(
+                    text: '60 min',
+                    style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                          fontSize: 12,
+                        ),
+                  ),
+                ],
+              ),
             ),
             leading: Hero(
-              tag: allSessions[index].sessionId,
+              tag: allSessions[index].id,
               child: CircleAvatar(
                 radius: 30,
                 backgroundColor: Colors.white,
                 backgroundImage:
-                    CachedNetworkImageProvider(allSessions[index].speakerImage),
+                    CachedNetworkImageProvider(allSessions[index].id),
               ),
             ),
             title: RichText(
               text: TextSpan(
-                  text: "${allSessions[index].sessionTitle}\n",
-                  style:
-                      Theme.of(context).textTheme.titleLarge?.copyWith(fontSize: 16),
-                  children: [
-                    TextSpan(
-                        text: allSessions[index].speakerName,
-                        style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                              fontSize: 14,
-                              fontWeight: FontWeight.bold,
-                              color: Tools.multiColors[Random().nextInt(4)],
-                            ),
-                        children: const [])
-                  ]),
+                text: "${allSessions[index].title}\n",
+                style: Theme.of(context).textTheme.titleLarge?.copyWith(fontSize: 16),
+                children: allSessions[index].speakers.isNotEmpty
+                    ? [
+                        TextSpan(
+                          text: allSessions[index].speakers[0].name,
+                          style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                                color: Tools.multiColors[Random().nextInt(4)],
+                              ),
+                        ),
+                      ]
+                    : [],
+              ),
             ),
             subtitle: Text(
-              allSessions[index].speakerDesc,
+              allSessions[index].description ?? '',
               style: Theme.of(context).textTheme.bodySmall?.copyWith(
                     fontSize: 10,
                   ),
