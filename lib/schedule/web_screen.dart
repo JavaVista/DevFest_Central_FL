@@ -10,9 +10,9 @@ class WebScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     var state = homeBloc.state as InHomeState;
     var sessions = state.sessionsData.sessions;
-    var webSessions = sessions.where((s) => s.track == "web").toList();
+    var webSessions = sessions.where((s) => s.room == "web").toList();
     return SessionList(
-      allSessions: webSessions, other: const [],
+      allSessions: webSessions, other: const [], speakers: const [],
     );
   }
 }

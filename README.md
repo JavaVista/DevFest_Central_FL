@@ -1,6 +1,6 @@
-# The GDG DevFest Florida App 🌴🏖️
+# The GDG DevFest Florida App 🌴🏖️ 2024
 
-A Flutter App developed for the most MAGICAL 🎆 developers conference in Florida. This app keeps you tied in to the event with the schedule, speaker information, and location information.
+Experience the magic of DevFest FL the most MAGICAL 🎆 developers conference in Florida with our official Flutter app! Stay updated with the latest schedule, speakers, and event location information.
 
 ## <p align="center">ScreenShots 🖼️</p>
 
@@ -14,10 +14,9 @@ A Flutter App developed for the most MAGICAL 🎆 developers conference in Flori
 
 ### <p align="center">Conference information 🍊</p>
 
+DevFest Florida is a yearly Google Developers conference taking place in Central Florida. Run by GDG Sun Coast, GDG Space Coast, and GDG Central Florida, and covering Web, Mobile, Startup, IoT, VR/AR, Cloud, Machine Learning, AI, and much more. Join us and the Local Developer Experts, Googlers, and Startups to learn about the latest and greatest on your favorite technology stacks and business processes.
 
-DevFest Florida is a yearly Google Developers conference taking place on Central Florida. Run by GDG Sun Coast, GDG Space Coast and GDG Central Florida and covering Web, Mobile, Startup, IoT, VR/AR, Cloud, Machine Learning and much more. Join us and the Local Developer Experts, Googlers and Startups to learn about the latest and greatest on your favorite technology stacks and business processes.
-
-The event is for the tech community and run by volunteers. Our goal is to raise awareness, and create actionable learning to ensure the success of our tech community.
+The event is for the tech community and run by volunteers. Our goal is to raise awareness and create actionable learning to ensure the success of our tech community.
 
 ### Technology
 
@@ -27,15 +26,25 @@ The event is for the tech community and run by volunteers. Our goal is to raise 
 
 #DevFest #DevFestFL
 
-We hope to see you there.  🙋‍♀️🙋🏿‍♂️ → Get your ticket today at 👉 devfestflorida.org
+We hope to see you there.  🙋‍♀️🙋🏿‍♂️ → Get your ticket today at 👉 [devfestflorida.com](https://devfestflorida.com/)
 
 ## Getting Started
 
 1. [Fork repository](https://github.com/iampawan/GDG-DevFest-App/fork) and clone your fork locally
-2. Install [Flutter 1.9.1 +hotfix.4](https://flutter.dev/docs/get-started/install)
-3. Install [Android Studio / IntelliJ / VSCode](https://flutter.dev/docs/development/tools/android-studio)
-4. [Preparing Release for Android](https://flutter.dev/docs/deployment/android)
-5. [Preparing Release for iOS](https://flutter.dev/docs/deployment/ios)
+2. Install [Flutter](https://flutter.dev/docs/get-started/install)
+3. Install [Android Studio](https://flutter.dev/docs/development/tools/android-studio) or [Project IDX](https://idx.google.com/) or any IDE
+4. [Preparing Deployment](https://docs.flutter.dev/deployment)
+
+### Recreating Android Project
+
+If you need to recreate the Android project for any reason, run the following command in the root directory:
+
+```bash
+flutter create --project-name devfestfl .
+```
+
+This command is necessary because the root folder is named `DevFest_FL_2024` while the project name in `pubspec.yaml` is `devfestfl`.
+
 
 A few resources to get you started if this is your first Flutter project:
 

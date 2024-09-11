@@ -12,12 +12,17 @@ import 'package:url_launcher/url_launcher.dart';
 class SessionDetail extends StatelessWidget {
   static const String routeName = "/session_detail";
   final Session session;
+  final SpeakerAtSession speakerAtSession;
+  final Speaker speaker;
 
-  //var index;
+  const SessionDetail(
+      {Key? key,
+      required this.session,
+      required this.speakerAtSession,
+      required this.speaker})
+      : super(key: key);
 
-  const SessionDetail({Key? key, required this.session}) : super(key: key);
-
-  Widget socialActions(context, Speaker speaker) => FittedBox(
+  Widget socialActions(BuildContext context,  session, speaker) => FittedBox(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
@@ -27,7 +32,9 @@ class SessionDetail extends StatelessWidget {
                 size: 15,
               ),
               onPressed: () {
-                launchUrl(Uri.parse(speaker.linkUrl));
+                launchUrl(Uri.parse(speaker.links
+                    .firstWhere((link) => link.linkType == 'Facebook')
+                    .url));
               },
             ),
             IconButton(
@@ -36,7 +43,9 @@ class SessionDetail extends StatelessWidget {
                 size: 15,
               ),
               onPressed: () {
-                launchUrl(Uri.parse(speaker.twitterUrl));
+                launchUrl(Uri.parse(speaker.links
+                    .firstWhere((link) => link.linkType == 'Twitter')
+                    .url));
               },
             ),
             IconButton(
@@ -45,7 +54,9 @@ class SessionDetail extends StatelessWidget {
                 size: 15,
               ),
               onPressed: () {
-                launchUrl(Uri.parse(speaker.linkedinUrl));
+                launchUrl(Uri.parse(speaker.links
+                    .firstWhere((link) => link.linkType == 'LinkedIn')
+                    .url));
               },
             ),
             IconButton(
@@ -54,7 +65,9 @@ class SessionDetail extends StatelessWidget {
                 size: 15,
               ),
               onPressed: () {
-                launchUrl(Uri.parse(speaker.githubUrl));
+                launchUrl(Uri.parse(speaker.links
+                    .firstWhere((link) => link.linkType == 'GitHub')
+                    .url));
               },
             ),
           ],
@@ -72,12 +85,12 @@ class SessionDetail extends StatelessWidget {
             children: <Widget>[
               Center(
                 child: Hero(
-                  tag: session.speakerImage,
+                  tag: session.id,
                   child: CircleAvatar(
                     radius: 100.0,
                     backgroundColor: Colors.white,
                     backgroundImage: CachedNetworkImageProvider(
-                      session.speakerImage,
+                      speaker.profilePicture,
                     ),
                   ),
                 ),
@@ -86,7 +99,7 @@ class SessionDetail extends StatelessWidget {
                 height: 10,
               ),
               Text(
-                session.speakerDesc,
+                speaker.tagLine,
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.titleLarge?.copyWith(
                       fontSize: 14,
@@ -97,7 +110,7 @@ class SessionDetail extends StatelessWidget {
                 height: 20,
               ),
               Text(
-                session.sessionTitle,
+                speaker.fullName,
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.titleLarge?.copyWith(
                       fontSize: 20,
@@ -108,7 +121,7 @@ class SessionDetail extends StatelessWidget {
                 height: 5,
               ),
               Text(
-                "Content Level: ${session.contentLevel}",
+                "Content Level: session.contentLevel",
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.titleSmall?.copyWith(
                       fontSize: 13,
@@ -119,7 +132,7 @@ class SessionDetail extends StatelessWidget {
                 height: 5,
               ),
               Text(
-                "Location: ${session.location}",
+                "Location: ${speaker.fullName}",
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.bodySmall?.copyWith(
                       fontSize: 13,
@@ -131,7 +144,7 @@ class SessionDetail extends StatelessWidget {
                 height: 10,
               ),
               Text(
-                session.sessionDesc,
+                speaker.fullName,
                 textAlign: TextAlign.left,
                 style: Theme.of(context)
                     .textTheme
@@ -141,13 +154,12 @@ class SessionDetail extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              // TODO: Fix socialAction iteration
-              //socialActions(context, speakers[index]),
+              socialActions(context, session, speaker),
             ],
           ),
         ),
       ),
-      title: session.speakerName,
+      title: speaker.fullName,
     );
   }
 }

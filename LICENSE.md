@@ -8,7 +8,7 @@ notice must be included in all works derived from this project.
 
 MIT License
 
-Copyright (c) 2019 Javier Carrion
+Copyright (c) 2024 Javier Carrion
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
