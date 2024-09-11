@@ -95,57 +95,57 @@ class SpeakerAtSession {
 }
 
 //*  Sessions hardcoded data
-const desc = "Presentation TBD";
-const activity = "Community Room - Get your badge, coffee and meet new friends";
-const peopleImage =
-    "https://icon-library.net//images/users-icon-png/users-icon-png-8.jpg";
-const personImage =
-    "https://icon-library.net//images/user-icon-png-transparent/user-icon-png-transparent-27.jpg";
-const contentLevel = "All Skills";
-const communityRoom = "Community Room";
-const webRoom = "Mythical Web 🕸";
-const mobileRoom = "Sorcerer Mobile 📱";
-const startupRoom = "Enchanted Startup 🔥";
+// const desc = "Presentation TBD";
+// const activity = "Community Room - Get your badge, coffee and meet new friends";
+// const peopleImage =
+//     "https://icon-library.net//images/users-icon-png/users-icon-png-8.jpg";
+// const personImage =
+//     "https://icon-library.net//images/user-icon-png-transparent/user-icon-png-transparent-27.jpg";
+// const contentLevel = "All Skills";
+// const communityRoom = "Community Room";
+// const webRoom = "Mythical Web 🕸";
+// const mobileRoom = "Sorcerer Mobile 📱";
+// const startupRoom = "Enchanted Startup 🔥";
 
 //* Tracks can be web, mobile and startups (Make it web if the track type is not clear.)
-List<Session> sessions = [
-  Session(
-    id: '1',
-    title: "Registration & Morning Coffee 📝📛☕",
-    description:
-        "Community Room:\nGet your badge, coffee and meet new friends.",
-    startsAt: "2023-10-01T09:00:00",
-    endsAt: "2023-10-01T09:30:00",
-    isServiceSession: true,
-    isPlenumSession: false,
-    speakers: [],
-    room: communityRoom,
-  ),
-  Session(
-    id: '2',
-    title: "Welcome Remarks 👋",
-    description: "The Devfest Florida's organizing team opening remarks.",
-    startsAt: "2023-10-01T09:30:00",
-    endsAt: "2023-10-01T10:00:00",
-    isServiceSession: false,
-    isPlenumSession: true,
-    speakers: [
-      SpeakerAtSession(id: '1', name: "DevFest Florida's organizing team"),
-    ],
-    room: webRoom,
-  ),
-  Session(
-    id: '3',
-    title: "Keynote - How companies internally innovate?",
-    description:
-        "Vanessa Zabala is the Director of Impact Development for the Orlando Economic Partnership, leading the organization's internal intrapreneurship initiatives and deploying innovation capacity programs to external stakeholders.\n\nCurrently, she is an adjunct professor at Rollins College teaching intrapreneurship. As an active member in the community, she is on the board of Rebuild Globally, West Lakes Partnership, and the Chair of conferences for the Organization of Women in International Trade.",
-    startsAt: "2023-10-01T10:00:00",
-    endsAt: "2023-10-01T10:40:00",
-    isServiceSession: false,
-    isPlenumSession: true,
-    speakers: [
-      SpeakerAtSession(id: '2', name: "Vanessa Zabala"),
-    ],
-    room: webRoom,
-  ),
-];
+// List<Session> sessions = [
+//   Session(
+//     id: '1',
+//     title: "Registration & Morning Coffee 📝📛☕",
+//     description:
+//         "Community Room:\nGet your badge, coffee and meet new friends.",
+//     startsAt: "2023-10-01T09:00:00",
+//     endsAt: "2023-10-01T09:30:00",
+//     isServiceSession: true,
+//     isPlenumSession: false,
+//     speakers: [],
+//     room: communityRoom,
+//   ),
+//   Session(
+//     id: '2',
+//     title: "Welcome Remarks 👋",
+//     description: "The Devfest Florida's organizing team opening remarks.",
+//     startsAt: "2023-10-01T09:30:00",
+//     endsAt: "2023-10-01T10:00:00",
+//     isServiceSession: false,
+//     isPlenumSession: true,
+//     speakers: [
+//       SpeakerAtSession(id: '1', name: "DevFest Florida's organizing team"),
+//     ],
+//     room: webRoom,
+//   ),
+//   Session(
+//     id: '3',
+//     title: "Keynote - How companies internally innovate?",
+//     description:
+//         "Vanessa Zabala is the Director of Impact Development for the Orlando Economic Partnership, leading the organization's internal intrapreneurship initiatives and deploying innovation capacity programs to external stakeholders.\n\nCurrently, she is an adjunct professor at Rollins College teaching intrapreneurship. As an active member in the community, she is on the board of Rebuild Globally, West Lakes Partnership, and the Chair of conferences for the Organization of Women in International Trade.",
+//     startsAt: "2023-10-01T10:00:00",
+//     endsAt: "2023-10-01T10:40:00",
+//     isServiceSession: false,
+//     isPlenumSession: true,
+//     speakers: [
+//       SpeakerAtSession(id: '2', name: "Vanessa Zabala"),
+//     ],
+//     room: webRoom,
+//   ),
+// ];

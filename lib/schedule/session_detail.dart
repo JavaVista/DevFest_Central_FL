@@ -11,7 +11,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 class SessionDetail extends StatelessWidget {
   static const String routeName = "/session_detail";
-  final SessionOfSpeaker session;
+  final Session session;
   final SpeakerAtSession speakerAtSession;
   final Speaker speaker;
 
@@ -22,7 +22,7 @@ class SessionDetail extends StatelessWidget {
       required this.speaker})
       : super(key: key);
 
-  Widget socialActions(BuildContext context, session, speaker) => FittedBox(
+  Widget socialActions(BuildContext context,  session, speaker) => FittedBox(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
@@ -110,7 +110,7 @@ class SessionDetail extends StatelessWidget {
                 height: 20,
               ),
               Text(
-                session.name,
+                speaker.fullName,
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.titleLarge?.copyWith(
                       fontSize: 20,
@@ -132,7 +132,7 @@ class SessionDetail extends StatelessWidget {
                 height: 5,
               ),
               Text(
-                "Location: ${session.name}",
+                "Location: ${speaker.fullName}",
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.bodySmall?.copyWith(
                       fontSize: 13,
@@ -144,7 +144,7 @@ class SessionDetail extends StatelessWidget {
                 height: 10,
               ),
               Text(
-                session.name,
+                speaker.fullName,
                 textAlign: TextAlign.left,
                 style: Theme.of(context)
                     .textTheme
@@ -159,7 +159,7 @@ class SessionDetail extends StatelessWidget {
           ),
         ),
       ),
-      title: session.name,
+      title: speaker.fullName,
     );
   }
 }

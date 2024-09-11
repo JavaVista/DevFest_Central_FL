@@ -12,7 +12,7 @@ class MobileScreen extends StatelessWidget {
     var sessions = state.sessionsData.sessions;
     var mobileSessions = sessions.where((s) => s.room == "mobile").toList();
     return SessionList(
-      allSessions: mobileSessions, other: const [],
+      allSessions: mobileSessions, other: const [], speakers: const [],
     );
   }
 }

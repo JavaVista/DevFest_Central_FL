@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:devfestfl/home/group.dart';
+import 'package:devfestfl/home/speaker.dart';
 import 'package:devfestfl/schedule/session_list.dart';
 import 'package:devfestfl/services/sessionize_api_service.dart';
 import 'package:devfestfl/universal/dev_scaffold.dart';
@@ -19,11 +20,13 @@ class SchedulePage extends StatefulWidget {
 
 class SchedulePageState extends State<SchedulePage> {
   late Future<List<Group>> _sessionsFuture;
+  late Future<List<Speaker>> _speakersFuture;
 
   @override
   void initState() {
     super.initState();
     _sessionsFuture = SessionizeApiService().getSessions();
+    _speakersFuture = SessionizeApiService().getSpeakers();
   }
 
   @override
@@ -66,45 +69,68 @@ class SchedulePageState extends State<SchedulePage> {
           ],
         ),
         body: FutureBuilder<List<Group>>(
-          future: _sessionsFuture.then((sessions) => sessions.cast<Group>()),
-          builder: (context, snapshot) {
-            if (snapshot.connectionState == ConnectionState.waiting) {
-              return const Center(child: CircularProgressIndicator());
-            } else if (snapshot.hasError) {
-              return Center(child: Text('Error: ${snapshot.error}'));
-            } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
-              return const Center(child: Text('No sessions found'));
-            }
+          future: _sessionsFuture,
+          builder: (context, sessionsSnapshot) {
+            return FutureBuilder<List<Speaker>>(
+              future: _speakersFuture,
+              builder: (context, speakersSnapshot) {
+                if (sessionsSnapshot.connectionState ==
+                        ConnectionState.waiting ||
+                    speakersSnapshot.connectionState ==
+                        ConnectionState.waiting) {
+                  return const Center(child: CircularProgressIndicator());
+                } else if (sessionsSnapshot.hasError ||
+                    speakersSnapshot.hasError) {
+                  return Center(
+                      child: Text(
+                          'Error: ${sessionsSnapshot.error ?? speakersSnapshot.error}'));
+                } else if (!sessionsSnapshot.hasData ||
+                    sessionsSnapshot.data!.isEmpty ||
+                    !speakersSnapshot.hasData ||
+                    speakersSnapshot.data!.isEmpty) {
+                  return const Center(
+                      child: Text('No sessions or speakers found'));
+                }
 
-            final groups = snapshot.data!;
-            final sessions = groups.expand((group) => group.sessions).toList();
-            var otherSessions =
-                sessions.where((s) => s.room == "Atrium").toList();
-            var webSessions = sessions.where((s) => s.room == "Web").toList();
-            var mobileSessions =
-                sessions.where((s) => s.room == "Mobile").toList();
-            var startupsSessions =
-                sessions.where((s) => s.room == "Startup").toList();
+                final groups = sessionsSnapshot.data!;
+                final sessions =
+                    groups.expand((group) => group.sessions).toList();
+                final speakers = speakersSnapshot.data!;
 
-            return TabBarView(
-              children: <Widget>[
-                SessionList(
-                  allSessions: otherSessions,
-                  other: const [],
-                ),
-                SessionList(
-                  allSessions: webSessions,
-                  other: const [],
-                ),
-                SessionList(
-                  allSessions: mobileSessions,
-                  other: const [],
-                ),
-                SessionList(
-                  allSessions: startupsSessions,
-                  other: const [],
-                ),
-              ],
+                var serviceSessions =
+                    sessions.where((s) => s.isServiceSession).toList();
+                var webSessions =
+                    sessions.where((s) => s.room == "Web").toList();
+                var mobileSessions =
+                    sessions.where((s) => s.room == "Mobile").toList();
+                var startupsSessions =
+                    sessions.where((s) => s.room == "Startup").toList();
+
+                return TabBarView(
+                  children: <Widget>[
+                    SessionList(
+                      allSessions: serviceSessions,
+                      speakers: speakers,
+                      other: const [],
+                    ),
+                    SessionList(
+                      allSessions: webSessions,
+                      speakers: speakers,
+                      other: const [],
+                    ),
+                    SessionList(
+                      allSessions: mobileSessions,
+                      speakers: speakers,
+                      other: const [],
+                    ),
+                    SessionList(
+                      allSessions: startupsSessions,
+                      speakers: speakers,
+                      other: const [],
+                    ),
+                  ],
+                );
+              },
             );
           },
         ),

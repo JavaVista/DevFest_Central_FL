@@ -12,7 +12,7 @@ class WebScreen extends StatelessWidget {
     var sessions = state.sessionsData.sessions;
     var webSessions = sessions.where((s) => s.room == "web").toList();
     return SessionList(
-      allSessions: webSessions, other: const [],
+      allSessions: webSessions, other: const [], speakers: const [],
     );
   }
 }
