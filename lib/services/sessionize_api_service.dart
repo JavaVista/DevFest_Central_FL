@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'package:devfestfl/home/speaker.dart';
 import 'package:http/http.dart' as http;
 import 'package:logging/logging.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -25,20 +24,18 @@ class SessionizeApiService {
     }
   }
 
-  Future<List<Speaker>> fetchSpeakers() async {
+  Future<List<dynamic>> fetchSpeakers() async {
     final response = await http.get(Uri.parse('$_baseUrl$_speakersEndpoint'));
     if (response.statusCode == 200) {
-      final data = json.decode(response.body) as List;
-      final speakers = data.map((json) => Speaker.fromJson(json)).toList();
+      final data = json.decode(response.body);
       _logger.info('Fetched speakers: $data');
       await _cacheData(_speakersEndpoint, data);
-      return speakers;
+      return data;
     } else {
       _logger.severe('Failed to load speakers: ${response.statusCode} ${response.body}');
       throw Exception('Failed to load speakers');
     }
   }
-
 
   Future<List<Group>> fetchSessions() async {
     final response = await http.get(Uri.parse('$_baseUrl$_sessionsEndpoint'));
@@ -72,10 +69,10 @@ class SessionizeApiService {
     return await fetchAllData();
   }
 
-   Future<List<Speaker>> getSpeakers() async {
+  Future<List<dynamic>> getSpeakers() async {
     final cachedData = await _getCachedData(_speakersEndpoint);
     if (cachedData != null) {
-      return (cachedData as List).map((json) => Speaker.fromJson(json)).toList();
+      return cachedData;
     }
     return await fetchSpeakers();
   }

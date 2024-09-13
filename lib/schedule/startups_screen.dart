@@ -12,7 +12,7 @@ class CloudScreen extends StatelessWidget {
     var sessions = state.sessionsData.sessions;
     var startupsSessions = sessions.where((s) => s.room == "startup").toList();
     return SessionList(
-      allSessions: startupsSessions, other: const [], speakers: const [],
+      allSessions: startupsSessions, other: const [],
     );
   }
 }
