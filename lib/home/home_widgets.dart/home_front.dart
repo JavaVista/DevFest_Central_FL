@@ -86,7 +86,7 @@ class HomeFront extends StatelessWidget {
               icon: const Icon(FontAwesomeIcons.envelope),
               onPressed: () async {
                 var emailUrl =
-                    '''mailto:suavejavi@gmail.com?subject=I Need Support - DevFest Florida 🌴🏖 App&body=Thanks for reaching out! I'd be more than happy to help you. Please, provide below a description of the issue and your contact information.
+                    '''mailto:javi@devfestflorida.org?subject=I Need Support - DevFest Florida 🌴🏖 App&body=Thanks for reaching out! I'd be more than happy to help you. Please, provide below a description of the issue and your contact information.
 👇👇👇
  \n
  ''';
