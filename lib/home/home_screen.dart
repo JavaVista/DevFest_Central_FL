@@ -7,7 +7,7 @@ import 'index.dart';
 class HomeScreen extends StatefulWidget {
   final HomeBloc homeBloc;
   
-  const HomeScreen({Key? key, required this.homeBloc}) : super(key: key);
+  const HomeScreen({super.key, required this.homeBloc});
 
   @override
   State<HomeScreen> createState() => HomeScreenState();

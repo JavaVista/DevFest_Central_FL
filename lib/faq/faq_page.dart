@@ -5,7 +5,7 @@ import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 class FaqPage extends StatelessWidget {
   static const String routeName = "/faq";
 
-  const FaqPage({Key? key}) : super(key: key);
+  const FaqPage({super.key});
 
   @override
   Widget build(BuildContext context) {

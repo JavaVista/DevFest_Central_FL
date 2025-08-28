@@ -14,7 +14,7 @@ import 'index.dart';
 class ConfigPage extends StatefulWidget {
   static const String routeName = "/";
 
-  const ConfigPage({Key? key}) : super(key: key);
+  const ConfigPage({super.key});
   @override
   ConfigPageState createState() => ConfigPageState();
 }

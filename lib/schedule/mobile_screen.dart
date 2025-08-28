@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class MobileScreen extends StatelessWidget {
   final HomeBloc homeBloc;
 
-  const MobileScreen({Key? key, required this.homeBloc}) : super(key: key);
+  const MobileScreen({super.key, required this.homeBloc});
   @override
   Widget build(BuildContext context) {
     var state = homeBloc.state as InHomeState;

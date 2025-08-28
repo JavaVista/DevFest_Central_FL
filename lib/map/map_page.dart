@@ -10,7 +10,7 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 class MapPage extends StatefulWidget {
   static const String routeName = "/map";
 
-  const MapPage({Key? key}) : super(key: key);
+  const MapPage({super.key});
   @override
   MapPageState createState() => MapPageState();
 }

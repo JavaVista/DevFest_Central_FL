@@ -11,7 +11,7 @@ import 'package:url_launcher/url_launcher.dart';
 class SponsorPage extends StatelessWidget {
   static const String routeName = "/sponsor";
 
-  const SponsorPage({Key? key}) : super(key: key);
+  const SponsorPage({super.key});
 
   Widget socialActions(context, Sponsor sponsor) => FittedBox(
         child: Row(

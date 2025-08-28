@@ -32,7 +32,7 @@
           "-d"
           "android"
           "-d"
-          "emulator-5556"
+          "emulator-5554"
         ];
         manager = "flutter";
       };

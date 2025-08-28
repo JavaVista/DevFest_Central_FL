@@ -11,7 +11,7 @@ import 'package:url_launcher/url_launcher.dart';
 class TeamPage extends StatelessWidget {
   static const String routeName = "/team";
 
-  const TeamPage({Key? key}) : super(key: key);
+  const TeamPage({super.key});
 
   Widget socialActions(context, Team team) => FittedBox(
         child: Row(

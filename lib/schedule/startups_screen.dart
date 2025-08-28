@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class CloudScreen extends StatelessWidget {
   final HomeBloc homeBloc;
 
-  const CloudScreen({Key? key, required this.homeBloc}) : super(key: key);
+  const CloudScreen({super.key, required this.homeBloc});
   @override
   Widget build(BuildContext context) {
     var state = homeBloc.state as InHomeState;

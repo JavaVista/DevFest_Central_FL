@@ -9,8 +9,7 @@ class DevScaffold extends StatelessWidget {
   final Widget? tabBar;
 
   const DevScaffold(
-      {Key? key, required this.body, required this.title, this.tabBar})
-      : super(key: key);
+      {super.key, required this.body, required this.title, this.tabBar});
   @override
   Widget build(BuildContext context) {
     return AnimatedContainer(

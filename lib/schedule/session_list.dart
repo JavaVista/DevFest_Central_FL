@@ -10,7 +10,7 @@ class SessionList extends StatelessWidget {
   final List<Session> allSessions;
   final List<Session> other;
 
-  const SessionList({Key? key, required this.allSessions, required this.other}) : super(key: key);
+  const SessionList({super.key, required this.allSessions, required this.other});
 
   @override
   Widget build(BuildContext context) {

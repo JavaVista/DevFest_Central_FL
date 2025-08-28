@@ -11,7 +11,7 @@ import 'package:url_launcher/url_launcher.dart';
 class SpeakersPage extends StatelessWidget {
   static const String routeName = "/speakers";
 
-  const SpeakersPage({Key? key}) : super(key: key);
+  const SpeakersPage({super.key});
 
   Widget socialActions(context, Speaker speaker) => FittedBox(
         child: Row(

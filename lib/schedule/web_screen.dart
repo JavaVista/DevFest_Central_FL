@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class WebScreen extends StatelessWidget {
   final HomeBloc homeBloc;
 
-  const WebScreen({Key? key, required this.homeBloc}) : super(key: key);
+  const WebScreen({super.key, required this.homeBloc});
   @override
   Widget build(BuildContext context) {
     var state = homeBloc.state as InHomeState;

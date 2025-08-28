@@ -15,7 +15,7 @@ class SessionDetail extends StatelessWidget {
 
   //var index;
 
-  const SessionDetail({Key? key, required this.session}) : super(key: key);
+  const SessionDetail({super.key, required this.session});
 
   Widget socialActions(context, Speaker speaker) => FittedBox(
         child: Row(

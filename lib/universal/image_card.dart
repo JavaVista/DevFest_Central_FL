@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class ImageCard extends StatelessWidget {
   final String img;
 
-  const ImageCard({Key? key, required this.img}) : super(key: key);
+  const ImageCard({super.key, required this.img});
   @override
   Widget build(BuildContext context) {
     return Container(

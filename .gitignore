@@ -41,6 +41,7 @@
 *key.properties
 *outputKey
 *key.jks
+*.pem
 
 # iOS/XCode related
 **/ios/**/*.mode1v3

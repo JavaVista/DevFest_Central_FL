@@ -3,8 +3,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class Devfest {
   static const String appName = "Devfestcentfl";
-  static const String appVersion = "Version 2.0.0";
-  static const int appVersionCode = 1;
+  static const String appVersion = "Version 2.0.1";
+  static const int appVersionCode = 11;
   static const String appColor = "#ffd7167";
   static Color primaryAppColor = Colors.white;
   static Color secondaryAppColor = Colors.black;

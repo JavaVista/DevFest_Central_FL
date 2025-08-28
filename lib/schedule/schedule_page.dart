@@ -10,7 +10,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class SchedulePage extends StatelessWidget {
   static const String routeName = "/schedule";
 
-  const SchedulePage({Key? key}) : super(key: key);
+  const SchedulePage({super.key});
 
   @override
   Widget build(BuildContext context) {

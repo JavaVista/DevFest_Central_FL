@@ -13,7 +13,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class HomeFront extends StatelessWidget {
-  const HomeFront({Key? key}) : super(key: key);
+  const HomeFront({super.key});
 
   _launchURL(String url) async {
     if (await canLaunchUrl(Uri.parse(url))) {
@@ -190,8 +190,7 @@ class ActionCard extends StatelessWidget {
   final String title;
   final Color color;
 
-  const ActionCard({Key? key, required this.onPressed, required this.icon, required this.title, required this.color})
-      : super(key: key);
+  const ActionCard({super.key, required this.onPressed, required this.icon, required this.title, required this.color});
   @override
   Widget build(BuildContext context) {
     return InkWell(
