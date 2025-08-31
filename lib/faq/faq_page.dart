@@ -1,6 +1,6 @@
 import 'package:devfestfl/universal/dev_scaffold.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
 class FaqPage extends StatelessWidget {
   static const String routeName = "/faq";
@@ -9,12 +9,13 @@ class FaqPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const DevScaffold(
-      body: WebviewScaffold(
-        url: "https://devfestflorida.org/faq",
-        hidden: true,
-      ),
+    final controller = WebViewController()
+      ..setJavaScriptMode(JavaScriptMode.unrestricted)
+      ..loadRequest(Uri.parse("https://devfestflorida.org/faq"));
+
+    return DevScaffold(
       title: "FAQ",
+      body: WebViewWidget(controller: controller),
     );
   }
 }
