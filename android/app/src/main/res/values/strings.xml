@@ -1,5 +1,3 @@
 <resources>
     <string name="app_name">devfestfl</string>
-    <!-- TODO: Replace with a real key for release builds -->
-    <string name="google_maps_api_key">YOUR_GOOGLE_MAPS_API_KEY</string>
 </resources>

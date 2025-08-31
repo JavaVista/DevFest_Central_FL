@@ -67,10 +67,10 @@ for more information.
 ### Versions:
 
 #### Current Versions:
-* DevFest Florida App Version: 2.0.1
+* DevFest Florida App Version: 2.0.2
 
-* Flutter Version: 3.24.0
-* Dart SDK Version: 3.5.0
+* Flutter Version: 3.29.2
+* Dart SDK Version: 3.7.2
 
 #### Project was original created from the following versions:
 
