@@ -1,6 +1,5 @@
 import 'package:equatable/equatable.dart';
 
-@override
 abstract class ConfigState extends Equatable {
   const ConfigState([List props = const <dynamic>[]]) : super();
 

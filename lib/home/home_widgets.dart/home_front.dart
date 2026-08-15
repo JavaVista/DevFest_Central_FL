@@ -52,38 +52,38 @@ class HomeFront extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
             IconButton(
-              icon: const Icon(FontAwesomeIcons.facebookF),
+              icon: const FaIcon(FontAwesomeIcons.facebookF),
               onPressed: () async {
                 await _launchURL("https://www.facebook.com/devfestflorida/");
               },
             ),
             IconButton(
-              icon: const Icon(FontAwesomeIcons.twitter),
+              icon: const FaIcon(FontAwesomeIcons.twitter),
               onPressed: () async {
                 await _launchURL("https://twitter.com/devfestfl");
               },
             ),
             IconButton(
-              icon: const Icon(FontAwesomeIcons.linkedinIn),
+              icon: const FaIcon(FontAwesomeIcons.linkedinIn),
               onPressed: () async {
                 _launchURL("https://www.linkedin.com/company/devfestflorida/");
               },
             ),
             IconButton(
-              icon: const Icon(FontAwesomeIcons.youtube),
+              icon: const FaIcon(FontAwesomeIcons.youtube),
               onPressed: () async {
                 await _launchURL(
                     "https://www.youtube.com/channel/UCKy_rozojea4PZHCVYHqKwg");
               },
             ),
             IconButton(
-              icon: const Icon(FontAwesomeIcons.meetup),
+              icon: const FaIcon(FontAwesomeIcons.meetup),
               onPressed: () async {
                 await _launchURL("https://www.meetup.com/GDG-Central-Florida/");
               },
             ),
             IconButton(
-              icon: const Icon(FontAwesomeIcons.envelope),
+              icon: const FaIcon(FontAwesomeIcons.envelope),
               onPressed: () async {
                 var emailUrl =
                     '''mailto:javi@devfestflorida.org?subject=I Need Support - DevFest Florida 🌴🏖 App&body=Thanks for reaching out! I'd be more than happy to help you. Please, provide below a description of the issue and your contact information.

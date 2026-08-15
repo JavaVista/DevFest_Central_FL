@@ -18,7 +18,7 @@ class TeamPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             IconButton(
-              icon: const Icon(
+              icon: const FaIcon(
                 FontAwesomeIcons.twitter,
                 size: 15,
               ),
@@ -27,7 +27,7 @@ class TeamPage extends StatelessWidget {
               },
             ),
             IconButton(
-              icon: const Icon(
+              icon: const FaIcon(
                 FontAwesomeIcons.linkedinIn,
                 size: 15,
               ),
@@ -36,7 +36,7 @@ class TeamPage extends StatelessWidget {
               },
             ),
             IconButton(
-              icon: const Icon(
+              icon: const FaIcon(
                 FontAwesomeIcons.github,
                 size: 15,
               ),

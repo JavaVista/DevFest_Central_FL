@@ -11,18 +11,10 @@ import 'package:flutter_test/flutter_test.dart';
 
 
 void main() {
-  testWidgets('Schedule is present and trigger navigation after tap - smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    //await tester.pumpWidget(MyApp());
+  testWidgets('HomePage displays Home title - smoke test', (WidgetTester tester) async {
+    await tester.pumpWidget(const MaterialApp(home: HomePage()));
+    await tester.pumpAndSettle();
 
-   await tester.pumpWidget(const MaterialApp(home: HomePage()));
-
-    expect(find.text('1'), findsNothing);
-
-  
-    expect(find.byType(ElevatedButton), findsOneWidget);
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    expect(find.text('Home'), findsOneWidget);
   });
 }

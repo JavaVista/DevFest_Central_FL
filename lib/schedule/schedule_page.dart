@@ -29,28 +29,28 @@ class SchedulePage extends StatelessWidget {
           labelStyle: const TextStyle(fontSize: 12),
           tabs: const <Widget>[
             Tab(
-              icon: Icon(
+              icon: FaIcon(
                 FontAwesomeIcons.users,
                 size: 20,
               ),
               child: Text("Activity"),
             ),
             Tab(
-              icon: Icon(
+              icon: FaIcon(
                 FontAwesomeIcons.globe,
                 size: 20,
               ),
               child: Text("Web"),
             ),
             Tab(
-              icon: Icon(
+              icon: FaIcon(
                 FontAwesomeIcons.mobile,
                 size: 20,
               ),
               child: Text("Mobile"),
             ),
             Tab(
-              icon: Icon(
+              icon: FaIcon(
                 FontAwesomeIcons.rocket,
                 size: 20,
               ),

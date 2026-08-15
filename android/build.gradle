@@ -5,14 +5,18 @@ allprojects {
     }
 }
 
-rootProject.buildDir = "../build"
-subprojects {
-    project.buildDir = "${rootProject.buildDir}/${project.name}"
+def repoBuildDir = rootProject.file("../build")
+rootProject.buildDir = repoBuildDir
+
+subprojects { project ->
+    if (project.projectDir.toPath().startsWith(rootDir.toPath())) {
+        project.buildDir = new File(repoBuildDir, project.name)
+    }
 }
 subprojects {
     project.evaluationDependsOn(":app")
 }
 
 tasks.register("clean", Delete) {
-    delete rootProject.buildDir
+    delete repoBuildDir
 }

@@ -25,7 +25,7 @@ class DevScaffold extends StatelessWidget {
             bottom: tabBar as PreferredSizeWidget?,
             actions: <Widget>[
               IconButton(
-                icon: Icon(
+                icon: FaIcon(
                   ConfigBloc().darkModeOn
                       ? FontAwesomeIcons.lightbulb
                       : FontAwesomeIcons.solidLightbulb,

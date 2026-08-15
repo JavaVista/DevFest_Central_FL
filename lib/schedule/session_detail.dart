@@ -22,7 +22,7 @@ class SessionDetail extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             IconButton(
-              icon: const Icon(
+              icon: const FaIcon(
                 FontAwesomeIcons.facebookF,
                 size: 15,
               ),
@@ -31,7 +31,7 @@ class SessionDetail extends StatelessWidget {
               },
             ),
             IconButton(
-              icon: const Icon(
+              icon: const FaIcon(
                 FontAwesomeIcons.twitter,
                 size: 15,
               ),
@@ -40,7 +40,7 @@ class SessionDetail extends StatelessWidget {
               },
             ),
             IconButton(
-              icon: const Icon(
+              icon: const FaIcon(
                 FontAwesomeIcons.linkedinIn,
                 size: 15,
               ),
@@ -49,7 +49,7 @@ class SessionDetail extends StatelessWidget {
               },
             ),
             IconButton(
-              icon: const Icon(
+              icon: const FaIcon(
                 FontAwesomeIcons.github,
                 size: 15,
               ),
